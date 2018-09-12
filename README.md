@@ -1,4 +1,4 @@
-# DataSnipers
+# ISQA 8086.02 - DataSnipers
 
 ## List of items on repo:
 
