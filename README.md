@@ -1,8 +1,15 @@
 # ISQA 8086.02 - DataSnipers
 
-## List of items on repo:
+### Group Members
+1. Kumar Vikash
+2. Harwinder Kaur
+3. Edem Dosseh
 
-  * [Data Snipers Repo License](https://github.com/EdemD/DataSnipers/blob/master/LICENSE)
-  * [Data Snipers Work Plan Gantt Chart. Click to download](https://github.com/EdemD/DataSnipers/blob/master/Data%20Snipers%20Project%20Work%20Plan.xlsx)
-  * [NYBG video review and notes](https://github.com/EdemD/DataSnipers/blob/master/NYBG%20video%20review%20and%20notes.md)
-  * [Data Snipers Research Questions](https://github.com/EdemD/DataSnipers/blob/master/Data%20Snipers%20Research%20Questions.md)
+### Data
+
+### List of Files
+
+1. [License](https://github.com/EdemD/DataSnipers/blob/master/LICENSE)
+2. [Work Plan](#)
+3. [Work Plan - Gantt Chart](https://github.com/EdemD/DataSnipers/blob/master/Work%20Plan/Project%20Plan%20-%20Gantt%20Chart.pdf)
+4. [Research Questions](https://github.com/EdemD/DataSnipers/blob/master/Data%20Snipers%20Research%20Questions.md)
