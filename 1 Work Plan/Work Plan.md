@@ -16,4 +16,4 @@ The project would start from September 9th, 2018 and is expected to take 13 week
 * Create Visualization -				Nov 01, 2018	-	Nov 07, 2018	|	Lead - Harwinder | Proof-Reader - Vikash
 * Create Final Project Presentation -	Nov 08, 2018	-	Dec 02, 2018	|	Lead - Vikash | Proof-Reader - Harwinder, Edem
 
-The Gantt Chart for the work plan can be found here - [Data Snipers - Work Plan (Gantt Chart)](https://github.com/EdemD/DataSnipers/blob/master/1%20Work%20Plan/Project%20Plan%20-%20Gantt%20Chart.pdf)
+The Gantt Chart for the work plan can be found here - [Data Snipers - Work Plan (Gantt Chart)](https://github.com/EdemD/DataSnipers/blob/master/1%20Work%20Plan/Work%20Plan%20-%20Gantt%20Chart.pdf)
