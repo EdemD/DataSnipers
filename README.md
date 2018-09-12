@@ -10,6 +10,6 @@
 ### List of Files
 
 1. [License](https://github.com/EdemD/DataSnipers/blob/master/LICENSE)
-2. [Work Plan](#)
-3. [Work Plan - Gantt Chart](https://github.com/EdemD/DataSnipers/blob/master/Work%20Plan/Project%20Plan%20-%20Gantt%20Chart.pdf)
-4. [Research Questions](https://github.com/EdemD/DataSnipers/blob/master/Data%20Snipers%20Research%20Questions.md)
+2. [Work Plan](https://github.com/EdemD/DataSnipers/blob/master/1%20Work%20Plan/Project%20Plan.md)
+3. [Work Plan - Gantt Chart](https://github.com/EdemD/DataSnipers/blob/master/1%20Work%20Plan/Project%20Plan%20-%20Gantt%20Chart.pdf)
+4. [Research Questions](https://github.com/EdemD/DataSnipers/blob/master/1%20Work%20Plan/Data%20Snipers%20Research%20Questions.md)
