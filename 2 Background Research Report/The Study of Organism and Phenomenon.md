@@ -20,14 +20,16 @@ Based on the initial analysis of data, we were able to conclude that the facilit
 
 #### 1. <u>Publication and Research</u>: 
 
-1. In the report, Torreya Forty -eight years of canopy change in hardwood-hemlock forest in New York City. James L. Rudnicky and Mark J. McDonnell. Institute of Ecosystem Studies, NYBG. were able to present the conclusions from various researchers who suggested that in 1982, the composition of the Thain forest compared to 1949 and 1980 vegetation data from Greenbrook Sanctuary, Hoboken NJ found out that major community of plants - oaks, hemlock-hardwood and swamp-hardwood similar in composition. However, the canopy from year 1980 was more homogeneous s comapred to 1949. The author at last concluded that the forest was undergoing  changes to recover from the disturbance to become more uniform. 
-
-They were able to understand the impact. However, they failed to understand the pattern of the change.
-
-**Source** : <u>file:///C:/UNO%20Softwares/1989%20Torreya.pdf</u>
+1. In the report, Torreya Forty -eight years of canopy change in hardwood-hemlock forest in New York City. James L. Rudnicky and Mark J. McDonnell. Institute of Ecosystem Studies, NYBG. were able to present the conclusions from various researchers who suggested that in 1982, the composition of the Thain forest compared to 1949 and 1980 vegetation data from Greenbrook Sanctuary, Hoboken NJ found out that major community of plants - oaks, hemlock-hardwood and swamp-hardwood similar in composition. However, the canopy from year 1980 was more homogeneous s comapred to 1949. The author at last concluded that the forest was undergoing  changes to recover from the disturbance to become more uniform. They were able to understand the impact. However, they failed to understand the pattern of the change.
 
 2. The another study was conducted and documented in year 1974, where they studied the impact of temperature impact on the areas of the forest. For example - the climate in the summer is warm and humid, cold during winters. The study was done in Central Park Observatory that is situated at 10 miles south to NYBG. The Average annual temperature is 12. 5 degree Celsius.
 
-   **Source** : <u>file:///C:/UNO%20Softwares/1989%20Torreya.pdf</u>
+   **Source** : <u>James L. Rudnicky and Mark J. McDonnell. 1989.Forty-Eight Years of Canopy Change in a Hardwood-Hemlock Forest in New York City.</u>
 
-During the year of 1930s the study was subjected to numerous errors in the observations recorded. 
+   During the year of 1930s the study was subjected to numerous errors in the observations recorded. Due to the much larger part of forest was surveyed than it is done now. However, the vegetation type could be identified by the data collected from 1930s. 
+
+3. Dominant species from year 1930 and 1980 varied. In 1930s the dominant species were in much larger number but their number reduced in year 1985. 
+
+4. Study Area - The area where the study has been conducted plays a very significant role. The temperature and humidity may vary. 
+
+5. Results: The results are compared with the data sets collected from previous years.
