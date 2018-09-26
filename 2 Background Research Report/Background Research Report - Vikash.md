@@ -30,7 +30,18 @@ Between 2008 and 2015, the director of NYBG developed an ambitious program of ec
 
 > We want to analyze the staff hours distribution during this period, and the impact it had towards the area of - restoration planting, invasive plant management and trail maintenance.
 
+Overall, by analyzing the data we have a better understanding of the aims and ambition of the NYBG, and we have ample data to support our analysis. Based on our initial analysis, we had targeted to answer the below questions-
 
+1. How restoration of the plants have impacted the overall growth from 2007 to 2018.
+2. How a specific species which was at the brink of extinction flourished due to the restoration efforts.
+3. The change in ratio of primitive species VS invasive species, due to restoration process
+4. Number of species which had significant difference due to the efforts.
+5. Number of species, which did not get much affected by the restoration efforts.
+6. Trend of species which were not a part of restoration process
+7. Trend of species which have been impacted by the restoration process (can be a duplicate)
+8. The different types of species in the restoration process
+
+I think, by a better understanding of the context, we can use incorporate the questions that we have added in this report into the existing ones, to make a more meaningful analysis.
 
 ##### References
 
