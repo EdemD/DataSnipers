@@ -9,15 +9,15 @@
 
 ### List of Files
 
-1. [License](https://github.com/EdemD/DataSnipers/blob/master/LICENSE)
+1. [License](/LICENSE)
 
-2. [Work Plan](https://github.com/EdemD/DataSnipers/blob/master/1%20Work%20Plan/Work%20Plan.md)
+2. [Work Plan](1%20Work%20Plan/Work%20Plan.md)
 
-3. [Work Plan - Gantt Chart](https://github.com/EdemD/DataSnipers/blob/master/1%20Work%20Plan/Work%20Plan%20-%20Gantt%20Chart.pdf)
+3. [Work Plan - Gantt Chart](1%20Work%20Plan/Work%20Plan%20-%20Gantt%20Chart.pdf)
 
-4. [Research Questions](https://github.com/EdemD/DataSnipers/blob/master/1%20Work%20Plan/Data%20Snipers%20Research%20Questions.md)
+4. [Research Questions](/1%20Work%20Plan/Data%20Snipers%20Research%20Questions.md)
 
-5. [Background Research Report](https://github.com/EdemD/DataSnipers/tree/master/2%20Background%20Research%20Report)
+5. [Background Research Report](/2%20Background%20Research%20Report)
 
 6. [Audience Profile](/3%20Audience%20Profile/Audience%20Profile.md)
 
