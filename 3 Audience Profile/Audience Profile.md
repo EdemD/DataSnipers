@@ -101,6 +101,8 @@ Towards the requirement, the management has prioritized the following goals for 
 1. Schuler, J.A. and Forrest, T. A.  2016. Thain Family Forest Program 2008-2025. The New York Botanical Garden.
 2. Saving the Plants of the World. (n.d.). Retrieved September 25, 2018, from New York Botanical Garden: [https://www.nybg.org/about/mission-and-history/saving-the-plants-of-the-world/](https://www.nybg.org/about/mission-and-history/saving-the-plants-of-the-world/)
 3. Mission and History. (n.d.). Retrieved September 25, 2018, from New York Botanical Garden: [https://www.nybg.org/about/mission-and-history/](https://www.nybg.org/about/mission-and-history/)
+4. Arcate Schuler, J. (2017, December 15). Is Restoration a Solution for the Invasive Species Problem? Retrieved from <https://www.nybg.org/blogs/science-talk/author/jarcate/>
+5. Newman, M. (2013, September 12). Poetry in Passing. Retrieved from <https://www.nybg.org/blogs/plant-talk/2013/09/around-the-garden/poetry-in-passing/>
 
 
 
@@ -112,3 +114,4 @@ Harwinder Kaur worked on the Audience Profile for an individual. She contributed
 
 ### Proofread Statement
 
+This document has been proofread by Harwinder Kaur on October 10, 2018 at 12:04 pm.
