@@ -96,10 +96,6 @@ Towards the requirement, the management has prioritized the following goals for 
 5. Document and enhance biodiversity
 6. Cultivate new partnerships
 
-### Opportunities (optional)
-
-
-
 ### References
 
 1. Schuler, J.A. and Forrest, T. A.  2016. Thain Family Forest Program 2008-2025. The New York Botanical Garden.
