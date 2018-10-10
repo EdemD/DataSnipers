@@ -14,4 +14,5 @@
 3. [Work Plan - Gantt Chart](https://github.com/EdemD/DataSnipers/blob/master/1%20Work%20Plan/Work%20Plan%20-%20Gantt%20Chart.pdf)
 4. [Research Questions](https://github.com/EdemD/DataSnipers/blob/master/1%20Work%20Plan/Data%20Snipers%20Research%20Questions.md)
 5. [Background Research Report](https://github.com/EdemD/DataSnipers/tree/master/2%20Background%20Research%20Report)
+6. Audience Profile
 
