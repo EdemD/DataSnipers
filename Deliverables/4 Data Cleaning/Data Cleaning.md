@@ -322,6 +322,44 @@ We did not find any license or usage terms with the data
 1. 
 
 ## 7. Forest Management
+### Files list
+* NYBG Forest Management_11052008 to 12312014.xls
+### Licensing 
+> We did not find any license or usage terms with the data
+
+### Metadata
+
+The restoration data was collected over a period of roughly 6 year from November 5,2008 to December 31,2014.
+The data sheet contains a lot of data. From initial analysis the focus of the data is what is considered invasive plants species in the United States.  
+
+* The NoteBook Entry tab appears to be recording all of the forest management activity  and series tasks performed over the period of time aforementioned. 
+
+	_Without a comprehensive metadata documentation, the review of this particular spreadsheet is daunting. Also due the amount of data presented, the following tabs in the spreadsheet appears to give a good solid look at the data_   
+
+*  
+	* Summary tab - Shows the hours put into the forest management effort at a high level
+	* Summary Graphs 2008 - Shows the hours put into the forest management effort for specific forest management effort year over year ( Invasive plant management, Trail Maintenance, Restoration Planting, Pesticide applications)
+	* Grid Specific Summary for the specific species monitored over the years
+		* [Allaria petiolata](https://en.wikipedia.org/wiki/Alliaria_petiolata) - Herbaceous, non woody
+		* [Aralia elata](https://en.wikipedia.org/wiki/Aralia_elata) - Deciduous small tree/shrub (Woody plant)
+		* [Fallopia japonica](https://en.wikipedia.org/wiki/Fallopia_japonica) - Also called Japanese knotweed and it's non woody
+		* [Hedera helix](https://en.wikipedia.org/wiki/Hedera_helix) - Hedera helix is an evergreen climbing plant, growing to 20–30 m (66–98 ft) high where suitable surfaces (trees, cliffs, walls) are available, and also growing as groundcover where no vertical surfaces occur.
+		* [Lonicera japonica](https://en.wikipedia.org/wiki/Lonicera_japonica) - Also known as Japanese honeysuckle. It's a vine
+		* [Lonicera maackia](https://en.wikipedia.org/wiki/Lonicera_maackii)  - Lonicera maackii is enumerated as an endangered species in Japan. It has escaped from cultivation and naturalized in New Zealand and the eastern United States; in the woodlands of the latter it is a significant invasive species. The plant is a large, deciduous shrub 
+		* [Phellodendron amurense](https://en.wikipedia.org/wiki/Phellodendron_amurense) - commonly called the Amur cork tree. The Amur cork tree is considered invasive in many parts of North America. The State of Massachusetts lists it as a noxious weed.
+
+Takeaways -  Every year that there seems to be significant decrease in the hours spent in management, exponentially larger amount of hours seem to be necessary in following years to try to get invasive species under control. Consistency in management is paramount for a successful forest management program. 
+
+### Issue with the data
+* On the Notebook Entry tab, the  column named _Estimated Staff Hours_ has an invalid date value in the column
+
+### Remediation rationale
+* Being there is just one row that has a date column, we suggest that we remove the row
+
+### Steps to Clean
+1. Open file  NYBG Forest Management_11052008 to 12312014.xls and navigate to the _Notebook Entry_ tab and _Estimated Staff Hours_ column.  Filter down to the date (1900) and remove it from the dataset
+2. Now open a new blank Excel spreadsheet and combine the data and both years and save for future analysis
+3. Close the original documents. _**DO NOT SAVE THE CHANGES TO THE ORIGINAL DOCUMENT(S)**_
 
 ## 8. Forest Restoration Planting
 
