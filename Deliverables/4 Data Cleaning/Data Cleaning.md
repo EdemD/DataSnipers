@@ -93,7 +93,7 @@ We did not find any license or usage terms with the data
 ### Licensing 
 > We did not find any license or usage terms with the data
 
-###Metadata
+### Metadata
 The data in this folder covers the year 1937, 2002, 2006, 2011, 2016
 
 * Useful findings
@@ -202,7 +202,7 @@ Also greater among of specimen are being recording for subsequent inventory. Any
 ### Licensing 
 > We did not find any license or usage terms with the data
 
-###Metadata
+### Metadata
 
 The ground cover data is for 2011 and 2016. _**We REALLY need the metadata for these files to be able to make better informed decisions and ask better questions of the data**_
 
