@@ -12,19 +12,49 @@
 
 ### Description of Data Source
 
-Sheet Used for Analysis - COMBINED
+**Sheet Used for Analysis -** COMBINED
 
-How Much
+**Number of Rows (sum of all sheets) -** 511
 
-Where From
+**Total Number of Rows (maximum) -** 9
 
-What it Contains
+**Source -** The data was provided by NYBG representative
 
-Sample Column Headers
+**Summary of Description** - Comprehensive Species Tally provides the results from the surveys that were conducted in each of the years - 1937, 2002, 2006, 2011 and 2016. It classifies the species found during these surveys into 3 categories -
+
+* Native
+* Non-native
+* Invasive
+
+There were three types of surveys based on type of the species -
+
+* Woody survey
+* Herb Transects survey
+* Additional Species survey
+
+**Sample**
+
+| Genus | Species        | Family      | Appear in Woody   Survey | Appear in Herb   Transects | Appear as   Additional Species | Native | Non-native | Invasive |
+| ----- | -------------- | ----------- | ------------------------ | -------------------------- | ------------------------------ | ------ | ---------- | -------- |
+| Acer  | negundo        | Sapindaceae |                          |                            | y                              | y      |            |          |
+| Acer  | platanoides    | Sapindaceae | y                        | y                          | y                              |        | y          | y        |
+| Acer  | pseudoplatanus | Sapindaceae | y                        | y                          | y                              |        | y          | y        |
+| Acer  | rubrum         | Sapindaceae | y                        | y                          | y                              | y      |            |          |
+| Acer  | saccharinum    | Sapindaceae |                          | y                          |                                | y      |            |          |
 
 ### Licensing
 
+We did not find any license or usage terms with the data
+
 ### Metadata
+
+**Genus -** A principal taxonomic category that ranks above species and below family, and is denoted by a capitalized Latin name (dictionary.com)
+
+**Species -** A group of living organisms consisting of similar individuals capable of exchanging genes or interbreeding. The species is the principal natural taxonomic unit, ranking below a genus and denoted by a Latin binomial (dictionary.com)
+
+**Family -** A principal taxonomic category that ranks above genus and below order, usually ending in *-idae* (in zoology) or *-aceae* (in botany) (dictionary.com)
+
+**Taxonomy Rank -** Species < Genus < Family < Order < Class < Phylum < Kingdom < Domain
 
 ### Issues with the data
 
