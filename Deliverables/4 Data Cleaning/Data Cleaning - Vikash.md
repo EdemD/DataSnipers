@@ -16,7 +16,7 @@
 
 **Number of Rows (sum of all sheets) -** 511
 
-**Total Number of Rows (maximum) -** 9
+**Total Number of Columns (maximum) -** 9
 
 **Source -** The data was provided by NYBG representative
 
@@ -58,14 +58,22 @@ We did not find any license or usage terms with the data
 
 ### Issues with the data
 
-* The Comprehensive Species Tally is divided into separate files
+* The Comprehensive Species Tally is divided into separate files for separate years
 * Some attributes (column names) are missing from some reports
+* The columns use **'y'** to represent 'presence' and use **blanks** to represent absence
 
 ### Remediation Rationale
 
+* Getting all the yearly data into one sheet would help us analyze the range of values giving us better understanding to devise our cleaning
+* Add a new column **Year** to represent
+* The attributes that are missing can be represented by a blank value
+* The **blank** values that were used to represent '**absence**' of a species can be changed to '**n**' so that -
+  * It does not affect our new blank values which represent the absence of data.
+  * It adds more meaning to the survey with '**y**' meaning *'found'* and '**n**' meaning *'not found'*.
+
 ### Steps to Clean
 
-1. Replaced all the blanks with 'n' as opposed to 'y' which represents
-2. Added all the 'COMBINED' sheet from the year 1937 - 2016 into one sheet.
-3. Added a new column **Year** to classify the different sheet data
-4. Replaced all the 
+1. In the sheet **COMBINED** for all the files, replaced all the blanks with **n** 
+2. Added column **Appear in Herb Transects** and **Appear as Additional Species** to the sheet COMBINED in the survey report for 1937, 2002 and 2006, to match the column structure of the year 2011 and 2016.
+3. Added all the 'COMBINED' sheet from the year 1937 - 2016 into one sheet.
+4. Added a new column **Year** to classify the different sheet data
