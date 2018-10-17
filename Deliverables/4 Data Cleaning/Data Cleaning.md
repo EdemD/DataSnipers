@@ -266,12 +266,12 @@ The ground cover data is for 2011 and 2016. _**We REALLY need the metadata for t
 
 **Sheets**
 
-* Master Spp. List (woody + herb)
-* pre-2016 Codes (need reconciled
+- Master Spp. List (woody + herb)
+- pre-2016 Codes (need reconciled
 
-### Description of Data Source
+### Sheet 1 - Master Spp. List (woody + herb)
 
-#### <u>Sheet 1 - Master Spp. List (woody + herb)</u>
+#### <u>Description of Data Source</u>
 
 **Number of Rows (sum of all sheets) -** 159
 
@@ -291,7 +291,39 @@ The ground cover data is for 2011 and 2016. _**We REALLY need the metadata for t
 | red maple      | Acer rubrum         | Tree               |       |          |          |
 | sugar maple    | Acer saccharum      | Tree               |       |          |          |
 
-#### <u>Sheet 2 - pre-2016 Codes (need reconciled</u>
+#### <u>Licensing</u>
+
+We did not find any license or usage terms with the data
+
+#### <u>Metadata</u>
+
+**Common Names -** Common Names of the species under study
+
+**Scientific Names -** Scientific Name of the species under study
+
+**Plant Feature Type** - Herb, Non-living, Shrub, Shrub/Vine, Tree Vine
+
+**Notes -** Additional Notes on the species
+
+**1937 Code -** The code that was used in the 1937 survey for this species
+
+**JS Note -** Unknown
+
+#### <u>Issues with the data</u>
+
+- No metadata corresponding to the column **JS Notes**.
+
+#### <u>Remediation Rationale</u>
+
+- No remediation suggested
+
+#### <u>Steps to Clean</u>
+
+1. No cleaning required
+
+### Sheet 2 - pre-2016 Codes (need reconciled
+
+#### <u>Description of Data Source</u>
 
 **Number of Rows -** 95
 
@@ -299,27 +331,49 @@ The ground cover data is for 2011 and 2016. _**We REALLY need the metadata for t
 
 **Source -** The data was provided by NYBG representative
 
-**Summary of Description** - This sheet contains the mapping for the codes used for the Species Latin Name before 2016. It also specifies whether a particular species code was used in data from 
+**Summary of Description** - This sheet contains the mapping for the codes used for the Species Latin Name before 2016. It also specifies in which survey (year) a particular species code was used.
 
 **Sample**
 
-### Licensing
+| CodeUsed | Species Latin Name (to match   2016 coding...) | Present_2011 | Present_2006 | Present_2002 | Present_1937 |
+| -------- | ---------------------------------------------- | ------------ | ------------ | ------------ | ------------ |
+| A        | Fraxinus sp.                                   |              |              |              | A            |
+| AB       | Alnus glutinosa                                |              |              | Y            |              |
+| AC       | Phellodendron amurense                         | Y            | Y            | Y            |              |
+| Acer sp. | Acer sp.                                       | Y            |              |              |              |
+| ACPS     | Acer pseudoplatanus                            | Y            |              |              |              |
+
+#### <u>Licensing</u>
 
 We did not find any license or usage terms with the data
 
-### Metadata
+#### <u>Metadata</u>
 
-### Issues with the data
+**CodeUsed -** Species Code
 
-- 
+**Species Latin Name -** Scientific Name of the species
 
-### Remediation Rationale
+**Present_YYYY -** Whether present in the survey for the corresponding years 1937, 2002, 2006, 2011. ()
 
-- 
+#### <u>Issues with the data</u>
 
-### Steps to Clean
+- There is an erroneous entry in the column **Present_1937**
+- There are empty spaces to mark the absence of a species
 
-1. 
+#### <u>Remediation Rationale</u>
+
+- Since, from the data it is evident that the Y corresponds to the value Yes and Blank cell corresponds to No, we can change all the blank values to N.
+- We can also modify the erroneous value to match the data range
+
+#### <u>Steps to Clean</u>
+
+1. In the cell **F2** replace 'A' with 'Y'
+2. Change all blank cells to 'N'
+   1. Select the cell C2:F96
+   2. From the menu **Home > Find & Select**, select **Go To Special**
+   3. Click on the Radio Button **Blanks** and press **OK**
+   4. Without clicking anywhere else, write **N**
+   5. Press **Ctrl** and without releasing it, hit **Enter**
 
 ## 7. Forest Management
 ### Files list
@@ -499,6 +553,4 @@ We did not find any license or usage terms with the data
    * Deleted the values 'Volunteers' from **J711:J734**
 
 ## 9. TFF Management Records
-
-## 10. Updated FMP Charts
 
