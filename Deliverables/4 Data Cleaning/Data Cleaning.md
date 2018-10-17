@@ -281,7 +281,7 @@ Also greater among of specimen are being recording for subsequent inventory. Any
 
 ## 4. Data Last Reviewed
 
-### Files List</u>
+### <u>Files List</u>
 
 - 1937 Data_last reviewed01172015.xls
 
@@ -766,3 +766,31 @@ We did not find any license or usage terms with the data
 2. Remove redundant columns
 3. Check Time stamp values 
 4. Coordinate Grid Location with GIS shape files
+
+
+
+## CONTRIBUTORSHIP
+
+#### Files worked by Kumar Vikash -
+
+* Comprehensive Species Tally
+* Species Code Master List
+* Forest Restoration Planting
+
+#### Files worked by Harwinder Kaur -
+
+* Additional Species
+* 1937 - Data Last Reviewed
+* TFF Management Records
+
+#### Files worked by Edem Dosseh -
+
+* Woody Plant
+* Ground Cover Data
+* Forest Management
+
+
+
+## PROOFREAD STATEMENT
+
+This document has been proofread by Kumar Vikash on October 17, 2018 01:00 PM.
