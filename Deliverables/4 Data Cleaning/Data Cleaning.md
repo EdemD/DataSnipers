@@ -146,8 +146,8 @@ The ground cover data is for 2011 and 2016. _**We REALLY need the metadata for t
 1. On the 2011 dataset _Groundcover_ tab, delete columns F,L,M,O,P
 2. Now move the _Date_ to column A and rename it _Sample Date_. Format the column as Date (dd/mm/yyyy format)
 3. Rename column B _Transect Number_
-4. Rename column C _Ploy Number_
-5. Rename column D _ Plot Corner_
+4. Rename column C _Plot Number_
+5. Rename column D _Plot Corner_
 6. On the 2016 dataset _Herb Transects_ tab, delete columns B, M
 7. Now open a new blank Excel spreadsheet and combine the data and both years and save for future analysis
 
