@@ -74,7 +74,7 @@ File appears to be correct
 
 Why are we now doing the 5 year interval starting 2011?  
 Any specific reasons why we are start to collect the additional attributes?
-Also greater among of specimen are being recording for subsequent inventory. Any reasons why?
+Also greater among of specimen are being recorded for subsequent inventory. Any reasons why?
 
 ## Ground Cover Data
 
