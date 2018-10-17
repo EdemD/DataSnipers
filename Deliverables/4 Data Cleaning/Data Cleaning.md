@@ -88,6 +88,69 @@ We did not find any license or usage terms with the data
 
 ## 5. Ground Cover Data
 
+### Files list
+* 2011_groundcoverDATA_09192017.xls
+* 2016_groundcoverDATA_12162016.xlsx
+### Licensing 
+> We did not find any license or usage terms with the data
+
+###Metadata
+
+The ground cover data is for 2011 and 2016. _**We REALLY need the metadata for these files to be able to make better informed decisions and ask better questions of the data**_
+
+* 2011 
+
+	* 6115 specimen were collected and recorded on the following attributes
+		* Transect number
+		* Plot number
+		* Corner or Plot Corner
+		* Genus
+		* Species or Specific epithet
+		* Abiotic/Biotic
+		* 0-1
+		* 1-2
+		* 2-3
+		*  3-4
+		* 4-5
+		* Sum of cover (cm)
+		* % Coverage
+		*Personnel
+		* Date
+		* Comment
+
+* 2016 
+
+	* 6247 specimen were collected and recorded on the following attributes
+		* Transect number
+		* Plot number
+		* Corner(**Now Plot Corner**)
+		* Genus
+		* Species(**Specific epithet**)
+		* 0-1
+		* 1-2
+		* 2-3
+		*  3-4
+		* 4-5
+		*Personnel (**Now Observers**)
+		* Date (**Now Sample Date**)
+		* Comment (**Comments**)  
+
+### Issue with the data
+* 2011 dataset contains columns not available on the 2016 dataset
+* Columns names are not the same
+
+### Remediation rationale
+* For analysis purposes a combined file would make calculation and correlation easier
+
+### Steps to Clean
+1. On the 2011 dataset _Groundcover_ tab, delete columns F,L,M,O,P
+2. Now move the _Date_ to column A and rename it _Sample Date_. Format the column as Date (dd/mm/yyyy format)
+3. Rename column B _Transect Number_
+4. Rename column C _Ploy Number_
+5. Rename column D _ Plot Corner_
+6. On the 2016 dataset _Herb Transects_ tab, delete columns B, M
+7. Now open a new blank Excel spreadsheet and combine the data and both years and save for future analysis
+
 ## 6. Species Code Master List
 
 **File** - NYBG_Species Code_Master List_JAS12022016.xlsx
