@@ -9,7 +9,7 @@ The source files used are the cleaned files, the documentation for which can be 
 **Comprehensive Species Tally (1937-2016)**
 
 ``` r
-cst <- read.csv("Comprehensive Species Tally 1937-2016.csv")
+cst <- read.csv("Comprehensive Species Tally 1937-2016.csv", na.strings = "na")
 cst <- cst[,-c(2,3,4)]
 head(cst)
 ```
@@ -55,11 +55,62 @@ head(restoration)
 Comprehensive Species Tally
 ---------------------------
 
-Including Plots
----------------
+Quick summary of the dataset
 
-You can also embed plots, for example:
+``` r
+cst$Survey.Year <- factor(cst$Survey.Year)
+summary(cst)
+```
 
-![](vikash-rScript_files/figure-markdown_github/pressure-1.png)
+    ##  Survey.Year                     Taxon     Appear.in.Woody.Survey
+    ##  1937: 18    Carpinus caroliniana   :  5   n:265                 
+    ##  2002: 37    Fagus grandifolia      :  5   y:246                 
+    ##  2006: 49    Liriodendron tulipifera:  5                         
+    ##  2011:131    Ostrya virginiana      :  5                         
+    ##  2016:276    Phellodendron amurense :  5                         
+    ##              Prunus spp.            :  5                         
+    ##              (Other)                :481                         
+    ##  Appear.in.Herb.Transects Appear.as.Additional.Species Native  Non.native
+    ##  n   :141                 n   :104                     n:189   n:359     
+    ##  y   :266                 y   :303                     y:322   y:152     
+    ##  NA's:104                 NA's:104                                       
+    ##                                                                          
+    ##                                                                          
+    ##                                                                          
+    ##                                                                          
+    ##  Invasive
+    ##  n:427   
+    ##  y: 84   
+    ##          
+    ##          
+    ##          
+    ##          
+    ## 
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+To analyze the variation of native, non-native and invasive species by years, we need to create a simplified dataframe.
+
+``` r
+#Create sub-tables
+cst_1937 <- subset(cst, cst$Survey.Year==1937)
+cst_2002 <- subset(cst, cst$Survey.Year==2002)
+cst_2006 <- subset(cst, cst$Survey.Year==2006)
+cst_2011 <- subset(cst, cst$Survey.Year==2011)
+cst_2016 <- subset(cst, cst$Survey.Year==2016)
+
+# Create vectors for all the years and species -> native, not-native and invasive
+year <- c(1937, 2002, 2006, 2011, 2016)
+native <- c(length(which(cst_1937$Native=='y')), length(which(cst_2002$Native=='y')), length(which(cst_2006$Native=='y')), length(which(cst_2011$Native=='y')), length(which(cst_2016$Native=='y')))
+non_native <- c(length(which(cst_1937$Non.native=='y')), length(which(cst_2002$Non.native=='y')), length(which(cst_2006$Non.native=='y')), length(which(cst_2011$Non.native=='y')), length(which(cst_2016$Non.native=='y')))
+invasive <- c(length(which(cst_1937$Invasive=='y')), length(which(cst_2002$Invasive=='y')), length(which(cst_2006$Invasive=='y')), length(which(cst_2011$Invasive=='y')), length(which(cst_2016$Invasive=='y')))
+
+#Create dataframe with the vectors
+cst_trend <- data.frame(year, native, non_native, invasive, stringsAsFactors = FALSE)
+head(cst_trend)
+```
+
+    ##   year native non_native invasive
+    ## 1 1937     15          2        2
+    ## 2 2002     27          9        6
+    ## 3 2006     32         15       10
+    ## 4 2011     72         48       30
+    ## 5 2016    176         78       36
