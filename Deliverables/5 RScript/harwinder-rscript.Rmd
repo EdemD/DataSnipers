@@ -1,0 +1,38 @@
+---
+title: "Harwinder r-script"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Understanding TFF Management Record
+
+The TFF Management Record, records the data from 01/02/2015 to 06/20/2016 (dd/mm/yyyy).The New York Botanical Garden organizes various projects that focus on maintaining the health of the Thain Family Forest. The document serves as a repository to input the details about the projects that were organized as well as record the information regarding number of volunteers who participated in various projects.It records the date, month and year on which the project was carried out and what tasks were carried out in the project.
+
+## Including Code
+
+You can include R code in the document as follows:
+
+```{r TffMgmtRecord}
+tff <- read.csv("Tff Management Record.csv")
+head(tff)
+```
+Summary
+```{r TffMgmtRecord2}
+summary(tff)
+```
+Plot
+```{r TffMgmtRecord3}
+plot(tff$Number.of.Staff.Hours.Worked, tff$Project.Type, xlab = "No. of Hours Staff Worked", ylab = "Projects")
+```
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
