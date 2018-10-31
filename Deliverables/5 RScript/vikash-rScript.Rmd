@@ -15,14 +15,14 @@ The source files used are the cleaned files, the documentation for which can be 
 
 **Comprehensive Species Tally (1937-2016)**
 ```{r comprehensive_species_tally}
-cst <- read.csv("Comprehensive Species Tally 1937-2016.csv", na.strings = "na")
+cst <- read.csv("src/Comprehensive Species Tally 1937-2016.csv", na.strings = "na")
 cst <- cst[,-c(2,3,4)]
 head(cst)
 ```
 
 **NYBG Restoration Planting (2007-2018)**
 ```{r restoration_planting}
-restoration <- read.csv("NYBG Forest Restoration Plantings 2007-2018.csv")
+restoration <- read.csv("src/NYBG Forest Restoration Plantings 2007-2018.csv")
 restoration <- restoration[,-c(1,6,7,9)]
 head(restoration)
 ```

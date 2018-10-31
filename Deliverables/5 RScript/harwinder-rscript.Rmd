@@ -16,7 +16,7 @@ The TFF Management Record, records the data from 01/02/2015 to 06/20/2016 (dd/mm
 You can include R code in the document as follows:
 
 ```{r TffMgmtRecord}
-tff <- read.csv("Tff Management Record.csv")
+tff <- read.csv("src/Tff Management Record.csv")
 head(tff)
 ```
 Summary
