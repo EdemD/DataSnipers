@@ -9,7 +9,7 @@ The source files used are the cleaned files, the documentation for which can be 
 **Comprehensive Species Tally (1937-2016)**
 
 ``` r
-cst <- read.csv("Comprehensive Species Tally 1937-2016.csv", na.strings = "na")
+cst <- read.csv("src/Comprehensive Species Tally 1937-2016.csv", na.strings = "na")
 cst <- cst[,-c(2,3,4)]
 head(cst)
 ```
@@ -39,7 +39,7 @@ head(cst)
 **NYBG Restoration Planting (2007-2018)**
 
 ``` r
-restoration <- read.csv("NYBG Forest Restoration Plantings 2007-2018.csv")
+restoration <- read.csv("src/NYBG Forest Restoration Plantings 2007-2018.csv")
 restoration <- restoration[,-c(1,6,7,9)]
 head(restoration)
 ```
@@ -98,7 +98,7 @@ cst_2011 <- subset(cst, cst$Survey.Year==2011)
 cst_2016 <- subset(cst, cst$Survey.Year==2016)
 
 # Create vectors for all the years and species -> native, not-native and invasive
-year <- c(1937, 2002, 2006, 2011, 2016)
+year <- c(1937-01-01, 2002-01-01, 2006-01-01, 2011-01-01, 2016-01-01)
 native <- c(length(which(cst_1937$Native=='y')), length(which(cst_2002$Native=='y')), length(which(cst_2006$Native=='y')), length(which(cst_2011$Native=='y')), length(which(cst_2016$Native=='y')))
 non_native <- c(length(which(cst_1937$Non.native=='y')), length(which(cst_2002$Non.native=='y')), length(which(cst_2006$Non.native=='y')), length(which(cst_2011$Non.native=='y')), length(which(cst_2016$Non.native=='y')))
 invasive <- c(length(which(cst_1937$Invasive=='y')), length(which(cst_2002$Invasive=='y')), length(which(cst_2006$Invasive=='y')), length(which(cst_2011$Invasive=='y')), length(which(cst_2016$Invasive=='y')))
@@ -109,8 +109,34 @@ head(cst_trend)
 ```
 
     ##   year native non_native invasive
-    ## 1 1937     15          2        2
-    ## 2 2002     27          9        6
-    ## 3 2006     32         15       10
-    ## 4 2011     72         48       30
-    ## 5 2016    176         78       36
+    ## 1 1935     15          2        2
+    ## 2 2000     27          9        6
+    ## 3 2004     32         15       10
+    ## 4 2009     72         48       30
+    ## 5 2014    176         78       36
+
+### Plotting the number of species by survey years
+
+We will first reshape the dataframe to suit our needs and then plot it using ggplot. Reshape2 package has cast and melt functions that can be used to change a the dataframe between wide and long format.
+
+``` r
+#Reshaping the dataframe
+library(reshape2)
+```
+
+    ## Warning: package 'reshape2' was built under R version 3.4.4
+
+``` r
+cst_trendL <- melt(cst_trend, id.vars = c("year"))
+colnames(cst_trendL)[2] <- "type"
+colnames(cst_trendL)[3] <- "count"
+
+#Plotting the dataset
+library(ggplot2)
+ggplot(cst_trendL, aes(x = year, y = count, color = type)) + geom_line()
+```
+
+![](vikash-rScript_files/figure-markdown_github/cst_plot-1.png)
+
+End
+===
