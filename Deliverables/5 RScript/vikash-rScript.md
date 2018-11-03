@@ -4,7 +4,10 @@ R-Script
 Reading Source Files
 --------------------
 
-The source files used are the cleaned files, the documentation for which can be found in [here](Deliverables/4%20Data%20Cleaning/Data%20Cleaning.md) \* Comprehensive Species Tally (1937-2016) \* NYBG Restoration Planting (2007-2018)
+The source files used are the cleaned files, the documentation for which can be found in [here](Deliverables/4%20Data%20Cleaning/Data%20Cleaning.md)
+
+-   Comprehensive Species Tally (1937-2016)
+-   NYBG Restoration Planting (2007-2018)
 
 **Comprehensive Species Tally (1937-2016)**
 
