@@ -43,7 +43,8 @@ cst_2011 <- subset(cst, cst$Survey.Year==2011)
 cst_2016 <- subset(cst, cst$Survey.Year==2016)
 
 # Create vectors for all the years and species -> native, not-native and invasive
-year <- c(1937-01-01, 2002-01-01, 2006-01-01, 2011-01-01, 2016-01-01)
+year <- c('1937-01-01', '2002-01-01', '2006-01-01', '2011-01-01', '2016-01-01')
+year <- as.Date(year)
 native <- c(length(which(cst_1937$Native=='y')), length(which(cst_2002$Native=='y')), length(which(cst_2006$Native=='y')), length(which(cst_2011$Native=='y')), length(which(cst_2016$Native=='y')))
 non_native <- c(length(which(cst_1937$Non.native=='y')), length(which(cst_2002$Non.native=='y')), length(which(cst_2006$Non.native=='y')), length(which(cst_2011$Non.native=='y')), length(which(cst_2016$Non.native=='y')))
 invasive <- c(length(which(cst_1937$Invasive=='y')), length(which(cst_2002$Invasive=='y')), length(which(cst_2006$Invasive=='y')), length(which(cst_2011$Invasive=='y')), length(which(cst_2016$Invasive=='y')))
@@ -64,7 +65,12 @@ colnames(cst_trendL)[3] <- "count"
 
 #Plotting the dataset
 library(ggplot2)
-ggplot(cst_trendL, aes(x = year, y = count, color = type)) + geom_line()
+ggplot(cst_trendL, aes(x = year, y = count, color = type)) + geom_line(size=1)
 ```
 
+NYBG has been actively working since 2002, and the results for the same is evident from the plot above. If we analyze this trend from 2002 to 2016, we would get a more detailed picture
+
+```{r cst_plot_2002}
+ggplot(cst_trendL[cst_trendL$year >= "2002-01-01",], aes(x = year, y = count, color = type)) + geom_line(size=1)
+```
 # End

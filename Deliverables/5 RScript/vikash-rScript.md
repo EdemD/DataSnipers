@@ -98,7 +98,8 @@ cst_2011 <- subset(cst, cst$Survey.Year==2011)
 cst_2016 <- subset(cst, cst$Survey.Year==2016)
 
 # Create vectors for all the years and species -> native, not-native and invasive
-year <- c(1937-01-01, 2002-01-01, 2006-01-01, 2011-01-01, 2016-01-01)
+year <- c('1937-01-01', '2002-01-01', '2006-01-01', '2011-01-01', '2016-01-01')
+year <- as.Date(year)
 native <- c(length(which(cst_1937$Native=='y')), length(which(cst_2002$Native=='y')), length(which(cst_2006$Native=='y')), length(which(cst_2011$Native=='y')), length(which(cst_2016$Native=='y')))
 non_native <- c(length(which(cst_1937$Non.native=='y')), length(which(cst_2002$Non.native=='y')), length(which(cst_2006$Non.native=='y')), length(which(cst_2011$Non.native=='y')), length(which(cst_2016$Non.native=='y')))
 invasive <- c(length(which(cst_1937$Invasive=='y')), length(which(cst_2002$Invasive=='y')), length(which(cst_2006$Invasive=='y')), length(which(cst_2011$Invasive=='y')), length(which(cst_2016$Invasive=='y')))
@@ -108,12 +109,12 @@ cst_trend <- data.frame(year, native, non_native, invasive, stringsAsFactors = F
 head(cst_trend)
 ```
 
-    ##   year native non_native invasive
-    ## 1 1935     15          2        2
-    ## 2 2000     27          9        6
-    ## 3 2004     32         15       10
-    ## 4 2009     72         48       30
-    ## 5 2014    176         78       36
+    ##         year native non_native invasive
+    ## 1 1937-01-01     15          2        2
+    ## 2 2002-01-01     27          9        6
+    ## 3 2006-01-01     32         15       10
+    ## 4 2011-01-01     72         48       30
+    ## 5 2016-01-01    176         78       36
 
 ### Plotting the number of species by survey years
 
@@ -133,10 +134,15 @@ colnames(cst_trendL)[3] <- "count"
 
 #Plotting the dataset
 library(ggplot2)
-ggplot(cst_trendL, aes(x = year, y = count, color = type)) + geom_line()
+ggplot(cst_trendL, aes(x = year, y = count, color = type)) + geom_line(size=1)
 ```
 
 ![](vikash-rScript_files/figure-markdown_github/cst_plot-1.png)
 
-End
-===
+NYBG has been actively working since 2002, and the results for the same is evident from the plot above. If we analyze this trend from 2002 to 2016, we would get a more detailed picture
+
+``` r
+ggplot(cst_trendL[cst_trendL$year >= "2002-01-01",], aes(x = year, y = count, color = type)) + geom_line(size=1)
+```
+
+![](vikash-rScript_files/figure-markdown_github/cst_plot_2002-1.png) \# End
