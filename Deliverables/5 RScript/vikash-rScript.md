@@ -148,7 +148,7 @@ line
 NYBG has been actively working since 2002, and the results for the same is evident from the plot above. If we analyze this trend from 2002 to 2016, we would get a more detailed picture
 
 ``` r
-line <- ggplot(cst_trendL[cst_trendL$year >= "2002-01-01",], aes(x = year, y = count, color = type)) + geom_line(size=1) + geom_point(size=4, shape=21, fill="white") + ggtitle("Species Count from 2002 to 2016") + labs(x="Years", y="Species Count")
+line <- ggplot(cst_trendL[cst_trendL$year >= "2002-01-01",], aes(x = year, y = count, color = type)) + geom_line(size=1) + geom_point(size=2) + ggtitle("Species Count from 2002 to 2016") + labs(x="Years", y="Species Count")
 line <- line + theme_bw()
 line
 ```
