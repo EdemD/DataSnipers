@@ -137,7 +137,10 @@ colnames(cst_trendL)[3] <- "count"
 
 #Plotting the dataset
 library(ggplot2)
-ggplot(cst_trendL, aes(x = year, y = count, color = type)) + geom_line(size=1)
+
+line <- ggplot(cst_trendL, aes(x = year, y = count, color = type)) + geom_line(size=1) + geom_point(size=2)+ ggtitle("Species Count from 1937 to 2016") + labs(x="Years", y="Species Count")
+line <- line + theme_bw()
+line
 ```
 
 ![](vikash-rScript_files/figure-markdown_github/cst_plot-1.png)
@@ -145,7 +148,12 @@ ggplot(cst_trendL, aes(x = year, y = count, color = type)) + geom_line(size=1)
 NYBG has been actively working since 2002, and the results for the same is evident from the plot above. If we analyze this trend from 2002 to 2016, we would get a more detailed picture
 
 ``` r
-ggplot(cst_trendL[cst_trendL$year >= "2002-01-01",], aes(x = year, y = count, color = type)) + geom_line(size=1)
+line <- ggplot(cst_trendL[cst_trendL$year >= "2002-01-01",], aes(x = year, y = count, color = type)) + geom_line(size=1) + geom_point(size=4, shape=21, fill="white") + ggtitle("Species Count from 2002 to 2016") + labs(x="Years", y="Species Count")
+line <- line + theme_bw()
+line
 ```
 
-![](vikash-rScript_files/figure-markdown_github/cst_plot_2002-1.png) \# End
+![](vikash-rScript_files/figure-markdown_github/cst_plot_2002-1.png)
+
+End
+===
