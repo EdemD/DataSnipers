@@ -80,6 +80,35 @@ line <- line + theme_bw()
 line
 ```
 
-# 
+# Percentage change over years
+From the above plots, it is evident that number of native species has increased a lot, due to management efforts compared to non-native and invasive species. Even though there is an increase in invasive species, the overall percentage of invasive species has decreased a lot.
+
+```{r pie_charts_cst}
+#Getting some colors
+library("RColorBrewer", lib.loc="~/R/win-library/3.4")
+
+#Creating the pie for the year 2002
+count_2002 <- cst_trendL[cst_trendL$year == "2002-01-01",-c(1)]
+slices <- count_2002$count
+
+labels <-  count_2002$type
+percent <- round(slices/sum(slices)*100, digits = 2)
+labels <- paste(labels, percent)
+labels <- paste(labels, "%", sep="")
+
+pie(slices, labels, main="Percentage of species type in 2002", col=brewer.pal(length(labels),"Pastel1"))
+
+#Creating pie for 2006
+count_2006 <- cst_trendL[cst_trendL$year == "2006-01-01",-c(1)]
+slices <- count_2006$count
+
+labels <-  count_2006$type
+percent <- round(slices/sum(slices)*100, digits = 2)
+labels <- paste(labels, percent)
+labels <- paste(labels, "%", sep="")
+
+pie(slices, labels, main="Percentage of species type in 2006", col=brewer.pal(length(labels),"Pastel1"))
+
+```
 
 # End
