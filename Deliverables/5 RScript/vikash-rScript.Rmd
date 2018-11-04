@@ -35,6 +35,12 @@ cst$Survey.Year <- factor(cst$Survey.Year)
 summary(cst)
 ```
 To analyze the variation of native, non-native and invasive species by years, we need to create a simplified dataframe.
+```{r cst_trendAlt}
+# Trying Tidyverse
+cst %>%
+  group_by(cst$Survey.Year)
+```
+
 ```{r cst_trend}
 #Create sub-tables
 cst_1937 <- subset(cst, cst$Survey.Year==1937)
@@ -109,6 +115,15 @@ labels <- paste(labels, "%", sep="")
 
 pie(slices, labels, main="Percentage of species type in 2006", col=brewer.pal(length(labels),"Pastel1"))
 
+```
+
+### Trying GGPlot
+```{r pie_chart_cst2}
+attach(cst_trendL)
+ggplot(cst_trendL, aes(x="", y=count, fill=type)) + 
+  geom_bar(width=1, stat="identity") +
+  coord_polar(theta = "y", start = 0) + 
+  facet_wrap(~year)
 ```
 
 # End
