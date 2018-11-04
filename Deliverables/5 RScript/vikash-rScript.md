@@ -1,15 +1,17 @@
 R-Script
 ================
 
-Reading Source Files
---------------------
+New York Botanical Garden Analysis
+==================================
 
-The source files used are the cleaned files, the documentation for which can be found in [here](Deliverables/4%20Data%20Cleaning/Data%20Cleaning.md)
+1. Trend in native, non-native and invasive species over the years
+------------------------------------------------------------------
 
--   Comprehensive Species Tally (1937-2016)
--   NYBG Restoration Planting (2007-2018)
+The source files used for this analysis are already cleaned, the documentation for which can be found in [here](Deliverables/4%20Data%20Cleaning/Data%20Cleaning.md)
 
-**Comprehensive Species Tally (1937-2016)**
+File Used - Comprehensive Species Tally (1937-2016)
+
+\*\* Reading the file\*\*
 
 ``` r
 cst <- read.csv("src/Comprehensive Species Tally 1937-2016.csv", na.strings = "na")
@@ -39,26 +41,7 @@ head(cst)
     ## 5        n
     ## 6        n
 
-**NYBG Restoration Planting (2007-2018)**
-
-``` r
-restoration <- read.csv("src/NYBG Forest Restoration Plantings 2007-2018.csv")
-restoration <- restoration[,-c(1,6,7,9)]
-head(restoration)
-```
-
-    ##   Qty                Taxon Plant.Type Height..inches. Date.Planted
-    ## 1   4      Quercus bicolor       Tree            >=24     5/1/2007
-    ## 2   5 Hamamelis virginiana      Shrub            >=24   11/11/2007
-    ## 3   4 Hamamelis virginiana      Shrub            >=24   11/11/2007
-    ## 4  12    Viburnum dentatum      Shrub            >=24   11/11/2007
-    ## 5  12    Viburnum dentatum      Shrub            >=24   11/11/2007
-    ## 6  12 Viburnum prunifolium      Shrub            >=24   11/11/2007
-
-Comprehensive Species Tally
----------------------------
-
-Quick summary of the dataset
+**Quick summary of the dataset**
 
 ``` r
 cst$Survey.Year <- factor(cst$Survey.Year)
@@ -90,7 +73,9 @@ summary(cst)
     ##          
     ## 
 
-To analyze the variation of native, non-native and invasive species by years, we need to create a simplified dataframe.
+### Simplifying the dataframe
+
+To analyze the variation of native, non-native and invasive species by years, we need to create a simplified dataframe, that gives us the count by years
 
 ``` r
 #Create sub-tables
@@ -121,7 +106,7 @@ head(cst_trend)
 
 ### Plotting the number of species by survey years
 
-We will first reshape the dataframe to suit our needs and then plot it using ggplot. Reshape2 package has cast and melt functions that can be used to change a the dataframe between wide and long format.
+We will first reshape the dataframe to suit our needs and then plot it using ggplot. Reshape2 package has cast and melt functions that can be used to change a dataframe between wide and long format.
 
 ``` r
 #Reshaping the dataframe
@@ -155,15 +140,18 @@ line
 
 ![](vikash-rScript_files/figure-markdown_github/cst_plot_2002-1.png)
 
+There is a clear growth in the total number of species in all the three types - native, non-native and invasive. Although, the number of species has been increasing for all these three types, the growth in invasive species seems to be declining after 2012. We can get a better picture by analyzing the percentage species by every year.
+
 Percentage change over years
 ============================
 
-From the above plots, it is evident that number of native species has increased a lot, due to management efforts compared to non-native and invasive species. Even though there is an increase in invasive species, the overall percentage of invasive species has decreased a lot.
+To plot the percentage change, we have used a Pie chart for every year the survey was held (except for 1937).
 
 ``` r
 #Getting some colors
 library("RColorBrewer", lib.loc="~/R/win-library/3.4")
 
+par(mar=c(0, 0, 2, 0), oma=c(0,0,2,0), mfrow=c(2,2))
 #Creating the pie for the year 2002
 count_2002 <- cst_trendL[cst_trendL$year == "2002-01-01",-c(1)]
 slices <- count_2002$count
@@ -174,11 +162,7 @@ labels <- paste(labels, percent)
 labels <- paste(labels, "%", sep="")
 
 pie(slices, labels, main="Percentage of species type in 2002", col=brewer.pal(length(labels),"Pastel1"))
-```
 
-![](vikash-rScript_files/figure-markdown_github/pie_charts_cst-1.png)
-
-``` r
 #Creating pie for 2006
 count_2006 <- cst_trendL[cst_trendL$year == "2006-01-01",-c(1)]
 slices <- count_2006$count
@@ -189,9 +173,53 @@ labels <- paste(labels, percent)
 labels <- paste(labels, "%", sep="")
 
 pie(slices, labels, main="Percentage of species type in 2006", col=brewer.pal(length(labels),"Pastel1"))
+
+#Creating pie for 2011
+count_2011 <- cst_trendL[cst_trendL$year == "2011-01-01",-c(1)]
+slices <- count_2011$count
+
+labels <-  count_2011$type
+percent <- round(slices/sum(slices)*100, digits = 2)
+labels <- paste(labels, percent)
+labels <- paste(labels, "%", sep="")
+
+pie(slices, labels, main="Percentage of species type in 2011", col=brewer.pal(length(labels),"Pastel1"))
+
+#Creating pie for 2016
+count_2016 <- cst_trendL[cst_trendL$year == "2016-01-01",-c(1)]
+slices <- count_2016$count
+
+labels <-  count_2016$type
+percent <- round(slices/sum(slices)*100, digits = 2)
+labels <- paste(labels, percent)
+labels <- paste(labels, "%", sep="")
+
+pie(slices, labels, main="Percentage of species type in 2016", col=brewer.pal(length(labels),"Pastel1"))
 ```
 
-![](vikash-rScript_files/figure-markdown_github/pie_charts_cst-2.png)
+![](vikash-rScript_files/figure-markdown_github/pie_charts_cst-1.png)
+
+From the pies, we can see that the percentage of native species has almost been constant over the period of 14 years. From 64.29% in 2002, it decreased till 48% in 2011, and then increased again to 60.69%. There is a minor increase in the %age of non-native species and is at its highest (26.9%) in 2016. The %age of invasive species although increased from 14.29% to 20% in 2011, decreased to its lowest (12.41%) in 2016.
+
+If we combine our findings to the trend in species count that we found earlier, we can infer that even though the number of species have increased over the past years, the invasive speices have been controlled more effectively after 2011.
+
+**NYBG Restoration Planting (2007-2018)**
+
+-   NYBG Restoration Planting (2007-2018)
+
+``` r
+restoration <- read.csv("src/NYBG Forest Restoration Plantings 2007-2018.csv")
+restoration <- restoration[,-c(1,6,7,9)]
+head(restoration)
+```
+
+    ##   Qty                Taxon Plant.Type Height..inches. Date.Planted
+    ## 1   4      Quercus bicolor       Tree            >=24     5/1/2007
+    ## 2   5 Hamamelis virginiana      Shrub            >=24   11/11/2007
+    ## 3   4 Hamamelis virginiana      Shrub            >=24   11/11/2007
+    ## 4  12    Viburnum dentatum      Shrub            >=24   11/11/2007
+    ## 5  12    Viburnum dentatum      Shrub            >=24   11/11/2007
+    ## 6  12 Viburnum prunifolium      Shrub            >=24   11/11/2007
 
 End
 ===
