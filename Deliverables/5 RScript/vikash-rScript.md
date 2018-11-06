@@ -1,11 +1,18 @@
 R-Script
 ================
 
+-   [New York Botanical Garden Analysis](#new-york-botanical-garden-analysis)
+    -   [1. Trend in number of native, non-native and invasive species over the years](#trend-in-number-of-native-non-native-and-invasive-species-over-the-years)
+        -   [Simplifying the dataframe](#simplifying-the-dataframe)
+        -   [Plotting the number of species by survey years](#plotting-the-number-of-species-by-survey-years)
+-   [Percentage change over years](#percentage-change-over-years)
+-   [End](#end)
+
 New York Botanical Garden Analysis
 ==================================
 
-1. Trend in native, non-native and invasive species over the years
-------------------------------------------------------------------
+1. Trend in number of native, non-native and invasive species over the years
+----------------------------------------------------------------------------
 
 The source files used for this analysis are already cleaned, the documentation for which can be found in [here](Deliverables/4%20Data%20Cleaning/Data%20Cleaning.md)
 
@@ -130,7 +137,7 @@ line
 
 ![](vikash-rScript_files/figure-markdown_github/cst_plot-1.png)
 
-NYBG has been actively working since 2002, and the results for the same is evident from the plot above. If we analyze this trend from 2002 to 2016, we would get a more detailed picture
+The number of species
 
 ``` r
 line <- ggplot(cst_trendL[cst_trendL$year >= "2002-01-01",], aes(x = year, y = count, color = type)) + geom_line(size=1) + geom_point(size=2) + ggtitle("Species Count from 2002 to 2016") + labs(x="Years", y="Species Count")
