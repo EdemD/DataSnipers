@@ -1,0 +1,83 @@
+---
+title: "R scripts and plots"
+author: "Edem Dosseh"
+date: "November 6, 2018"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("~/Edem/R Project/")
+```
+
+## Read in the files
+
+```{r }
+library(readxl)
+woodyplants <- read_xlsx("Combined Woody Plants Data (2002,2006,2011,2016).xlsx")
+groundcover <- read.csv("Combined Groundcover2011_2016.csv", stringsAsFactors = FALSE)
+
+head(woodyplants)
+tail(woodyplants)
+str(woodyplants)
+summary(woodyplants)
+
+head(groundcover)
+tail(groundcover)
+str(groundcover)
+summary(groundcover)
+##forestmgmt <- read_xls("NYBG Forest Management_11052008 to 12312014.xls")
+```
+
+## Removing rows that have missing values in all columns except for first year (Year column)
+```{r }
+## First We are checking if there are any missing year column which is the first column on the datasets
+sum(is.na(woodyplants$Year))
+sum(is.na(groundcover$Sample.Date))
+
+## Removing the empty rows
+woodyplants <- woodyplants[rowSums(is.na(woodyplants)) < 7,]
+groundcover <- groundcover[rowSums(is.na(groundcover)) < 10,]
+```
+
+
+## Massaging the data
+```{r }
+woodyplants$`Transect Number` <- as.factor(woodyplants$`Transect Number`)
+woodyplants$`Plot Number` <- as.factor(woodyplants$`Plot Number`)
+
+groundcover$Transect.Number <- as.factor(groundcover$Transect.Number)
+groundcover$Plot.Number <- as.factor(groundcover$Plot.Number)
+groundcover$Sample.Date <- as.Date(groundcover$Sample.Date, format = "%m/%d/%Y")
+
+#Set all the values in Genus to uppercases
+woodyplants$Genus <- toupper(woodyplants$Genus)
+
+library(dplyr)
+
+#Get top 7 Genus
+top_7 <- woodyplants %>% count(Genus) %>% arrange(desc(n)) %>% filter(n > 1000)
+
+#Create a vector with top 7 Genus
+target <- c("PRUNUS","DEAD","LINDERA","ACER","ARALIA","FAGUS","VIBURNUM")
+
+#Get top 7 Genus with Year
+top_7_year <- woodyplants %>% count(Year,Genus) %>% arrange(desc(n)) %>% filter(Genus %in% target )
+
+#Create plots
+
+
+```
+
+
+## Including Plots
+
+
+```{r}
+library(ggplot2)
+
+ggplot(top_7_year, aes(x = Genus, y = n, fill = factor(Year)), position ="dodge") + geom_bar(stat = "identity")
+ggplot(top_7_year, aes(x = Genus, y = n, fill = factor(Year)), position ="dodge") + geom_bar(stat = "identity", position = "dodge")
+```
+
+
