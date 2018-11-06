@@ -1,40 +1,43 @@
 ---
 title: "R-Script"
-output: github_document
+output: 
+  github_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(reshape2)
+library(ggplot2)
+library("RColorBrewer", lib.loc="~/R/win-library/3.4")
+library(lubridate)
 ```
 
-## Reading Source Files
+# New York Botanical Garden Analysis
 
-The source files used are the cleaned files, the documentation for which can be found in [here](Deliverables/4%20Data%20Cleaning/Data%20Cleaning.md)
+## 1. Trend in number of native, non-native and invasive species over the years
 
-* Comprehensive Species Tally (1937-2016)
-* NYBG Restoration Planting (2007-2018)
+The source files used for this analysis are already cleaned, the documentation for which can be found in [here](Deliverables/4%20Data%20Cleaning/Data%20Cleaning.md)
 
-**Comprehensive Species Tally (1937-2016)**
+File Used - Comprehensive Species Tally (1937-2016)
+
+** Reading the source file**
 ```{r comprehensive_species_tally}
 cst <- read.csv("src/Comprehensive Species Tally 1937-2016.csv", na.strings = "na")
 cst <- cst[,-c(2,3,4)]
 head(cst)
 ```
 
-**NYBG Restoration Planting (2007-2018)**
-```{r restoration_planting}
-restoration <- read.csv("src/NYBG Forest Restoration Plantings 2007-2018.csv")
-restoration <- restoration[,-c(1,6,7,9)]
-head(restoration)
-```
-
-## Comprehensive Species Tally
-Quick summary of the dataset
+**Quick summary of the dataset**
 ```{r cst}
 cst$Survey.Year <- factor(cst$Survey.Year)
 summary(cst)
 ```
-To analyze the variation of native, non-native and invasive species by years, we need to create a simplified dataframe.
+
+### 1.1. Reshaping the source table
+To analyze the variation of native, non-native and invasive species by years, we need to create a simplified dataframe, that gives us the count by years
+
 ```{r cst_trend}
 #Create sub-tables
 cst_1937 <- subset(cst, cst$Survey.Year==1937)
@@ -55,24 +58,21 @@ cst_trend <- data.frame(year, native, non_native, invasive, stringsAsFactors = F
 head(cst_trend)
 ```
 
-### Plotting the number of species by survey years
-We will first reshape the dataframe to suit our needs and then plot it using ggplot. Reshape2 package has cast and melt functions that can be used to change a the dataframe between wide and long format.
+### 1.2. Plotting the number of species types by survey years
+To plot the number of species types, We will first reshape the dataframe into the 'long' format and then plot it using ggplot. Reshape2 package has cast and melt functions that can be used to change a dataframe between wide and long format.
 ```{r cst_plot}
 #Reshaping the dataframe
-library(reshape2)
 cst_trendL <- melt(cst_trend, id.vars = c("year"))
 colnames(cst_trendL)[2] <- "type"
 colnames(cst_trendL)[3] <- "count"
 
 #Plotting the dataset
-library(ggplot2)
-
 line <- ggplot(cst_trendL, aes(x = year, y = count, color = type)) + geom_line(size=1) + geom_point(size=2)+ ggtitle("Species Count from 1937 to 2016") + labs(x="Years", y="Species Count")
 line <- line + theme_bw()
 line
 ```
 
-NYBG has been actively working since 2002, and the results for the same is evident from the plot above. If we analyze this trend from 2002 to 2016, we would get a more detailed picture
+The number of species types have increased a lot from the earliest survey data available. The increase in the species types is valid for all the species types.
 
 ```{r cst_plot_2002}
 line <- ggplot(cst_trendL[cst_trendL$year >= "2002-01-01",], aes(x = year, y = count, color = type)) + geom_line(size=1) + geom_point(size=2) + ggtitle("Species Count from 2002 to 2016") + labs(x="Years", y="Species Count")
@@ -80,6 +80,154 @@ line <- line + theme_bw()
 line
 ```
 
-# 
+From the period 2002 to 2016, there is a tremendous growth in the total number of species in all the three types - native, non-native and invasive. Although, the number of species has been increasing for all these three types, the growth in invasive species seems to be declining after 2012. We can get a better picture by analyzing the percentage species by every year.
 
+## 1.3. Percentage change in species types over years
+To plot the percentage change, we have used a Pie chart for every year the survey was held (except for 1937).
+
+```{r pie_charts_cst}
+par(mar=c(0, 0, 2, 0), oma=c(0,0,2,0), mfrow=c(2,2))
+#Creating the pie for the year 2002
+count_2002 <- cst_trendL[cst_trendL$year == "2002-01-01",-c(1)]
+slices <- count_2002$count
+
+labels <-  count_2002$type
+percent <- round(slices/sum(slices)*100, digits = 2)
+labels <- paste(labels, percent)
+labels <- paste(labels, "%", sep="")
+
+pie(slices, labels, main="Percentage of species type in 2002", col=brewer.pal(length(labels),"Pastel1"))
+
+#Creating pie for 2006
+count_2006 <- cst_trendL[cst_trendL$year == "2006-01-01",-c(1)]
+slices <- count_2006$count
+
+labels <-  count_2006$type
+percent <- round(slices/sum(slices)*100, digits = 2)
+labels <- paste(labels, percent)
+labels <- paste(labels, "%", sep="")
+
+pie(slices, labels, main="Percentage of species type in 2006", col=brewer.pal(length(labels),"Pastel1"))
+
+#Creating pie for 2011
+count_2011 <- cst_trendL[cst_trendL$year == "2011-01-01",-c(1)]
+slices <- count_2011$count
+
+labels <-  count_2011$type
+percent <- round(slices/sum(slices)*100, digits = 2)
+labels <- paste(labels, percent)
+labels <- paste(labels, "%", sep="")
+
+pie(slices, labels, main="Percentage of species type in 2011", col=brewer.pal(length(labels),"Pastel1"))
+
+#Creating pie for 2016
+count_2016 <- cst_trendL[cst_trendL$year == "2016-01-01",-c(1)]
+slices <- count_2016$count
+
+labels <-  count_2016$type
+percent <- round(slices/sum(slices)*100, digits = 2)
+labels <- paste(labels, percent)
+labels <- paste(labels, "%", sep="")
+
+pie(slices, labels, main="Percentage of species type in 2016", col=brewer.pal(length(labels),"Pastel1"))
+
+```
+
+From the pies, we can see that the percentage of species types that were native has almost been constant over the period of 14 years. From 64.29% in 2002, it decreased till 48% in 2011, and then increased again to 60.69%. There is a minor increase in the %age of non-native species types and is at its highest (26.9%) in 2016. The %age of invasive species types although increased from 14.29% to 20% in 2011, decreased to its lowest (12.41%) in 2016.
+
+If we combine our findings to the trend in species count that we found earlier, we can infer that even though the number of species have increased over the past years, the invasive species types have been controlled more effectively after 2011.
+
+## 2. Restoration Efforts over the years (2007-2018)
+
+Towards the management goals, there are active restoration projects that have been going on since 2007. 
+
+By analysing the source file 'NYBG Forest Restoration Planting we can analyze the restoration efforts during the survey period.
+
+```{r restoration_planting}
+restoration <- read.csv("src/NYBG Forest Restoration Plantings 2007-2018.csv", stringsAsFactors = FALSE)
+restoration <- restoration[,-c(1,5,6,7,9)]
+
+attach(restoration)
+
+# Modifying the Data Types
+restoration$Date.Planted <- as.Date(Date.Planted, "%m/%d/%Y")
+restoration$Plant.Type <- as.factor(Plant.Type)
+
+head(restoration)
+```
+A quick summary of the dataframe provides us with important information about the data under analysis
+```{r restoration_summary}
+summary(restoration)
+```
+
+This provides us with some imporant information on the data. There are 3 plant types, that have been planted as a part of restoration processes -
+* Herb
+* Shrubs
+* Tree
+
+```{r plant_type}
+#Total plants planted
+sum(Qty)
+
+#Total plants planted by Type
+res_qty_type <- restoration %>%
+  group_by(Plant.Type) %>%
+  summarise(Qty = sum(Qty))
+res_qty_type
+
+# Pie Chart for the plants planted by Type
+slices <- res_qty_type$Qty
+labels <-  res_qty_type$Plant.Type
+percent <- round(slices/sum(slices)*100, digits = 2)
+labels <- paste(labels, percent)
+labels <- paste(labels, "%", sep="")
+
+pie(slices, labels, main="Plant types planted", col=brewer.pal(length(labels),"Pastel1"))
+```
+
+If we analyze these plant types and the quantities planted over the years
+
+```{r quantities planted by year and month}
+#Adding a column for the year
+restoration <- restoration %>%
+  mutate(year_planted = year(restoration$Date.Planted))
+
+#Adding a column for the month
+restoration <- restoration %>%
+  mutate(month_planted = month(restoration$Date.Planted))
+
+#Summarising number of plants planted by years
+res_qty_year <- restoration %>%
+  group_by(year_planted) %>%
+  summarise(Qty = sum(Qty))
+
+plot_qty_year <- ggplot(res_qty_year, aes(x=res_qty_year$year_planted, y=res_qty_year$Qty)) + geom_bar(stat = "identity") + 
+  geom_text(y=res_qty_year$Qty+300 , label = res_qty_year$Qty) + 
+  ggtitle("Restoration Planting by Years") + labs(x="Years", y="Plants planted") +
+  theme_bw()
+plot_qty_year
+```
+
+```{r qty_by_monthYear}
+#Plantation by month and year
+res_month <- restoration %>%
+  group_by(year_planted, month_planted) %>%
+  summarise(Qty = sum(Qty))
+
+#Adding a dummy month column for X Label
+res_month <- res_month %>%
+  mutate(month2_planted = as.Date(paste0("2000-", month_planted, "-01"), "%Y-%m-%d"))
+
+#Plotting the new dataset
+res_month %>%
+  ggplot(aes(x=month2_planted, y=Qty)) +
+    geom_bar(stat = "identity", fill = "darkorchid4") +
+  facet_wrap(~year_planted, ncol = 3) +
+    labs(title="Plantations by Months/Year", x="Month", y="Quantity planted")+
+  theme_bw() + scale_x_date(date_labels = "%b")
+```
+
+```{r ending restoration_planting}
+detach(restoration)
+```
 # End
