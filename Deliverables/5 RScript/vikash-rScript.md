@@ -126,11 +126,6 @@ We will first reshape the dataframe to suit our needs and then plot it using ggp
 ``` r
 #Reshaping the dataframe
 library(reshape2)
-```
-
-    ## Warning: package 'reshape2' was built under R version 3.4.4
-
-``` r
 cst_trendL <- melt(cst_trend, id.vars = c("year"))
 colnames(cst_trendL)[2] <- "type"
 colnames(cst_trendL)[3] <- "count"
