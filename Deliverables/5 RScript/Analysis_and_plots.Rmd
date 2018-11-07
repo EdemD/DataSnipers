@@ -17,8 +17,6 @@ library(lubridate)
 library(readxl)
 ```
 
-# New York Botanical Garden Analysis
-
 ## 1. Trend in number of native, non-native and invasive species over the years
 
 The source files used for this analysis are already cleaned, the documentation for which can be found in [here](Deliverables/4%20Data%20Cleaning/Data%20Cleaning.md)
@@ -285,11 +283,14 @@ ggplot(top_7_year, aes(x = Genus, y = n, fill = factor(Year)), position ="dodge"
 ggplot(top_7_year, aes(x = Genus, y = n, fill = factor(Year)), position ="dodge") + geom_bar(stat = "identity", position = "dodge")
 ```
 
+-
 ## 4. Analysis on TFF and NYBG
+
 * [Analysis on TFF Management](harwinder-rscript_files/TFF%20Management%20Analysis.pdf)
 * [Analysis on Forest Restoration](harwinder-rscript_files/NYBG%20Forest%20Restoration%202007%20Analysis%20-%202018.pdf)
 
 ## Contributorship
+
 Kumar Vikash
 * Trend in number of native, non-native and invasive species over the years
 * Restoration Efforts over the years (2007-2018)
@@ -302,4 +303,5 @@ Harwinder Kaur
 
 
 ## Proofread Statement
+
 The document was proofread by Kumar Vikash on Nov 7, 2018

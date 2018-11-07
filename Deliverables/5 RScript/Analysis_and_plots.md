@@ -1,21 +1,16 @@
 Analysis using R
 ================
 
--   [New York Botanical Garden Analysis](#new-york-botanical-garden-analysis)
-    -   [1. Trend in number of native, non-native and invasive species over the years](#trend-in-number-of-native-non-native-and-invasive-species-over-the-years)
-        -   [1.1. Reshaping the source table](#reshaping-the-source-table)
-        -   [1.2. Plotting the number of species types by survey years](#plotting-the-number-of-species-types-by-survey-years)
-    -   [2. Restoration Efforts over the years (2007-2018)](#restoration-efforts-over-the-years-2007-2018)
-    -   [3. Woody cover and Ground cover](#woody-cover-and-ground-cover)
-        -   [Removing rows that have missing values in all columns except for first year (Year column)](#removing-rows-that-have-missing-values-in-all-columns-except-for-first-year-year-column)
-        -   [Massaging the data](#massaging-the-data)
-        -   [Including Plots](#including-plots)
-    -   [4. Analysis on TFF and NYBG](#analysis-on-tff-and-nybg)
-    -   [Contributorship](#contributorship)
-    -   [Proofread Statement](#proofread-statement)
-
-New York Botanical Garden Analysis
-==================================
+-   [1. Trend in number of native, non-native and invasive species over the years](#trend-in-number-of-native-non-native-and-invasive-species-over-the-years)
+    -   [1.1. Reshaping the source table](#reshaping-the-source-table)
+    -   [1.2. Plotting the number of species types by survey years](#plotting-the-number-of-species-types-by-survey-years)
+-   [2. Restoration Efforts over the years (2007-2018)](#restoration-efforts-over-the-years-2007-2018)
+-   [3. Woody cover and Ground cover](#woody-cover-and-ground-cover)
+    -   [Removing rows that have missing values in all columns except for first year (Year column)](#removing-rows-that-have-missing-values-in-all-columns-except-for-first-year-year-column)
+    -   [Massaging the data](#massaging-the-data)
+    -   [Including Plots](#including-plots)
+-   [Contributorship](#contributorship)
+-   [Proofread Statement](#proofread-statement)
 
 1. Trend in number of native, non-native and invasive species over the years
 ----------------------------------------------------------------------------
@@ -528,8 +523,8 @@ ggplot(top_7_year, aes(x = Genus, y = n, fill = factor(Year)), position ="dodge"
 
 ![](Analysis_and_plots_files/figure-markdown_github/unnamed-chunk-4-2.png)
 
-4. Analysis on TFF and NYBG
----------------------------
+-   4. Analysis on TFF and NYBG
+    ---------------------------
 
 -   [Analysis on TFF Management](harwinder-rscript_files/TFF%20Management%20Analysis.pdf)
 -   [Analysis on Forest Restoration](harwinder-rscript_files/NYBG%20Forest%20Restoration%202007%20Analysis%20-%202018.pdf)
