@@ -224,7 +224,7 @@ res_month %>%
     geom_bar(stat = "identity", fill = "darkorchid4") +
   facet_wrap(~year_planted, ncol = 3) +
     labs(title="Plantations by Months/Year", x="Month", y="Quantity planted")+
-  theme_bw() + scale_x_date(date_labels = "%b")
+  theme_bw(base_size = 15) + scale_x_date(date_labels = "%b")
 ```
 
 ```{r ending restoration_planting}
