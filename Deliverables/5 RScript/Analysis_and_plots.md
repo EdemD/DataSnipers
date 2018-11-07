@@ -9,8 +9,9 @@ Analysis using R
     -   [Removing rows that have missing values in all columns except for first year (Year column)](#removing-rows-that-have-missing-values-in-all-columns-except-for-first-year-year-column)
     -   [Massaging the data](#massaging-the-data)
     -   [Including Plots](#including-plots)
--   [Contributorship](#contributorship)
--   [Proofread Statement](#proofread-statement)
+-   [4. Analysis on TFF and NYBG](#analysis-on-tff-and-nybg)
+-   [5. Contributorship](#contributorship)
+-   [6. Proofread Statement](#proofread-statement)
 
 1. Trend in number of native, non-native and invasive species over the years
 ----------------------------------------------------------------------------
@@ -523,14 +524,14 @@ ggplot(top_7_year, aes(x = Genus, y = n, fill = factor(Year)), position ="dodge"
 
 ![](Analysis_and_plots_files/figure-markdown_github/unnamed-chunk-4-2.png)
 
--   4. Analysis on TFF and NYBG
-    ---------------------------
+4. Analysis on TFF and NYBG
+---------------------------
 
 -   [Analysis on TFF Management](harwinder-rscript_files/TFF%20Management%20Analysis.pdf)
 -   [Analysis on Forest Restoration](harwinder-rscript_files/NYBG%20Forest%20Restoration%202007%20Analysis%20-%202018.pdf)
 
-Contributorship
----------------
+5. Contributorship
+------------------
 
 Kumar Vikash \* Trend in number of native, non-native and invasive species over the years \* Restoration Efforts over the years (2007-2018)
 
@@ -538,7 +539,7 @@ Edem Dosseh \* Woody Cover and Ground cover
 
 Harwinder Kaur \* Analysis on TFF and NYBG
 
-Proofread Statement
--------------------
+6. Proofread Statement
+----------------------
 
 The document was proofread by Kumar Vikash on Nov 7, 2018

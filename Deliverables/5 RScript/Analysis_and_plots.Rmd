@@ -283,13 +283,14 @@ ggplot(top_7_year, aes(x = Genus, y = n, fill = factor(Year)), position ="dodge"
 ggplot(top_7_year, aes(x = Genus, y = n, fill = factor(Year)), position ="dodge") + geom_bar(stat = "identity", position = "dodge")
 ```
 
--
+
 ## 4. Analysis on TFF and NYBG
 
 * [Analysis on TFF Management](harwinder-rscript_files/TFF%20Management%20Analysis.pdf)
 * [Analysis on Forest Restoration](harwinder-rscript_files/NYBG%20Forest%20Restoration%202007%20Analysis%20-%202018.pdf)
 
-## Contributorship
+
+## 5. Contributorship
 
 Kumar Vikash
 * Trend in number of native, non-native and invasive species over the years
@@ -302,6 +303,6 @@ Harwinder Kaur
 * Analysis on TFF and NYBG
 
 
-## Proofread Statement
+## 6. Proofread Statement
 
 The document was proofread by Kumar Vikash on Nov 7, 2018
