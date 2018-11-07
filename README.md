@@ -17,3 +17,4 @@
 6. [Audience Profile](Deliverables//3%20Audience%20Profile/Audience%20Profile.md)
 7. [Data Cleaning Documentation](Deliverables/4%20Data%20Cleaning/Data%20Cleaning.md)
 8. [R-Scripts (WIP)](Deliverables/5%20RScript)
+9. [R-Plots](Deliverables/5%20RScript/Analysis_and_plots.md)

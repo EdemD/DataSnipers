@@ -1,64 +1,49 @@
-Analysis using R
-================
+---
+title: "Analysis using R"
+output: 
+  github_document:
+    toc: yes
+---
 
--   [New York Botanical Garden Analysis](#new-york-botanical-garden-analysis)
-    -   [1. Trend in number of native, non-native and invasive species over the years](#trend-in-number-of-native-non-native-and-invasive-species-over-the-years)
-        -   [1.1. Reshaping the source table](#reshaping-the-source-table)
-        -   [1.2. Plotting the number of species types by survey years](#plotting-the-number-of-species-types-by-survey-years)
-    -   [2. Restoration Efforts over the years (2007-2018)](#restoration-efforts-over-the-years-2007-2018)
-        -   [Analysis of restoration by species types - native, non-native and invasive](#analysis-of-restoration-by-species-types---native-non-native-and-invasive)
-    -   [Contributorship](#contributorship)
-    -   [Proofread Statement](#proofread-statement)
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(reshape2)
+library(ggplot2)
+library("RColorBrewer", lib.loc="~/R/win-library/3.4")
+library(lubridate)
 
-New York Botanical Garden Analysis
-==================================
+#Edem's
+library(readxl)
+```
 
-1. Trend in number of native, non-native and invasive species over the years
-----------------------------------------------------------------------------
+# New York Botanical Garden Analysis
+
+## 1. Trend in number of native, non-native and invasive species over the years
 
 The source files used for this analysis are already cleaned, the documentation for which can be found in [here](Deliverables/4%20Data%20Cleaning/Data%20Cleaning.md)
 
 File Used - Comprehensive Species Tally (1937-2016)
 
-\*\* Reading the source file\*\*
-
-``` r
+** Reading the source file**
+```{r comprehensive_species_tally}
 cst <- read.csv("src/Comprehensive Species Tally 1937-2016.csv", na.strings = "na")
 cst <- cst[,-c(2,3,4,6,7,8)]
 head(cst)
 ```
 
-    ##   Survey.Year               Taxon Native Non.native Invasive
-    ## 1        2016        Acer negundo      y          n        n
-    ## 2        2016    Acer platanoides      n          y        y
-    ## 3        2016 Acer pseudoplatanus      n          y        y
-    ## 4        2016         Acer rubrum      y          n        n
-    ## 5        2016    Acer saccharinum      y          n        n
-    ## 6        2016      Acer saccharum      y          n        n
-
 From the above
 
 **Quick summary of the dataset**
-
-``` r
+```{r cst}
 cst$Survey.Year <- factor(cst$Survey.Year)
 summary(cst)
 ```
 
-    ##  Survey.Year                     Taxon     Native  Non.native Invasive
-    ##  1937: 18    Carpinus caroliniana   :  5   n:189   n:359      n:427   
-    ##  2002: 37    Fagus grandifolia      :  5   y:322   y:152      y: 84   
-    ##  2006: 49    Liriodendron tulipifera:  5                              
-    ##  2011:131    Ostrya virginiana      :  5                              
-    ##  2016:276    Phellodendron amurense :  5                              
-    ##              Prunus spp.            :  5                              
-    ##              (Other)                :481
-
 ### 1.1. Reshaping the source table
-
 To analyze the variation of native, non-native and invasive species by years, we need to create a simplified dataframe, that gives us the count by years
 
-``` r
+```{r cst_trend}
 #Create sub-tables
 cst_1937 <- subset(cst, cst$Survey.Year==1937)
 cst_2002 <- subset(cst, cst$Survey.Year==2002)
@@ -78,18 +63,9 @@ cst_trend <- data.frame(year, native, non_native, invasive, stringsAsFactors = F
 head(cst_trend)
 ```
 
-    ##         year native non_native invasive
-    ## 1 1937-01-01     15          2        2
-    ## 2 2002-01-01     27          9        6
-    ## 3 2006-01-01     32         15       10
-    ## 4 2011-01-01     72         48       30
-    ## 5 2016-01-01    176         78       36
-
 ### 1.2. Plotting the number of species types by survey years
-
 To plot the number of species types, We will first reshape the dataframe into the 'long' format and then plot it using ggplot. Reshape2 package has cast and melt functions that can be used to change a dataframe between wide and long format.
-
-``` r
+```{r cst_plot}
 #Reshaping the dataframe
 cst_trendL <- melt(cst_trend, id.vars = c("year"))
 colnames(cst_trendL)[2] <- "type"
@@ -101,33 +77,28 @@ line <- line + theme_bw()
 line
 ```
 
-![](vikash-rScript_files/figure-markdown_github/cst_plot-1.png)
-
 The number of species types have increased a lot from the earliest survey data available. The increase in the species types is valid for all the species types.
 
-``` r
+```{r cst_plot_2002}
 line <- ggplot(cst_trendL[cst_trendL$year >= "2002-01-01",], aes(x = year, y = count, color = type)) + geom_line(size=1) + geom_point(size=2) + ggtitle("Species Count from 2002 to 2016") + labs(x="Years", y="Species Count")
 line <- line + theme_bw()
 line
 ```
 
-![](vikash-rScript_files/figure-markdown_github/cst_plot_2002-1.png)
-
 From the period 2002 to 2016, there is a tremendous growth in the total number of species in all the three types - native, non-native and invasive. Although, the number of species has been increasing for all these three types, the growth in invasive species seems to be declining after 2012.
 
-Please note that in the above diagram, the non-native species also includes the invasive species. We may be interested in dividing all the species into - \* Native \* Non-native and Non-invasive \* Invasive (which are also non-native)
+Please note that in the above diagram, the non-native species also includes the invasive species. We may be interested in dividing all the species into -
+* Native
+* Non-native and Non-invasive
+* Invasive (which are also non-native)
 
-``` r
+```{r cst_div}
 cst_div <- cst %>%
   mutate(species_type = case_when(Native=='y' ~ 'Native',
                                   (Non.native=='y' & Invasive=='n') ~ 'Non-native/Non-invasive',
                                   (Non.native=='y' & Invasive=='y') ~ 'Non-native/Invasive',
                                   TRUE ~ 'Uncategorized'))
-```
 
-    ## Warning: package 'bindrcpp' was built under R version 3.4.4
-
-``` r
 cst_div <- cst_div[,-c(3,4,5)]
 cst_div <- subset(cst_div, species_type!='Uncategorized')
 cst_div$species_type <- factor(cst_div$species_type)
@@ -138,25 +109,7 @@ species_type_count <- cst_div %>%
 species_type_count
 ```
 
-    ## # A tibble: 14 x 3
-    ##    Survey.Year species_type                n
-    ##    <fct>       <fct>                   <int>
-    ##  1 1937        Native                     15
-    ##  2 1937        Non-native/Invasive         2
-    ##  3 2002        Native                     27
-    ##  4 2002        Non-native/Invasive         6
-    ##  5 2002        Non-native/Non-invasive     3
-    ##  6 2006        Native                     32
-    ##  7 2006        Non-native/Invasive        10
-    ##  8 2006        Non-native/Non-invasive     5
-    ##  9 2011        Native                     72
-    ## 10 2011        Non-native/Invasive        30
-    ## 11 2011        Non-native/Non-invasive    18
-    ## 12 2016        Native                    176
-    ## 13 2016        Non-native/Invasive        36
-    ## 14 2016        Non-native/Non-invasive    42
-
-``` r
+```{r cst_div_pies}
 par(mar=c(0, 0, 2, 0), oma=c(0,0,2,0), mfrow=c(3,2))
 #Creating the pie for the year 2002
 for(i in levels(species_type_count$Survey.Year)){
@@ -170,20 +123,16 @@ for(i in levels(species_type_count$Survey.Year)){
   
   pie(slices, labels, main=paste("Percentage of species type in ", i), col=brewer.pal(length(labels),"Pastel1"))
 }
+
 ```
 
-    ## Warning in brewer.pal(length(labels), "Pastel1"): minimal value for n is 3, returning requested palette with 3 different levels
+## 2. Restoration Efforts over the years (2007-2018)
 
-![](vikash-rScript_files/figure-markdown_github/cst_div_pies-1.png)
-
-2. Restoration Efforts over the years (2007-2018)
--------------------------------------------------
-
-Towards the management goals, there are active restoration projects that have been going on since 2007.
+Towards the management goals, there are active restoration projects that have been going on since 2007. 
 
 By analysing the source file 'NYBG Forest Restoration Planting we can analyze the restoration efforts during the survey period.
 
-``` r
+```{r restoration_planting}
 restoration <- read.csv("src/NYBG Forest Restoration Plantings 2007-2018.csv", stringsAsFactors = FALSE)
 restoration <- restoration[,-c(1,5,6,7,9)]
 
@@ -195,54 +144,26 @@ restoration$Plant.Type <- as.factor(Plant.Type)
 
 head(restoration)
 ```
-
-    ##   Qty                Taxon Plant.Type Date.Planted
-    ## 1   4      Quercus bicolor       Tree   2007-05-01
-    ## 2   5 Hamamelis virginiana      Shrub   2007-11-11
-    ## 3   4 Hamamelis virginiana      Shrub   2007-11-11
-    ## 4  12    Viburnum dentatum      Shrub   2007-11-11
-    ## 5  12    Viburnum dentatum      Shrub   2007-11-11
-    ## 6  12 Viburnum prunifolium      Shrub   2007-11-11
-
 A quick summary of the dataframe provides us with important information about the data under analysis
-
-``` r
+```{r restoration_summary}
 summary(restoration)
 ```
 
-    ##       Qty             Taxon           Plant.Type   Date.Planted       
-    ##  Min.   :   1.00   Length:1153        Herb :541   Min.   :2007-05-01  
-    ##  1st Qu.:   7.00   Class :character   Shrub:176   1st Qu.:2011-06-08  
-    ##  Median :  17.00   Mode  :character   Tree :436   Median :2012-10-26  
-    ##  Mean   :  33.18                                  Mean   :2013-10-07  
-    ##  3rd Qu.:  40.00                                  3rd Qu.:2016-06-16  
-    ##  Max.   :1000.00                                  Max.   :2018-06-22
+This provides us with some imporant information on the data. There are 3 plant types, that have been planted as a part of restoration processes -
+* Herb
+* Shrubs
+* Tree
 
-This provides us with some imporant information on the data. There are 3 plant types, that have been planted as a part of restoration processes - \* Herb \* Shrubs \* Tree
-
-``` r
+```{r plant_type}
 #Total plants planted
 sum(Qty)
-```
 
-    ## [1] 38258
-
-``` r
 #Total plants planted by Type
 res_qty_type <- restoration %>%
   group_by(Plant.Type) %>%
   summarise(Qty = sum(Qty))
 res_qty_type
-```
 
-    ## # A tibble: 3 x 2
-    ##   Plant.Type   Qty
-    ##   <fct>      <int>
-    ## 1 Herb       21974
-    ## 2 Shrub       2701
-    ## 3 Tree       13583
-
-``` r
 # Pie Chart for the plants planted by Type
 slices <- res_qty_type$Qty
 labels <-  res_qty_type$Plant.Type
@@ -253,11 +174,9 @@ labels <- paste(labels, "%", sep="")
 pie(slices, labels, main="Plant types planted", col=brewer.pal(length(labels),"Pastel1"))
 ```
 
-![](vikash-rScript_files/figure-markdown_github/plant_type-1.png)
-
 If we analyze these plant types and the quantities planted over the years
 
-``` r
+```{r quantities planted by year and month}
 #Adding a column for the year
 restoration <- restoration %>%
   mutate(year_planted = year(restoration$Date.Planted))
@@ -278,9 +197,7 @@ plot_qty_year <- ggplot(res_qty_year, aes(x=res_qty_year$year_planted, y=res_qty
 plot_qty_year
 ```
 
-![](vikash-rScript_files/figure-markdown_github/quantities%20planted%20by%20year%20and%20month-1.png)
-
-``` r
+```{r qty_by_monthYear}
 #Plantation by month and year
 res_month <- restoration %>%
   group_by(year_planted, month_planted) %>%
@@ -299,21 +216,90 @@ res_month %>%
   theme_bw(base_size = 15) + scale_x_date(date_labels = "%b")
 ```
 
-![](vikash-rScript_files/figure-markdown_github/qty_by_monthYear-1.png)
+## 3. Woody cover and Ground cover
 
-### Analysis of restoration by species types - native, non-native and invasive
+```{r }
+woodyplants <- read_xlsx("src/Combined Woody Plants Data (2002,2006,2011,2016).xlsx")
+groundcover <- read.csv("src/Combined Groundcover2011_2016.csv", stringsAsFactors = FALSE)
 
-``` r
-#Left join CST data on the Restoration
-detach(restoration)
+head(woodyplants)
+tail(woodyplants)
+str(woodyplants)
+summary(woodyplants)
+
+head(groundcover)
+tail(groundcover)
+str(groundcover)
+summary(groundcover)
+##forestmgmt <- read_xls("NYBG Forest Management_11052008 to 12312014.xls")
 ```
 
-Contributorship
----------------
+### Removing rows that have missing values in all columns except for first year (Year column)
+```{r }
+## First We are checking if there are any missing year column which is the first column on the datasets
+sum(is.na(woodyplants$Year))
+sum(is.na(groundcover$Sample.Date))
 
-Kumar Vikash -
+## Removing the empty rows
+woodyplants <- woodyplants[rowSums(is.na(woodyplants)) < 7,]
+groundcover <- groundcover[rowSums(is.na(groundcover)) < 10,]
+```
 
-Proofread Statement
--------------------
 
-The document was proofread by Kumar Vikash on Nov 7, 2018 \# End
+### Massaging the data
+```{r }
+woodyplants$`Transect Number` <- as.factor(woodyplants$`Transect Number`)
+woodyplants$`Plot Number` <- as.factor(woodyplants$`Plot Number`)
+
+groundcover$Transect.Number <- as.factor(groundcover$Transect.Number)
+groundcover$Plot.Number <- as.factor(groundcover$Plot.Number)
+groundcover$Sample.Date <- as.Date(groundcover$Sample.Date, format = "%m/%d/%Y")
+
+#Set all the values in Genus to uppercases
+woodyplants$Genus <- toupper(woodyplants$Genus)
+
+library(dplyr)
+
+#Get top 7 Genus
+top_7 <- woodyplants %>% count(Genus) %>% arrange(desc(n)) %>% filter(n > 1000)
+
+#Create a vector with top 7 Genus
+target <- c("PRUNUS","DEAD","LINDERA","ACER","ARALIA","FAGUS","VIBURNUM")
+
+#Get top 7 Genus with Year
+top_7_year <- woodyplants %>% count(Year,Genus) %>% arrange(desc(n)) %>% filter(Genus %in% target )
+
+#Create plots
+
+
+```
+
+
+### Including Plots
+
+
+```{r}
+library(ggplot2)
+
+ggplot(top_7_year, aes(x = Genus, y = n, fill = factor(Year)), position ="dodge") + geom_bar(stat = "identity")
+ggplot(top_7_year, aes(x = Genus, y = n, fill = factor(Year)), position ="dodge") + geom_bar(stat = "identity", position = "dodge")
+```
+
+## 4. Analysis on TFF and NYBG
+* [Analysis on TFF Management](harwinder-rscript_files/TFF%20Management%20Analysis.pdf)
+* [Analysis on Forest Restoration](harwinder-rscript_files/NYBG%20Forest%20Restoration%202007%20Analysis%20-%202018.pdf)
+
+## Contributorship
+Kumar Vikash
+* Trend in number of native, non-native and invasive species over the years
+* Restoration Efforts over the years (2007-2018)
+
+Edem Dosseh
+* Woody Cover and Ground cover
+
+Harwinder Kaur
+* Analysis on TFF and NYBG
+
+
+## Proofread Statement
+The document was proofread by Kumar Vikash on Nov 7, 2018

@@ -6,7 +6,11 @@ Analysis using R
         -   [1.1. Reshaping the source table](#reshaping-the-source-table)
         -   [1.2. Plotting the number of species types by survey years](#plotting-the-number-of-species-types-by-survey-years)
     -   [2. Restoration Efforts over the years (2007-2018)](#restoration-efforts-over-the-years-2007-2018)
-        -   [Analysis of restoration by species types - native, non-native and invasive](#analysis-of-restoration-by-species-types---native-non-native-and-invasive)
+    -   [3. Woody cover and Ground cover](#woody-cover-and-ground-cover)
+        -   [Removing rows that have missing values in all columns except for first year (Year column)](#removing-rows-that-have-missing-values-in-all-columns-except-for-first-year-year-column)
+        -   [Massaging the data](#massaging-the-data)
+        -   [Including Plots](#including-plots)
+    -   [4. Analysis on TFF and NYBG](#analysis-on-tff-and-nybg)
     -   [Contributorship](#contributorship)
     -   [Proofread Statement](#proofread-statement)
 
@@ -101,7 +105,7 @@ line <- line + theme_bw()
 line
 ```
 
-![](vikash-rScript_files/figure-markdown_github/cst_plot-1.png)
+![](Analysis_and_plots_files/figure-markdown_github/cst_plot-1.png)
 
 The number of species types have increased a lot from the earliest survey data available. The increase in the species types is valid for all the species types.
 
@@ -111,7 +115,7 @@ line <- line + theme_bw()
 line
 ```
 
-![](vikash-rScript_files/figure-markdown_github/cst_plot_2002-1.png)
+![](Analysis_and_plots_files/figure-markdown_github/cst_plot_2002-1.png)
 
 From the period 2002 to 2016, there is a tremendous growth in the total number of species in all the three types - native, non-native and invasive. Although, the number of species has been increasing for all these three types, the growth in invasive species seems to be declining after 2012.
 
@@ -174,7 +178,7 @@ for(i in levels(species_type_count$Survey.Year)){
 
     ## Warning in brewer.pal(length(labels), "Pastel1"): minimal value for n is 3, returning requested palette with 3 different levels
 
-![](vikash-rScript_files/figure-markdown_github/cst_div_pies-1.png)
+![](Analysis_and_plots_files/figure-markdown_github/cst_div_pies-1.png)
 
 2. Restoration Efforts over the years (2007-2018)
 -------------------------------------------------
@@ -253,7 +257,7 @@ labels <- paste(labels, "%", sep="")
 pie(slices, labels, main="Plant types planted", col=brewer.pal(length(labels),"Pastel1"))
 ```
 
-![](vikash-rScript_files/figure-markdown_github/plant_type-1.png)
+![](Analysis_and_plots_files/figure-markdown_github/plant_type-1.png)
 
 If we analyze these plant types and the quantities planted over the years
 
@@ -278,7 +282,7 @@ plot_qty_year <- ggplot(res_qty_year, aes(x=res_qty_year$year_planted, y=res_qty
 plot_qty_year
 ```
 
-![](vikash-rScript_files/figure-markdown_github/quantities%20planted%20by%20year%20and%20month-1.png)
+![](Analysis_and_plots_files/figure-markdown_github/quantities%20planted%20by%20year%20and%20month-1.png)
 
 ``` r
 #Plantation by month and year
@@ -299,21 +303,247 @@ res_month %>%
   theme_bw(base_size = 15) + scale_x_date(date_labels = "%b")
 ```
 
-![](vikash-rScript_files/figure-markdown_github/qty_by_monthYear-1.png)
+![](Analysis_and_plots_files/figure-markdown_github/qty_by_monthYear-1.png)
 
-### Analysis of restoration by species types - native, non-native and invasive
+3. Woody cover and Ground cover
+-------------------------------
 
 ``` r
-#Left join CST data on the Restoration
-detach(restoration)
+woodyplants <- read_xlsx("src/Combined Woody Plants Data (2002,2006,2011,2016).xlsx")
+groundcover <- read.csv("src/Combined Groundcover2011_2016.csv", stringsAsFactors = FALSE)
+
+head(woodyplants)
 ```
+
+    ## # A tibble: 6 x 8
+    ##    Year `Transect Number` `Plot Number` `N/S` Genus    `Specific epithet`
+    ##   <dbl>             <dbl>         <dbl> <chr> <chr>    <chr>             
+    ## 1  1937              3.00          4.00 N     Fraxinus sp.               
+    ## 2  1937             11.0           4.00 N     Tsuga    canadensis        
+    ## 3  1937             13.0           1.00 N     Cornus   sp.               
+    ## 4  1937             17.0          14.0  S     Cornus   sp.               
+    ## 5  1937             19.0           3.00 S     Cornus   sp.               
+    ## 6  1937              3.00          2.00 S     Cornus   sp.               
+    ## # ... with 2 more variables: `DBH (cm)` <dbl>, BA <dbl>
+
+``` r
+tail(woodyplants)
+```
+
+    ## # A tibble: 6 x 8
+    ##    Year `Transect Number` `Plot Number` `N/S` Genus    `Specific epithet`
+    ##   <dbl>             <dbl>         <dbl> <chr> <chr>    <chr>             
+    ## 1  2016              27.0          6.00 S     Fraxinus americana         
+    ## 2  2016              27.0          6.00 N     Dead     <NA>              
+    ## 3  2016              27.0          6.00 N     Dead     <NA>              
+    ## 4  2016              27.0          6.00 N     Fraxinus americana         
+    ## 5  2016              27.0          6.00 N     Fraxinus americana         
+    ## 6  2016              27.0          6.00 N     Fraxinus americana         
+    ## # ... with 2 more variables: `DBH (cm)` <dbl>, BA <dbl>
+
+``` r
+str(woodyplants)
+```
+
+    ## Classes 'tbl_df', 'tbl' and 'data.frame':    19595 obs. of  8 variables:
+    ##  $ Year            : num  1937 1937 1937 1937 1937 ...
+    ##  $ Transect Number : num  3 11 13 17 19 3 3 5 5 5 ...
+    ##  $ Plot Number     : num  4 4 1 14 3 2 2 13 16 7 ...
+    ##  $ N/S             : chr  "N" "N" "N" "S" ...
+    ##  $ Genus           : chr  "Fraxinus" "Tsuga" "Cornus" "Cornus" ...
+    ##  $ Specific epithet: chr  "sp." "canadensis" "sp." "sp." ...
+    ##  $ DBH (cm)        : num  2.54 2.54 2.54 2.54 2.54 5.08 5.08 5.08 5.08 5.08 ...
+    ##  $ BA              : num  0.000507 0.000507 0.000507 0.000507 0.000507 ...
+
+``` r
+summary(woodyplants)
+```
+
+    ##       Year      Transect Number  Plot Number        N/S           
+    ##  Min.   :1937   Min.   : 1.00   Min.   :  1.0   Length:19595      
+    ##  1st Qu.:2006   1st Qu.: 9.00   1st Qu.:  7.0   Class :character  
+    ##  Median :2011   Median :13.00   Median : 14.0   Mode  :character  
+    ##  Mean   :2009   Mean   :13.19   Mean   : 39.8                     
+    ##  3rd Qu.:2016   3rd Qu.:17.00   3rd Qu.: 32.0                     
+    ##  Max.   :2016   Max.   :27.00   Max.   :247.0                     
+    ##                 NA's   :89      NA's   :89                        
+    ##     Genus           Specific epithet      DBH (cm)             BA         
+    ##  Length:19595       Length:19595       Min.   :  1.000   Min.   :0.00000  
+    ##  Class :character   Class :character   1st Qu.:  1.427   1st Qu.:0.00016  
+    ##  Mode  :character   Mode  :character   Median :  2.400   Median :0.00045  
+    ##                                        Mean   :  7.780   Mean   :0.01946  
+    ##                                        3rd Qu.:  6.400   3rd Qu.:0.00322  
+    ##                                        Max.   :140.600   Max.   :1.55260  
+    ##                                        NA's   :91        NA's   :90
+
+``` r
+head(groundcover)
+```
+
+    ##   Sample.Date Transect.Number Plot.Number Plot.Corner               Genus
+    ## 1   6/20/2011               1           1          NE Coarse Woody Debris
+    ## 2   6/20/2011               1           1          NW Coarse Woody Debris
+    ## 3   6/20/2011               1           1          SE Coarse Woody Debris
+    ## 4   6/20/2011               1           1          SW Coarse Woody Debris
+    ## 5   6/20/2011               1           2          NE Coarse Woody Debris
+    ## 6   6/20/2011               1           2          NW Coarse Woody Debris
+    ##   Specific.epithet X0.1 X1.2 X2.3 X3.4 X4.5
+    ## 1                     0    8    0    0   10
+    ## 2                   100  100  100   70   40
+    ## 3                    50    5    0   20    0
+    ## 4                     0    0    0    8    0
+    ## 5                     0    0   10    0    0
+    ## 6                     0    0    0    8    0
+
+``` r
+tail(groundcover)
+```
+
+    ##       Sample.Date Transect.Number Plot.Number Plot.Corner       Genus
+    ## 12355   7/28/2011              15          27          NW    Viburnum
+    ## 12356   7/28/2011              15          27          SE       Fagus
+    ## 12357   7/28/2011              15          27          SE Maianthemum
+    ## 12358   7/28/2011              15          27          SW      Aralia
+    ## 12359   7/28/2011              15          27          SW Maianthemum
+    ## 12360   7/28/2011              15          27          SW     Quercus
+    ##       Specific.epithet X0.1 X1.2 X2.3 X3.4 X4.5
+    ## 12355         dentatum    0    0    0 10.0    0
+    ## 12356      grandifolia    0    1    0  0.0   24
+    ## 12357        canadense    0    0   10  0.0    2
+    ## 12358            elata    7   41   13  0.0    0
+    ## 12359        canadense    0    0    0  1.0    0
+    ## 12360            rubra    0    0    0  0.0    2
+
+``` r
+str(groundcover)
+```
+
+    ## 'data.frame':    12360 obs. of  11 variables:
+    ##  $ Sample.Date     : chr  "6/20/2011" "6/20/2011" "6/20/2011" "6/20/2011" ...
+    ##  $ Transect.Number : num  1 1 1 1 1 1 1 1 1 1 ...
+    ##  $ Plot.Number     : num  1 1 1 1 2 2 2 2 3 3 ...
+    ##  $ Plot.Corner     : chr  "NE" "NW" "SE" "SW" ...
+    ##  $ Genus           : chr  "Coarse Woody Debris" "Coarse Woody Debris" "Coarse Woody Debris" "Coarse Woody Debris" ...
+    ##  $ Specific.epithet: chr  "" "" "" "" ...
+    ##  $ X0.1            : num  0 100 50 0 0 0 0 8 0 0 ...
+    ##  $ X1.2            : num  8 100 5 0 0 0 0 0 8 0 ...
+    ##  $ X2.3            : num  0 100 0 0 10 0 0 20 0 5 ...
+    ##  $ X3.4            : chr  "0" "70" "20" "8" ...
+    ##  $ X4.5            : num  10 40 0 0 0 0 0 0 0 0 ...
+
+``` r
+summary(groundcover)
+```
+
+    ##  Sample.Date        Transect.Number  Plot.Number    Plot.Corner       
+    ##  Length:12360       Min.   : 1.00   Min.   : 1.00   Length:12360      
+    ##  Class :character   1st Qu.: 9.00   1st Qu.: 4.00   Class :character  
+    ##  Mode  :character   Median :13.00   Median : 9.00   Mode  :character  
+    ##                     Mean   :13.17   Mean   :10.46                     
+    ##                     3rd Qu.:17.00   3rd Qu.:15.00                     
+    ##                     Max.   :27.00   Max.   :30.00                     
+    ##                                                                       
+    ##     Genus           Specific.epithet        X0.1            X1.2        
+    ##  Length:12360       Length:12360       Min.   :  0.0   Min.   :   0.00  
+    ##  Class :character   Class :character   1st Qu.:  0.0   1st Qu.:   0.00  
+    ##  Mode  :character   Mode  :character   Median :  1.0   Median :   2.00  
+    ##                                        Mean   : 22.2   Mean   :  22.78  
+    ##                                        3rd Qu.: 30.0   3rd Qu.:  30.00  
+    ##                                        Max.   :555.0   Max.   :1000.00  
+    ##                                        NA's   :2       NA's   :2        
+    ##       X2.3            X3.4                X4.5       
+    ##  Min.   :  0.00   Length:12360       Min.   :  0.00  
+    ##  1st Qu.:  0.00   Class :character   1st Qu.:  0.00  
+    ##  Median :  2.00   Mode  :character   Median :  2.00  
+    ##  Mean   : 22.68                      Mean   : 22.39  
+    ##  3rd Qu.: 30.00                      3rd Qu.: 30.00  
+    ##  Max.   :400.00                      Max.   :640.00  
+    ##  NA's   :4                           NA's   :9
+
+``` r
+##forestmgmt <- read_xls("NYBG Forest Management_11052008 to 12312014.xls")
+```
+
+### Removing rows that have missing values in all columns except for first year (Year column)
+
+``` r
+## First We are checking if there are any missing year column which is the first column on the datasets
+sum(is.na(woodyplants$Year))
+```
+
+    ## [1] 0
+
+``` r
+sum(is.na(groundcover$Sample.Date))
+```
+
+    ## [1] 0
+
+``` r
+## Removing the empty rows
+woodyplants <- woodyplants[rowSums(is.na(woodyplants)) < 7,]
+groundcover <- groundcover[rowSums(is.na(groundcover)) < 10,]
+```
+
+### Massaging the data
+
+``` r
+woodyplants$`Transect Number` <- as.factor(woodyplants$`Transect Number`)
+woodyplants$`Plot Number` <- as.factor(woodyplants$`Plot Number`)
+
+groundcover$Transect.Number <- as.factor(groundcover$Transect.Number)
+groundcover$Plot.Number <- as.factor(groundcover$Plot.Number)
+groundcover$Sample.Date <- as.Date(groundcover$Sample.Date, format = "%m/%d/%Y")
+
+#Set all the values in Genus to uppercases
+woodyplants$Genus <- toupper(woodyplants$Genus)
+
+library(dplyr)
+
+#Get top 7 Genus
+top_7 <- woodyplants %>% count(Genus) %>% arrange(desc(n)) %>% filter(n > 1000)
+
+#Create a vector with top 7 Genus
+target <- c("PRUNUS","DEAD","LINDERA","ACER","ARALIA","FAGUS","VIBURNUM")
+
+#Get top 7 Genus with Year
+top_7_year <- woodyplants %>% count(Year,Genus) %>% arrange(desc(n)) %>% filter(Genus %in% target )
+
+#Create plots
+```
+
+### Including Plots
+
+``` r
+library(ggplot2)
+
+ggplot(top_7_year, aes(x = Genus, y = n, fill = factor(Year)), position ="dodge") + geom_bar(stat = "identity")
+```
+
+![](Analysis_and_plots_files/figure-markdown_github/unnamed-chunk-4-1.png)
+
+``` r
+ggplot(top_7_year, aes(x = Genus, y = n, fill = factor(Year)), position ="dodge") + geom_bar(stat = "identity", position = "dodge")
+```
+
+![](Analysis_and_plots_files/figure-markdown_github/unnamed-chunk-4-2.png)
+
+4. Analysis on TFF and NYBG
+---------------------------
+
+-   [Analysis on TFF Management](harwinder-rscript_files/TFF%20Management%20Analysis.pdf)
+-   [Analysis on Forest Restoration](harwinder-rscript_files/NYBG%20Forest%20Restoration%202007%20Analysis%20-%202018.pdf)
 
 Contributorship
 ---------------
 
-Kumar Vikash -
+Kumar Vikash \* Trend in number of native, non-native and invasive species over the years \* Restoration Efforts over the years (2007-2018)
+
+Edem Dosseh \* Woody Cover and Ground cover
+
+Harwinder Kaur \* Analysis on TFF and NYBG
 
 Proofread Statement
 -------------------
 
-The document was proofread by Kumar Vikash on Nov 7, 2018 \# End
+The document was proofread by Kumar Vikash on Nov 7, 2018
