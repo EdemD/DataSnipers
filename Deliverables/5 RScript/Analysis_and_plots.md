@@ -1,20 +1,20 @@
 Analysis using R
 ================
 
--   [1. Trend in number of native, non-native and invasive species over the years](#trend-in-number-of-native-non-native-and-invasive-species-over-the-years)
-    -   [1.1. Reshaping the source table](#reshaping-the-source-table)
-    -   [1.2. Plotting the number of species types by survey years](#plotting-the-number-of-species-types-by-survey-years)
--   [2. Restoration Efforts over the years (2007-2018)](#restoration-efforts-over-the-years-2007-2018)
--   [3. Woody cover and Ground cover](#woody-cover-and-ground-cover)
+-   [Trend in number of native, non-native and invasive species over the years](#trend-in-number-of-native-non-native-and-invasive-species-over-the-years)
+    -   [Reshaping the source table](#reshaping-the-source-table)
+    -   [Plotting the number of species types by survey years](#plotting-the-number-of-species-types-by-survey-years)
+-   [Restoration Efforts over the years (2007-2018)](#restoration-efforts-over-the-years-2007-2018)
+-   [Woody cover and Ground cover](#woody-cover-and-ground-cover)
     -   [Removing rows that have missing values in all columns except for first year (Year column)](#removing-rows-that-have-missing-values-in-all-columns-except-for-first-year-year-column)
     -   [Massaging the data](#massaging-the-data)
     -   [Including Plots](#including-plots)
--   [4. Analysis on TFF and NYBG](#analysis-on-tff-and-nybg)
--   [5. Contributorship](#contributorship)
--   [6. Proofread Statement](#proofread-statement)
+-   [Analysis on TFF and NYBG](#analysis-on-tff-and-nybg)
+-   [Contributorship](#contributorship)
+-   [Proofread Statement](#proofread-statement)
 
-1. Trend in number of native, non-native and invasive species over the years
-----------------------------------------------------------------------------
+Trend in number of native, non-native and invasive species over the years
+-------------------------------------------------------------------------
 
 The source files used for this analysis are already cleaned, the documentation for which can be found in [here](Deliverables/4%20Data%20Cleaning/Data%20Cleaning.md)
 
@@ -54,7 +54,7 @@ summary(cst)
     ##              Prunus spp.            :  5                              
     ##              (Other)                :481
 
-### 1.1. Reshaping the source table
+### Reshaping the source table
 
 To analyze the variation of native, non-native and invasive species by years, we need to create a simplified dataframe, that gives us the count by years
 
@@ -85,7 +85,7 @@ head(cst_trend)
     ## 4 2011-01-01     72         48       30
     ## 5 2016-01-01    176         78       36
 
-### 1.2. Plotting the number of species types by survey years
+### Plotting the number of species types by survey years
 
 To plot the number of species types, We will first reshape the dataframe into the 'long' format and then plot it using ggplot. Reshape2 package has cast and melt functions that can be used to change a dataframe between wide and long format.
 
@@ -176,8 +176,8 @@ for(i in levels(species_type_count$Survey.Year)){
 
 ![](Analysis_and_plots_files/figure-markdown_github/cst_div_pies-1.png)
 
-2. Restoration Efforts over the years (2007-2018)
--------------------------------------------------
+Restoration Efforts over the years (2007-2018)
+----------------------------------------------
 
 Towards the management goals, there are active restoration projects that have been going on since 2007.
 
@@ -301,8 +301,8 @@ res_month %>%
 
 ![](Analysis_and_plots_files/figure-markdown_github/qty_by_monthYear-1.png)
 
-3. Woody cover and Ground cover
--------------------------------
+Woody cover and Ground cover
+----------------------------
 
 ``` r
 woodyplants <- read_xlsx("src/Combined Woody Plants Data (2002,2006,2011,2016).xlsx")
@@ -524,14 +524,14 @@ ggplot(top_7_year, aes(x = Genus, y = n, fill = factor(Year)), position ="dodge"
 
 ![](Analysis_and_plots_files/figure-markdown_github/unnamed-chunk-4-2.png)
 
-4. Analysis on TFF and NYBG
----------------------------
+Analysis on TFF and NYBG
+------------------------
 
 -   [Analysis on TFF Management](harwinder-rscript_files/TFF%20Management%20Analysis.pdf)
 -   [Analysis on Forest Restoration](harwinder-rscript_files/NYBG%20Forest%20Restoration%202007%20Analysis%20-%202018.pdf)
 
-5. Contributorship
-------------------
+Contributorship
+---------------
 
 Kumar Vikash \* Trend in number of native, non-native and invasive species over the years \* Restoration Efforts over the years (2007-2018)
 
@@ -539,7 +539,7 @@ Edem Dosseh \* Woody Cover and Ground cover
 
 Harwinder Kaur \* Analysis on TFF and NYBG
 
-6. Proofread Statement
-----------------------
+Proofread Statement
+-------------------
 
 The document was proofread by Kumar Vikash on Nov 7, 2018
