@@ -560,11 +560,19 @@ Analysis on TFF and NYBG
 Contributorship
 ---------------
 
-Kumar Vikash \* Trend in number of native, non-native and invasive species over the years \* Restoration Efforts over the years (2007-2018)
+Kumar Vikash
 
-Edem Dosseh \* Woody Cover and Ground cover
+* Trend in number of native, non-native and invasive species over the years
 
-Harwinder Kaur \* Analysis on TFF and NYBG
+-   Restoration Efforts over the years (2007-2018)
+
+Edem Dosseh
+
+-   Woody Cover and Ground cover
+
+Harwinder Kaur
+
+-   Analysis on TFF and NYBG
 
 Proofread Statement
 -------------------

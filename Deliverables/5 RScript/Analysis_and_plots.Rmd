@@ -312,13 +312,16 @@ ggplot(top_7_year, aes(x = Genus, y = n, fill = factor(Year)), position ="dodge"
 ## Contributorship
 
 Kumar Vikash
+
 * Trend in number of native, non-native and invasive species over the years
 * Restoration Efforts over the years (2007-2018)
 
 Edem Dosseh
+
 * Woody Cover and Ground cover
 
 Harwinder Kaur
+
 * Analysis on TFF and NYBG
 
 
