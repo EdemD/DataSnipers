@@ -107,21 +107,26 @@ species_type_count
 ```
 
 ```{r cst_div_pies}
-par(mar=c(0, 0, 2, 0), oma=c(0,0,2,0), mfrow=c(3,2))
-#Creating the pie for the year 2002
+par(mar=c(0, 0, 2, 0), oma=c(0,0,2,0), mfrow=c(2,2))
+#Creating the pie for the years
 for(i in levels(species_type_count$Survey.Year)){
-  count_2002 <- species_type_count[species_type_count$Survey.Year == i,-c(1)]
-  slices <- count_2002$n
+  if(i=='1937'){
+    next
+  }
+  count_i <- species_type_count[species_type_count$Survey.Year == i,-c(1)]
+  slices <- count_i$n
   
-  labels <-  count_2002$species_type
+  labels <-  count_i$species_type
   percent <- round(slices/sum(slices)*100, digits = 2)
   labels <- paste(labels, percent)
   labels <- paste(labels, "%", sep="")
   
-  pie(slices, labels, main=paste("Percentage of species type in ", i), col=brewer.pal(length(labels),"Pastel1"))
+  pie(slices, labels, main=paste("Percentage of species type in ", i),
+      col=brewer.pal(length(labels),"Pastel1"))
 }
 
 ```
+If we analyze the charts above, we can see that the percentage of species found in NYBG has decreased for the survey years 2006(75% to 68%) and 2011(68% to 60%) from where it increased to 69% in the 2016 survey. Similar trends are also found in invasive species which increased from 16.6% in 2002 to 35% in 2011. The number of invasive species found in NYBG seems to have decrased by more than 10% in the survey year 2016. This is a good sign and reflects the success of the management efforts in invasive species control.
 
 ## 2. Restoration Efforts over the years (2007-2018)
 
@@ -210,7 +215,7 @@ res_month %>%
     geom_bar(stat = "identity", fill = "darkorchid4") +
   facet_wrap(~year_planted, ncol = 3) +
     labs(title="Plantations by Months/Year", x="Month", y="Quantity planted")+
-  theme_bw(base_size = 15) + scale_x_date(date_labels = "%b")
+  theme_bw(base_size = 10) + scale_x_date(date_labels = "%b")
 ```
 
 ### Analysis of restoration by species types - native, non-native and invasive
@@ -220,10 +225,5 @@ res_month %>%
 detach(restoration)
 ```
 
-## Contributorship
-Kumar Vikash -
 
-
-## Proofread Statement
-The document was proofread by Kumar Vikash on Nov 7, 2018
 # End

@@ -108,13 +108,16 @@ species_type_count
 ```
 
 ```{r cst_div_pies}
-par(mar=c(0, 0, 2, 0), oma=c(0,0,2,0), mfrow=c(3,2))
+par(mar=c(0, 0, 2, 0), oma=c(0,0,2,0), mfrow=c(2,2))
 #Creating the pie for the year 2002
 for(i in levels(species_type_count$Survey.Year)){
-  count_2002 <- species_type_count[species_type_count$Survey.Year == i,-c(1)]
-  slices <- count_2002$n
+  if(i=='1937'){
+    next
+  }
+  count_i <- species_type_count[species_type_count$Survey.Year == i,-c(1)]
+  slices <- count_i$n
   
-  labels <-  count_2002$species_type
+  labels <-  count_i$species_type
   percent <- round(slices/sum(slices)*100, digits = 2)
   labels <- paste(labels, percent)
   labels <- paste(labels, "%", sep="")
@@ -123,6 +126,8 @@ for(i in levels(species_type_count$Survey.Year)){
 }
 
 ```
+
+If we analyze the charts above, we can see that the percentage of species found in NYBG has decreased for the survey years 2006(75% to 68%) and 2011(68% to 60%) from where it increased to 69% in the 2016 survey. Similar trends are also found in invasive species which increased from 16.6% in 2002 to 35% in 2011. The number of invasive species found in NYBG seems to have decrased by more than 10% in the survey year 2016. This is a good sign and reflects the success of the management efforts in invasive species control.
 
 ## Restoration Efforts over the years (2007-2018)
 
@@ -142,6 +147,7 @@ restoration$Plant.Type <- as.factor(Plant.Type)
 
 head(restoration)
 ```
+
 A quick summary of the dataframe provides us with important information about the data under analysis
 ```{r restoration_summary}
 summary(restoration)
@@ -172,8 +178,10 @@ labels <- paste(labels, "%", sep="")
 pie(slices, labels, main="Plant types planted", col=brewer.pal(length(labels),"Pastel1"))
 ```
 
-If we analyze these plant types and the quantities planted over the years
+57.44% of the restoration plantings were for Herbs followed by the Trees (35.5%). There have been plantation of Shrubs as well, even though the percentage is pretty less compared to the other two (7.06%)
 
+### Restoration Planting by Years
+If we summarise the planting by year, we can identify if the restoration efforts are consistent throughtout the period of study.
 ```{r quantities planted by year and month}
 #Adding a column for the year
 restoration <- restoration %>%
@@ -188,12 +196,21 @@ res_qty_year <- restoration %>%
   group_by(year_planted) %>%
   summarise(Qty = sum(Qty))
 
-plot_qty_year <- ggplot(res_qty_year, aes(x=res_qty_year$year_planted, y=res_qty_year$Qty)) + geom_bar(stat = "identity") + 
+plot_qty_year <- ggplot(res_qty_year, aes(x=res_qty_year$year_planted, y=res_qty_year$Qty)) + geom_bar(stat = "identity", fill = "#2987bb") + 
   geom_text(y=res_qty_year$Qty+300 , label = res_qty_year$Qty) + 
   ggtitle("Restoration Planting by Years") + labs(x="Years", y="Plants planted") +
   theme_bw()
 plot_qty_year
 ```
+
+From the plot, it is evident that the plantations are not consistent. Even with the possibility of incomplete data, we cannot ignore the fact that 2018 has been a very active year for forest restoration.
+
+```{r res_year_box}
+boxplot(res_qty_year$Qty, main = "Plants planted by years", xlab="Quantity", col = "#ec8a71")
+quantile(res_qty_year$Qty)
+```
+
+The above figure confirms the scattered nature of the plantations, while the average plats planted is 2277, it has gone as low as 101 and as high as 8678.
 
 ```{r qty_by_monthYear}
 #Plantation by month and year
@@ -211,8 +228,10 @@ res_month %>%
     geom_bar(stat = "identity", fill = "darkorchid4") +
   facet_wrap(~year_planted, ncol = 3) +
     labs(title="Plantations by Months/Year", x="Month", y="Quantity planted")+
-  theme_bw(base_size = 15) + scale_x_date(date_labels = "%b")
+  theme_bw(base_size = 10) + scale_x_date(date_labels = "%b")
 ```
+
+Further, looking at the whole data monthly for all the years, the inconsistency in the plantation is more clear. There is no specific pattern in the plantations that has taken place except the fact that for all the years, there has been no restoration planting during the months December and January, during which the weather is extremely cold.
 
 ## Woody cover and Ground cover
 

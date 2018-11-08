@@ -5,6 +5,7 @@ Analysis using R
     -   [Reshaping the source table](#reshaping-the-source-table)
     -   [Plotting the number of species types by survey years](#plotting-the-number-of-species-types-by-survey-years)
 -   [Restoration Efforts over the years (2007-2018)](#restoration-efforts-over-the-years-2007-2018)
+    -   [Restoration Planting by Years](#restoration-planting-by-years)
 -   [Woody cover and Ground cover](#woody-cover-and-ground-cover)
     -   [Removing rows that have missing values in all columns except for first year (Year column)](#removing-rows-that-have-missing-values-in-all-columns-except-for-first-year-year-column)
     -   [Massaging the data](#massaging-the-data)
@@ -157,13 +158,16 @@ species_type_count
     ## 14 2016        Non-native/Non-invasive    42
 
 ``` r
-par(mar=c(0, 0, 2, 0), oma=c(0,0,2,0), mfrow=c(3,2))
+par(mar=c(0, 0, 2, 0), oma=c(0,0,2,0), mfrow=c(2,2))
 #Creating the pie for the year 2002
 for(i in levels(species_type_count$Survey.Year)){
-  count_2002 <- species_type_count[species_type_count$Survey.Year == i,-c(1)]
-  slices <- count_2002$n
+  if(i=='1937'){
+    next
+  }
+  count_i <- species_type_count[species_type_count$Survey.Year == i,-c(1)]
+  slices <- count_i$n
   
-  labels <-  count_2002$species_type
+  labels <-  count_i$species_type
   percent <- round(slices/sum(slices)*100, digits = 2)
   labels <- paste(labels, percent)
   labels <- paste(labels, "%", sep="")
@@ -172,9 +176,9 @@ for(i in levels(species_type_count$Survey.Year)){
 }
 ```
 
-    ## Warning in brewer.pal(length(labels), "Pastel1"): minimal value for n is 3, returning requested palette with 3 different levels
-
 ![](Analysis_and_plots_files/figure-markdown_github/cst_div_pies-1.png)
+
+If we analyze the charts above, we can see that the percentage of species found in NYBG has decreased for the survey years 2006(75% to 68%) and 2011(68% to 60%) from where it increased to 69% in the 2016 survey. Similar trends are also found in invasive species which increased from 16.6% in 2002 to 35% in 2011. The number of invasive species found in NYBG seems to have decrased by more than 10% in the survey year 2016. This is a good sign and reflects the success of the management efforts in invasive species control.
 
 Restoration Efforts over the years (2007-2018)
 ----------------------------------------------
@@ -255,7 +259,11 @@ pie(slices, labels, main="Plant types planted", col=brewer.pal(length(labels),"P
 
 ![](Analysis_and_plots_files/figure-markdown_github/plant_type-1.png)
 
-If we analyze these plant types and the quantities planted over the years
+57.44% of the restoration plantings were for Herbs followed by the Trees (35.5%). There have been plantation of Shrubs as well, even though the percentage is pretty less compared to the other two (7.06%)
+
+### Restoration Planting by Years
+
+If we summarise the planting by year, we can identify if the restoration efforts are consistent throughtout the period of study.
 
 ``` r
 #Adding a column for the year
@@ -271,7 +279,7 @@ res_qty_year <- restoration %>%
   group_by(year_planted) %>%
   summarise(Qty = sum(Qty))
 
-plot_qty_year <- ggplot(res_qty_year, aes(x=res_qty_year$year_planted, y=res_qty_year$Qty)) + geom_bar(stat = "identity") + 
+plot_qty_year <- ggplot(res_qty_year, aes(x=res_qty_year$year_planted, y=res_qty_year$Qty)) + geom_bar(stat = "identity", fill = "#2987bb") + 
   geom_text(y=res_qty_year$Qty+300 , label = res_qty_year$Qty) + 
   ggtitle("Restoration Planting by Years") + labs(x="Years", y="Plants planted") +
   theme_bw()
@@ -279,6 +287,23 @@ plot_qty_year
 ```
 
 ![](Analysis_and_plots_files/figure-markdown_github/quantities%20planted%20by%20year%20and%20month-1.png)
+
+From the plot, it is evident that the plantations are not consistent. Even with the possibility of incomplete data, we cannot ignore the fact that 2018 has been a very active year for forest restoration.
+
+``` r
+boxplot(res_qty_year$Qty, main = "Plants planted by years", xlab="Quantity", col = "#ec8a71")
+```
+
+![](Analysis_and_plots_files/figure-markdown_github/res_year_box-1.png)
+
+``` r
+quantile(res_qty_year$Qty)
+```
+
+    ##      0%     25%     50%     75%    100% 
+    ##  101.00 2125.25 2277.00 4284.50 8678.00
+
+The above figure confirms the scattered nature of the plantations, while the average plats planted is 2277, it has gone as low as 101 and as high as 8678.
 
 ``` r
 #Plantation by month and year
@@ -296,10 +321,12 @@ res_month %>%
     geom_bar(stat = "identity", fill = "darkorchid4") +
   facet_wrap(~year_planted, ncol = 3) +
     labs(title="Plantations by Months/Year", x="Month", y="Quantity planted")+
-  theme_bw(base_size = 15) + scale_x_date(date_labels = "%b")
+  theme_bw(base_size = 10) + scale_x_date(date_labels = "%b")
 ```
 
 ![](Analysis_and_plots_files/figure-markdown_github/qty_by_monthYear-1.png)
+
+Further, looking at the whole data monthly for all the years, the inconsistency in the plantation is more clear. There is no specific pattern in the plantations that has taken place except the fact that for all the years, there has been no restoration planting during the months December and January, during which the weather is extremely cold.
 
 Woody cover and Ground cover
 ----------------------------
