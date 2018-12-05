@@ -18,3 +18,7 @@
 7. [Data Cleaning Documentation](Deliverables/4%20Data%20Cleaning/Data%20Cleaning.md)
 8. [R-Scripts (WIP)](Deliverables/5%20RScript)
 9. [R-Plots](Deliverables/5%20RScript/Analysis_and_plots.md)
+
+### PROOFREAD STATEMENT
+
+1. This document has been proofread by Edem Dosseh on December 3, 2018 08:58 PM.
