@@ -6,6 +6,8 @@ Analysis using R
     -   [Plotting the number of species types by survey years](#plotting-the-number-of-species-types-by-survey-years)
 -   [Restoration Efforts over the years (2007-2018)](#restoration-efforts-over-the-years-2007-2018)
     -   [Restoration Planting by Years](#restoration-planting-by-years)
+    -   [Restoration by Species Types](#restoration-by-species-types)
+    -   [Restoration by Species Count](#restoration-by-species-count)
 -   [Woody cover and Ground cover](#woody-cover-and-ground-cover)
     -   [Removing rows that have missing values in all columns except for first year (Year column)](#removing-rows-that-have-missing-values-in-all-columns-except-for-first-year-year-column)
     -   [Massaging the data](#massaging-the-data)
@@ -30,12 +32,12 @@ head(cst)
 ```
 
     ##   Survey.Year               Taxon Native Non.native Invasive
-    ## 1        2016        Acer negundo      y          n        n
-    ## 2        2016    Acer platanoides      n          y        y
-    ## 3        2016 Acer pseudoplatanus      n          y        y
-    ## 4        2016         Acer rubrum      y          n        n
-    ## 5        2016    Acer saccharinum      y          n        n
-    ## 6        2016      Acer saccharum      y          n        n
+    ## 1        2016        acer negundo      y          n        n
+    ## 2        2016    acer platanoides      n          y        y
+    ## 3        2016 acer pseudoplatanus      n          y        y
+    ## 4        2016         acer rubrum      y          n        n
+    ## 5        2016    acer saccharinum      y          n        n
+    ## 6        2016      acer saccharum      y          n        n
 
 From the above
 
@@ -47,12 +49,12 @@ summary(cst)
 ```
 
     ##  Survey.Year                     Taxon     Native  Non.native Invasive
-    ##  1937: 18    Carpinus caroliniana   :  5   n:189   n:359      n:427   
-    ##  2002: 37    Fagus grandifolia      :  5   y:322   y:152      y: 84   
-    ##  2006: 49    Liriodendron tulipifera:  5                              
-    ##  2011:131    Ostrya virginiana      :  5                              
-    ##  2016:276    Phellodendron amurense :  5                              
-    ##              Prunus spp.            :  5                              
+    ##  1937: 18    carpinus caroliniana   :  5   n:189   n:359      n:427   
+    ##  2002: 37    fagus grandifolia      :  5   y:322   y:152      y: 84   
+    ##  2006: 49    liriodendron tulipifera:  5                              
+    ##  2011:131    ostrya virginiana      :  5                              
+    ##  2016:276    phellodendron amurense :  5                              
+    ##              prunus spp.            :  5                              
     ##              (Other)                :481
 
 ### Reshaping the source table
@@ -68,8 +70,9 @@ cst_2011 <- subset(cst, cst$Survey.Year==2011)
 cst_2016 <- subset(cst, cst$Survey.Year==2016)
 
 # Create vectors for all the years and species -> native, not-native and invasive
-year <- c('1937-01-01', '2002-01-01', '2006-01-01', '2011-01-01', '2016-01-01')
-year <- as.Date(year)
+#year <- c('1937-01-01', '2002-01-01', '2006-01-01', '2011-01-01', '2016-01-01')
+#year <- as.Date(year)
+year <- c(1937, 2002, 2006, 2011, 2016)
 native <- c(length(which(cst_1937$Native=='y')), length(which(cst_2002$Native=='y')), length(which(cst_2006$Native=='y')), length(which(cst_2011$Native=='y')), length(which(cst_2016$Native=='y')))
 non_native <- c(length(which(cst_1937$Non.native=='y')), length(which(cst_2002$Non.native=='y')), length(which(cst_2006$Non.native=='y')), length(which(cst_2011$Non.native=='y')), length(which(cst_2016$Non.native=='y')))
 invasive <- c(length(which(cst_1937$Invasive=='y')), length(which(cst_2002$Invasive=='y')), length(which(cst_2006$Invasive=='y')), length(which(cst_2011$Invasive=='y')), length(which(cst_2016$Invasive=='y')))
@@ -79,12 +82,12 @@ cst_trend <- data.frame(year, native, non_native, invasive, stringsAsFactors = F
 head(cst_trend)
 ```
 
-    ##         year native non_native invasive
-    ## 1 1937-01-01     15          2        2
-    ## 2 2002-01-01     27          9        6
-    ## 3 2006-01-01     32         15       10
-    ## 4 2011-01-01     72         48       30
-    ## 5 2016-01-01    176         78       36
+    ##   year native non_native invasive
+    ## 1 1937     15          2        2
+    ## 2 2002     27          9        6
+    ## 3 2006     32         15       10
+    ## 4 2011     72         48       30
+    ## 5 2016    176         78       36
 
 ### Plotting the number of species types by survey years
 
@@ -97,7 +100,7 @@ colnames(cst_trendL)[2] <- "type"
 colnames(cst_trendL)[3] <- "count"
 
 #Plotting the dataset
-line <- ggplot(cst_trendL, aes(x = year, y = count, color = type)) + geom_line(size=1) + geom_point(size=2)+ ggtitle("Species Count from 1937 to 2016") + labs(x="Years", y="Species Count")
+line <- ggplot(cst_trendL, aes(x = year, y = count, color = type)) + geom_line(size=1) + geom_point(size=2)+ ggtitle("Species Types Count from 1937 to 2016") + labs(x="Years", y="Number of different Species")
 line <- line + theme_bw()
 line
 ```
@@ -107,9 +110,12 @@ line
 The number of species types have increased a lot from the earliest survey data available. The increase in the species types is valid for all the species types.
 
 ``` r
-line <- ggplot(cst_trendL[cst_trendL$year >= "2002-01-01",], aes(x = year, y = count, color = type)) + geom_line(size=1) + geom_point(size=2) + ggtitle("Species Count from 2002 to 2016") + labs(x="Years", y="Species Count")
-line <- line + theme_bw()
-line
+cst_trendL [year != 1937,]%>%
+  ggplot(aes(x = year, y = count, color = type)) +
+  geom_line(size=1) + 
+  geom_point(size=2) + 
+  ggtitle("Species Count from 2002 to 2016") + labs(x="Years", y="Species Count") + 
+  theme_bw()
 ```
 
 ![](Analysis_and_plots_files/figure-markdown_github/cst_plot_2002-1.png)
@@ -201,12 +207,12 @@ head(restoration)
 ```
 
     ##   Qty                Taxon Plant.Type Date.Planted
-    ## 1   4      Quercus bicolor       Tree   2007-05-01
-    ## 2   5 Hamamelis virginiana      Shrub   2007-11-11
-    ## 3   4 Hamamelis virginiana      Shrub   2007-11-11
-    ## 4  12    Viburnum dentatum      Shrub   2007-11-11
-    ## 5  12    Viburnum dentatum      Shrub   2007-11-11
-    ## 6  12 Viburnum prunifolium      Shrub   2007-11-11
+    ## 1   4      quercus bicolor       Tree   2007-05-01
+    ## 2   5 hamamelis virginiana      Shrub   2007-11-11
+    ## 3   4 hamamelis virginiana      Shrub   2007-11-11
+    ## 4  12    viburnum dentatum      Shrub   2007-11-11
+    ## 5  12    viburnum dentatum      Shrub   2007-11-11
+    ## 6  12 viburnum prunifolium      Shrub   2007-11-11
 
 A quick summary of the dataframe provides us with important information about the data under analysis
 
@@ -327,6 +333,114 @@ res_month %>%
 ![](Analysis_and_plots_files/figure-markdown_github/qty_by_monthYear-1.png)
 
 Further, looking at the whole data monthly for all the years, the inconsistency in the plantation is more clear. There is no specific pattern in the plantations that has taken place except the fact that for all the years, there has been no restoration planting during the months December and January, during which the weather is extremely cold.
+
+### Restoration by Species Types
+
+Using the comprehensive species tally we can classify the restoration platings by species type. To do this, we will left join the Restoration Data with Comprehensive Species Tally. There are some of the species planted for which we did not have enough information to categorize them as Native/Non-Native and Invasive. We would be skipping these in the below analysis.
+
+``` r
+# Removing duplicates from Comprehensive Speices Tally
+cst_dedup <- cst[!duplicated(cst$Taxon),]
+
+# Left Joining Restoration Data with Comprehensive Species Tally
+res_by_species <- restoration %>%
+  left_join(cst_dedup)
+```
+
+    ## Joining, by = "Taxon"
+
+    ## Warning: Column `Taxon` joining character vector and factor, coercing into
+    ## character vector
+
+``` r
+res_by_species <- na.omit(res_by_species)
+
+summary(res_by_species)
+```
+
+    ##       Qty            Taxon           Plant.Type   Date.Planted       
+    ##  Min.   :  1.00   Length:759         Herb :242   Min.   :2007-05-01  
+    ##  1st Qu.:  7.00   Class :character   Shrub:132   1st Qu.:2010-11-09  
+    ##  Median : 17.00   Mode  :character   Tree :385   Median :2012-10-24  
+    ##  Mean   : 32.09                                  Mean   :2013-06-01  
+    ##  3rd Qu.: 40.50                                  3rd Qu.:2015-11-18  
+    ##  Max.   :500.00                                  Max.   :2018-06-22  
+    ##   year_planted  month_planted    Survey.Year Native  Non.native Invasive
+    ##  Min.   :2007   Min.   : 3.000   1937:  1    n:  0   n:759      n:759   
+    ##  1st Qu.:2010   1st Qu.: 6.000   2002:  0    y:759   y:  0      y:  0   
+    ##  Median :2012   Median :10.000   2006:  0                               
+    ##  Mean   :2013   Mean   : 8.426   2011:  6                               
+    ##  3rd Qu.:2015   3rd Qu.:11.000   2016:752                               
+    ##  Max.   :2018   Max.   :12.000
+
+The quick summary tells us that in the data set that we are dealing with, all the restoraiton planting has been for native species. To understand the correlation between the restoration and the number of species types, let us simplify the above dataframe.
+
+``` r
+res_native <- res_by_species[, c(1, 5)]
+
+# Summarizing by year
+res_native_by_year <- res_native %>%
+  group_by(year_planted) %>%
+  summarise(qty_planted = sum(Qty))
+
+#Plotting
+res_native_by_year[res_native_by_year$year_planted<2017,] %>%
+  ggplot(aes(x=year_planted, y=qty_planted)) +
+  geom_bar(stat = "identity", fill = "darkorchid4")
+```
+
+![](Analysis_and_plots_files/figure-markdown_github/restoration_native-1.png)
+
+### Restoration by Species Count
+
+From the survey data of Woody Plants, we can analyze the year wise composition of forest by native/non-native and invasive.
+
+``` r
+woody_plants = read.csv("src/inventory/woodyplant 1937-2016.csv", na.strings = "#N/A")
+woody_plants <- na.omit(woody_plants)
+woody_plants <- woody_plants[,-c(2,3)]
+```
+
+``` r
+woody_plants_1937 <- subset(woody_plants, woody_plants$Year==1937)
+woody_plants_2002 <- subset(woody_plants, woody_plants$Year==2002)
+woody_plants_2006 <- subset(woody_plants, woody_plants$Year==2006)
+woody_plants_2011 <- subset(woody_plants, woody_plants$Year==2011)
+woody_plants_2016 <- subset(woody_plants, woody_plants$Year==2016)
+
+# Create vectors for all the years and species -> native, not-native and invasive
+#year <- c('1937-01-01', '2002-01-01', '2006-01-01', '2011-01-01', '2016-01-01')
+#year <- as.Date(year)
+year <- c(1937, 2002, 2006, 2011, 2016)
+native <- c(length(which(woody_plants_1937$Native=='y')), length(which(woody_plants_2002$Native=='y')), length(which(woody_plants_2006$Native=='y')), length(which(woody_plants_2011$Native=='y')), length(which(woody_plants_2016$Native=='y')))
+non_native <- c(length(which(woody_plants_1937$Non.native=='y')), length(which(woody_plants_2002$Non.native=='y')), length(which(woody_plants_2006$Non.native=='y')), length(which(woody_plants_2011$Non.native=='y')), length(which(woody_plants_2016$Non.native=='y')))
+invasive <- c(length(which(woody_plants_1937$Invasive=='y')), length(which(woody_plants_2002$Invasive=='y')), length(which(woody_plants_2006$Invasive=='y')), length(which(woody_plants_2011$Invasive=='y')), length(which(woody_plants_2016$Invasive=='y')))
+
+#Create dataframe with the vectors
+woody_plants_trend <- data.frame(year, native, non_native, invasive, stringsAsFactors = FALSE)
+head(woody_plants_trend)
+```
+
+    ##   year native non_native invasive
+    ## 1 1937    455          5        5
+    ## 2 2002    918        103       95
+    ## 3 2006   2610        816      784
+    ## 4 2011   3789        932      910
+    ## 5 2016   4970       1097     1028
+
+``` r
+woody_plants_trendL <- melt(woody_plants_trend, id.vars = c("year"))
+colnames(woody_plants_trendL)[2] <- "type"
+colnames(woody_plants_trendL)[3] <- "count"
+
+woody_plants_trendL[year != 1937,] %>%
+  ggplot(aes(x = year, y = count, color = type)) + 
+  geom_line(size=1) + geom_point(size=2) + 
+  ggtitle("Woody Plants Count from 2002 to 2016") + labs(x="Years", y="Count") +
+  theme_bw()
+```
+
+![](Analysis_and_plots_files/figure-markdown_github/plot_woody_plants-1.png)
 
 Woody cover and Ground cover
 ----------------------------
@@ -562,8 +676,7 @@ Contributorship
 
 Kumar Vikash
 
-* Trend in number of native, non-native and invasive species over the years
-
+-   Trend in number of native, non-native and invasive species over the years
 -   Restoration Efforts over the years (2007-2018)
 
 Edem Dosseh

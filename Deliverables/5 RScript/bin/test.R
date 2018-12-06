@@ -29,3 +29,8 @@ res_type <- res_type[,-c(3,4)]
 res_type <- na.omit(res_type)
 
 mtcars %>% count(cyl)
+
+#Summarizing by year
+res_native_by_year <- res_native %>%
+  group_by(year_planted) %>%
+  summarise(qty_planted = sum(Qty))

@@ -48,8 +48,9 @@ cst_2011 <- subset(cst, cst$Survey.Year==2011)
 cst_2016 <- subset(cst, cst$Survey.Year==2016)
 
 # Create vectors for all the years and species -> native, not-native and invasive
-year <- c('1937-01-01', '2002-01-01', '2006-01-01', '2011-01-01', '2016-01-01')
-year <- as.Date(year)
+#year <- c('1937-01-01', '2002-01-01', '2006-01-01', '2011-01-01', '2016-01-01')
+#year <- as.Date(year)
+year <- c(1937, 2002, 2006, 2011, 2016)
 native <- c(length(which(cst_1937$Native=='y')), length(which(cst_2002$Native=='y')), length(which(cst_2006$Native=='y')), length(which(cst_2011$Native=='y')), length(which(cst_2016$Native=='y')))
 non_native <- c(length(which(cst_1937$Non.native=='y')), length(which(cst_2002$Non.native=='y')), length(which(cst_2006$Non.native=='y')), length(which(cst_2011$Non.native=='y')), length(which(cst_2016$Non.native=='y')))
 invasive <- c(length(which(cst_1937$Invasive=='y')), length(which(cst_2002$Invasive=='y')), length(which(cst_2006$Invasive=='y')), length(which(cst_2011$Invasive=='y')), length(which(cst_2016$Invasive=='y')))
@@ -76,9 +77,12 @@ line
 The number of species types have increased a lot from the earliest survey data available. The increase in the species types is valid for all the species types.
 
 ```{r cst_plot_2002}
-line <- ggplot(cst_trendL[cst_trendL$year >= "2002-01-01",], aes(x = year, y = count, color = type)) + geom_line(size=1) + geom_point(size=2) + ggtitle("Species Count from 2002 to 2016") + labs(x="Years", y="Species Count")
-line <- line + theme_bw()
-line
+cst_trendL [year != 1937,]%>%
+  ggplot(aes(x = year, y = count, color = type)) +
+  geom_line(size=1) + 
+  geom_point(size=2) + 
+  ggtitle("Species Count from 2002 to 2016") + labs(x="Years", y="Species Count") + 
+  theme_bw()
 ```
 
 From the period 2002 to 2016, there is a tremendous growth in the total number of species in all the three types - native, non-native and invasive. Although, the number of species has been increasing for all these three types, the growth in invasive species seems to be declining after 2012.
@@ -230,6 +234,121 @@ res_month %>%
 ```
 
 Further, looking at the whole data monthly for all the years, the inconsistency in the plantation is more clear. There is no specific pattern in the plantations that has taken place except the fact that for all the years, there has been no restoration planting during the months December and January, during which the weather is extremely cold.
+
+### Restoration by Species Types
+
+Using the comprehensive species tally we can classify the restoration platings by species type. To do this, we will left join the Restoration Data with Comprehensive Species Tally. There are some of the species planted for which we did not have enough information to categorize them as Native/Non-Native and Invasive. We would be skipping these in the below analysis.
+
+```{r restoration_by_species_type}
+# Removing duplicates from Comprehensive Speices Tally
+cst_dedup <- cst[!duplicated(cst$Taxon),]
+
+# Left Joining Restoration Data with Comprehensive Species Tally
+res_by_species <- restoration %>%
+  left_join(cst_dedup)
+
+res_by_species <- na.omit(res_by_species)
+
+summary(res_by_species)
+
+```
+
+The quick summary tells us that in the data set that we are dealing with, all the restoraiton planting has been for native species. To understand the correlation between the restoration and the number of species types, let us simplify the above dataframe.
+
+```{r restoration_native}
+res_native <- res_by_species[, c(1, 5)]
+
+# Summarizing by year
+res_native_by_year <- res_native %>%
+  group_by(year_planted) %>%
+  summarise(qty_planted = sum(Qty))
+
+#Plotting
+res_native_by_year[res_native_by_year$year_planted<2017,] %>%
+  ggplot(aes(x=year_planted, y=qty_planted)) +
+  geom_bar(stat = "identity", fill = "darkorchid4")
+
+```
+
+### Restoration by Species Count
+
+#### Woody Plant
+
+From the survey data of Woody Plants, we can analyze the year wise composition of forest by native/non-native and invasive. 
+
+```{r woody_plants}
+woody_plants = read.csv("src/inventory/woodyplant 1937-2016.csv", na.strings = "#N/A")
+woody_plants <- na.omit(woody_plants)
+woody_plants <- woody_plants[,-c(2,3)]
+```
+
+```{r count_species}
+woody_plants_1937 <- subset(woody_plants, woody_plants$Year==1937)
+woody_plants_2002 <- subset(woody_plants, woody_plants$Year==2002)
+woody_plants_2006 <- subset(woody_plants, woody_plants$Year==2006)
+woody_plants_2011 <- subset(woody_plants, woody_plants$Year==2011)
+woody_plants_2016 <- subset(woody_plants, woody_plants$Year==2016)
+
+# Create vectors for all the years and species -> native, not-native and invasive
+#year <- c('1937-01-01', '2002-01-01', '2006-01-01', '2011-01-01', '2016-01-01')
+#year <- as.Date(year)
+year <- c(1937, 2002, 2006, 2011, 2016)
+native <- c(length(which(woody_plants_1937$Native=='y')), length(which(woody_plants_2002$Native=='y')), length(which(woody_plants_2006$Native=='y')), length(which(woody_plants_2011$Native=='y')), length(which(woody_plants_2016$Native=='y')))
+non_native <- c(length(which(woody_plants_1937$Non.native=='y')), length(which(woody_plants_2002$Non.native=='y')), length(which(woody_plants_2006$Non.native=='y')), length(which(woody_plants_2011$Non.native=='y')), length(which(woody_plants_2016$Non.native=='y')))
+invasive <- c(length(which(woody_plants_1937$Invasive=='y')), length(which(woody_plants_2002$Invasive=='y')), length(which(woody_plants_2006$Invasive=='y')), length(which(woody_plants_2011$Invasive=='y')), length(which(woody_plants_2016$Invasive=='y')))
+
+#Create dataframe with the vectors
+woody_plants_trend <- data.frame(year, native, non_native, invasive, stringsAsFactors = FALSE)
+head(woody_plants_trend)
+```
+
+```{r plot_woody_plants}
+woody_plants_trendL <- melt(woody_plants_trend, id.vars = c("year"))
+colnames(woody_plants_trendL)[2] <- "type"
+colnames(woody_plants_trendL)[3] <- "count"
+
+woody_plants_trendL[year != 1937,] %>%
+  ggplot(aes(x = year, y = count, color = type)) + 
+  geom_line(size=1) + geom_point(size=2) + 
+  ggtitle("Woody Plants Count from 2002 to 2016") + labs(x="Years", y="Count") +
+  theme_bw()
+```
+
+#### Ground Cover
+
+From the survey data of Groundcover Plants, we can analyze the year wise composition of forest by native/non-native and invasive. 
+
+```{r gc_plants}
+gc_plants = read.csv("src/inventory/groundcover 2011-2016.csv", na.strings = "#N/A")
+gc_plants <- na.omit(gc_plants)
+gc_plants <- gc_plants[,-c(2,3)]
+
+gc_plants_1937 <- subset(gc_plants, gc_plants$Year==1937)
+gc_plants_2002 <- subset(gc_plants, gc_plants$Year==2002)
+gc_plants_2006 <- subset(gc_plants, gc_plants$Year==2006)
+gc_plants_2011 <- subset(gc_plants, gc_plants$Year==2011)
+gc_plants_2016 <- subset(gc_plants, gc_plants$Year==2016)
+
+# Create vectors for all the years and species -> native, not-native and invasive
+year <- c(1937, 2002, 2006, 2011, 2016)
+native <- c(length(which(gc_plants_1937$Native=='y')), length(which(gc_plants_2002$Native=='y')), length(which(gc_plants_2006$Native=='y')), length(which(gc_plants_2011$Native=='y')), length(which(gc_plants_2016$Native=='y')))
+non_native <- c(length(which(gc_plants_1937$Non.native=='y')), length(which(gc_plants_2002$Non.native=='y')), length(which(gc_plants_2006$Non.native=='y')), length(which(gc_plants_2011$Non.native=='y')), length(which(gc_plants_2016$Non.native=='y')))
+invasive <- c(length(which(gc_plants_1937$Invasive=='y')), length(which(gc_plants_2002$Invasive=='y')), length(which(gc_plants_2006$Invasive=='y')), length(which(gc_plants_2011$Invasive=='y')), length(which(gc_plants_2016$Invasive=='y')))
+
+#Create dataframe with the vectors
+gc_plants_trend <- data.frame(year, native, non_native, invasive, stringsAsFactors = FALSE)
+
+gc_plants_trendL <- melt(gc_plants_trend, id.vars = c("year"))
+colnames(gc_plants_trendL)[2] <- "type"
+colnames(gc_plants_trendL)[3] <- "count"
+
+gc_plants_trendL[year != 1937,] %>%
+  ggplot(aes(x = year, y = count, color = type)) + 
+  geom_line(size=1) + geom_point(size=2) + 
+  ggtitle("Woody Plants Count from 2002 to 2016") + labs(x="Years", y="Count") +
+  theme_bw()
+
+```
 
 ## Woody cover and Ground cover
 
