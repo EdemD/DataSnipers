@@ -1,0 +1,1154 @@
+ID,Qty,Taxon,Plant Type,Height (inches),Location,Grid,Date Planted,# of Volunteers
+1,4,quercus bicolor,Tree,>=24,Main Trail,,5/1/2007,2
+2,5,hamamelis virginiana,Shrub,>=24,Magnolia Way,,11/11/2007,2
+3,4,hamamelis virginiana,Shrub,>=24,Bridge Trail (Entrance),,11/11/2007,2
+4,12,viburnum dentatum,Shrub,>=24,Main Trail,,11/11/2007,2
+5,12,viburnum dentatum,Shrub,>=24,Oak Trail,,11/11/2007,2
+6,12,viburnum prunifolium,Shrub,>=24,Oak Trail,,11/11/2007,2
+7,3,amelanchier canadensis,Tree,>=24,Main Trail,,11/11/2007,2
+8,5,betula lenta,Tree,>=24,Main Trail,,11/11/2007,2
+9,4,carpinus caroliniana,Tree,>=24,Magnolia Way,,11/11/2007,2
+10,2,carpinus caroliniana,Tree,>=24,Main Trail,,11/11/2007,2
+11,5,chionanthus virginicus,Shrub,>=24,Forest Overlook,,11/27/2007,
+12,4,hamamelis virginiana,Shrub,>=24,Main Trail,,11/27/2007,
+13,12,viburnum dentatum,Shrub,>=24,Main Trail,,11/27/2007,
+14,12,viburnum dentatum,Shrub,>=24,Forest Overlook,,11/27/2007,
+15,2,carpinus caroliniana,Tree,>=24,Main Trail,,11/27/2007,
+16,2,carpinus caroliniana,Tree,>=24,Forest Overlook,,11/27/2007,
+17,1,quercus bicolor,Tree,>=24,Main Trail,,11/27/2007,
+18,50,acer saccharum,Tree,>=24,FOREST,,4/12/2008,
+19,50,betula lenta,Tree,>=24,FOREST,,4/12/2008,
+20,50,liriodendron tulipifera,Tree,>=24,FOREST,,4/12/2008,
+21,50,quercus rubra,Tree,>=24,FOREST,,4/12/2008,
+22,50,quercus velutina,Tree,>=24,FOREST,,4/12/2008,
+23,10,amelanchier canadensis,Tree,>=24,FOREST,,4/25/2008,
+24,25,betula populifolia,Tree,>=24,FOREST,,4/25/2008,
+25,50,cornus alternifolia,Tree,>=24,FOREST,,4/25/2008,
+26,50,cornus florida,Tree,>=24,FOREST,,4/25/2008,
+27,30,fraxinus pennsylvanica,Tree,>=24,FOREST,,4/25/2008,
+28,40,platanus occidentalis,Tree,>=24,FOREST,,4/25/2008,
+29,50,quercus palustris,Tree,>=24,FOREST,,4/25/2008,
+30,1,quercus bicolor,Tree,>=24,FOREST,,5/8/2008,
+31,12,quercus rubra,Tree,>=24,Main Trail,,9/5/2008,
+32,100,lindera benzoin,Shrub,>=24,Oak Trail (old path site),,10/14/2008,
+33,50,viburnum prunifolium,Shrub,>=24,Oak Trail (old path site),,10/14/2008,
+34,25,acer rubrum,Tree,>=24,Oak Trail (old path site),,10/14/2008,
+35,50,betula lenta,Tree,>=24,Oak Trail (old path site),,10/14/2008,35
+36,25,carpinus caroliniana,Tree,>=24,Oak Trail (old path site),,10/14/2008,
+37,10,carya glabra,Tree,>=24,Oak Trail (old path site),,10/14/2008,
+38,10,carya ovata,Tree,>=24,Oak Trail (old path site),,10/14/2008,
+39,10,carya tomentosa,Tree,>=24,Oak Trail (old path site),,10/14/2008,
+40,50,fraxinus americana,Tree,>=24,Oak Trail (old path site),,10/14/2008,
+41,10,liquidambar styraciflua,Tree,>=24,Oak Trail (old path site),,10/14/2008,
+42,10,liriodendron tulipifera,Tree,>=24,Oak Trail (old path site),,10/14/2008,
+43,50,nyssa sylvatica,Tree,>=24,Oak Trail (old path site),,10/14/2008,
+44,25,quercus alba,Tree,>=24,Oak Trail (old path site),,10/14/2008,
+45,50,quercus velutina,Tree,>=24,Oak Trail (old path site),,10/14/2008,
+46,25,hamamelis virginiana,Shrub,>=24,Bridge Trail,,10/17/2008,
+47,25,viburnum prunifolium,Shrub,>=24,Bridge Trail,,10/17/2008,
+48,10,amelanchier canadensis,Tree,>=24,Bridge Trail,,10/17/2008,
+49,1,carpinus caroliniana,Tree,>=24,Bridge Trail,,10/17/2008,
+50,15,carya mix,Tree,>=24,Bridge Trail,,10/17/2008,
+51,25,cornus alternifolia,Tree,>=24,Bridge Trail,,10/17/2008,
+52,29,fraxinus americana,Tree,>=24,Bridge Trail,,10/17/2008,4
+53,10,liquidambar styraciflua,Tree,>=24,Bridge Trail,,10/17/2008,
+54,14,liriodendron tulipifera,Tree,>=24,Bridge Trail,,10/17/2008,
+55,26,quercus alba,Tree,>=24,Bridge Trail,,10/17/2008,
+56,10,quercus palustris,Tree,>=24,Bridge Trail,,10/17/2008,1
+57,10,viburnum prunifolium,Shrub,>=24,Oak Trail by Rock Garden,,10/24/2008,
+58,29,carya mix,Tree,>=24,Oak Trail by Rock Garden,,10/24/2008,
+59,5,liquidambar styraciflua,Tree,>=24,Oak Trail by Rock Garden,,10/24/2008,
+60,10,ostrya virginiana,Tree,>=24,Oak Trail by Rock Garden,,10/24/2008,
+61,37,quercus alba,Tree,>=24,Oak Trail by Rock Garden,,10/24/2008,9
+62,10,quercus palustris,Tree,>=24,Oak Trail by Rock Garden,,10/24/2008,
+63,76,quercus velutina/rubra,Tree,>=24,Oak Trail by Rock Garden,,10/24/2008,
+64,61,hamamelis virginiana,Shrub,>=24,Main Trail,,10/25/2008,
+65,15,viburnum prunifolium,Shrub,>=24,Main Trail,,10/25/2008,
+66,30,acer saccharinum,Tree,>=24,Main Trail,,10/25/2008,30
+67,7,amelanchier canadensis,Tree,>=24,Main Trail,,10/25/2008,
+68,4,carpinus caroliniana,Tree,>=24,Main Trail,,10/25/2008,
+69,50,fraxinus americana,Tree,>=24,Main Trail,,10/25/2008,
+70,14,ostrya virginiana,Tree,>=24,Main Trail,,10/25/2008,
+71,30,quercus palustris,Tree,>=24,Main Trail,,10/25/2008,
+72,25,acer rubrum,Tree,>=24,Main Trail,,11/7/2008,
+73,50,acer saccharum,Tree,>=24,Main Trail,,11/7/2008,7
+74,75,fraxinus pennsylvanica,Tree,>=24,Main Trail,,11/7/2008,
+75,75,quercus alba,Tree,>=24,Main Trail,,11/7/2008,
+76,25,sassafras albidum,Tree,>=24,Main Trail,,11/7/2008,
+77,25,acer rubrum,Tree,>=24,Main Trail,,11/8/2008,
+78,50,acer saccharum,Tree,>=24,Main Trail,,11/8/2008,21
+79,85,fraxinus pennsylvanica,Tree,>=24,Main Trail,,11/8/2008,
+80,25,quercus alba,Tree,>=24,Main Trail,,11/8/2008,
+81,15,sassafras albidum,Tree,>=24,Main Trail,,11/8/2008,
+82,7,fraxinus pennsylvanica,Tree,>=24,Oak Trail (old path),,11/11/2008,
+83,15,quercus alba,Tree,>=24,Oak Trail (old path),,11/11/2008,2
+84,10,sassafras albidum,Tree,>=24,Oak Trail (old path),,11/11/2008,
+85,8,fraxinus pennsylvanica,Tree,>=24,Oak Trail (old path),,11/18/2008,
+86,10,quercus alba,Tree,>=24,Oak Trail (old path),,11/18/2008,1
+87,32,lindera benzoin,Shrub,<24,Azalea Way Forest Edge,,11/19/2008,
+88,1,viburnum prunifolium,Shrub,<24,Azalea Way Forest Edge,,11/19/2008,
+89,11,hamamelis virginiana,Shrub,>=24,Mitsubishi Wetlands,,11/19/2008,
+90,10,lindera benzion,Shrub,>=24,Mitsubishi Wetlands,,11/19/2008,4
+91,1,betula lenta,Tree,<24,Azalea Way Forest Edge,,11/19/2008,
+92,10,cornus florida,Tree,<24,Azalea Way Forest Edge,,11/19/2008,
+93,1,liquidambar styraciflua,Tree,<24,Azalea Way Forest Edge,,11/19/2008,
+94,2,liriodendron tulipifera,Tree,<24,Azalea Way Forest Edge,,11/19/2008,
+95,2,nyssa sylvatica,Tree,<24,Azalea Way Forest Edge,,11/19/2008,
+96,1,ostrya virginiana,Tree,<24,Mitsubishi Wetlands,,11/19/2008,
+97,7,quercus velutina,Tree,<24,Azalea Way Forest Edge,,11/19/2008,
+98,8,amelanchier canadensis,Tree,>=24,Mitsubishi Wetlands,,11/19/2008,
+99,20,quercus rubra,Tree,<24,Spicebush Trail Entrance,,5/18/2009,
+100,1,acer rubrum,Tree,>=24,Spicebush Trail Entrance,,5/18/2009,
+101,2,betula lenta,Tree,>=24,Spicebush Trail Entrance,,5/18/2009,
+102,1,carpinus caroliniana,Tree,>=24,Spicebush Trail Entrance,,5/18/2009,
+103,2,fraxinus americana,Tree,>=24,Spicebush Trail Entrance,,5/18/2009,
+104,2,quercus rubra,Tree,>=24,Spicebush Trail Entrance,,5/18/2009,
+105,50,acer rubrum,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+106,100,acer saccharinum,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+107,100,amelanchier canadensis,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+108,15,amelanchier canadensis,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+109,75,betula lenta,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+110,50,cornus florida,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+111,40,cornus florida,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+112,20,liquidambar styraciflua,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+113,10,nyssa sylvatica,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+114,50,nyssa sylvatica,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+115,50,quercus alba,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+116,50,quercus bicolor,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+117,25,quercus bicolor,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+118,50,quercus palustris,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+119,25,quercus palustris,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+120,50,quercus velutina,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+121,20,salix discolor,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+122,70,salix nigra,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+123,75,sassafras albidum,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+124,25,sassafras albidum,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+125,9,ulmus americana,Tree,>=24,See Fall 2009 Maps,,11/1/2009,
+126,50,lindera benzoin,Shrub,>=24,See Spring 2009 Maps,,4/25/2009,
+127,100,acer rubrum,Tree,>=24,See Spring 2009 Maps,,4/25/2009,
+128,125,betula lenta,Tree,>=24,See Spring 2009 Maps,,4/25/2009,
+129,50,cornus florida,Tree,>=24,See Spring 2009 Maps,,4/25/2009,
+130,150,quercus alba,Tree,>=24,See Spring 2009 Maps,,4/25/2009,
+131,75,nyssa sylvatica,Tree,>=24,See Spring 2009 Maps,,4/25/2009,
+132,100,amelanchier canadensis,Tree,>=24,See Spring 2009 Maps,,4/25/2009,
+133,100,cornus alternifolia,Tree,>=24,See Spring 2009 Maps,,4/25/2009,
+134,40,liquidambar styraciflua,Tree,>=24,See Spring 2009 Maps,,4/25/2009,
+135,260,quercus rubra,Tree,>=24,See Spring 2009 Maps,,4/25/2009,
+136,8,betula lenta,Tree,>=24,Spicebush Trail by Hemlock failure 3/13/2012,,4/10/2010,
+137,8,liriodendron tulipifera,Tree,>=24,Spicebush Trail by Hemlock failure 3/13/2011,,4/10/2010,
+138,8,quercus alba,Tree,>=24,Spicebush Trail by Hemlock failure 3/13/2010,,4/10/2010,
+139,8,ulmus americana,Tree,>=24,Spicebush Trail by Hemlock failure 3/13/2013,,4/10/2010,
+140,60,quercus palustris,Tree,>=24,Fallopia research plots,,4/13/2010,
+141,15,lindera benzoin,Shrub,>=24,Across from Stone Mill,,4/22/2010,
+142,10,acer rubrum,Tree,>=24,Across from Stone Mill,,4/22/2010,
+143,42,betula lenta,Tree,>=24,Across from Stone Mill,,4/22/2010,
+144,42,liriodendron tulipifera,Tree,>=24,Across from Stone Mill,,4/22/2010,
+145,20,nyssa sylvatica,Tree,>=24,Across from Stone Mill,,4/22/2010,
+146,35,quercus alba,Tree,>=24,Across from Stone Mill,,4/22/2010,
+147,40,ulmus americana,Tree,>=24,Across from Stone Mill,,4/22/2010,
+148,1,amelanchier canadensis,Tree,>=24,Across from Stone Mill,,4/23/2010,
+149,10,salix discolor,Tree,>=24,Across from Stone Mill,,4/23/2010,
+150,8,salix sp. ,Tree,>=24,Across from Stone Mill,,4/23/2010,
+151,6,aesculus parviflora,Shrub,>=24,Waterfall Trail,,8/20/2010,
+152,15,lindera benzoin,Shrub,>=24,Waterfall Trail,,8/20/2010,
+153,5,cornus florida,Tree,>=24,Waterfall Trail,,8/20/2010,
+154,16,clethra alnifolia,Shrub,>=24,Waterfall Trail,,8/25/2010,
+155,50,rhus aromatica 'gro low',Shrub,<24,Waterfall Trail,,8/31/2010,
+156,60,polystichum acrostichoides,Herb,n/a,,M9,9/10/2010,
+157,12,dennstaedtia punctiloba,Herb,n/a,,M9,9/17/2010,
+158,9,dennstaedtia punctiloba,Herb,n/a,,"N11,M11",9/17/2010,
+159,5,polystichum acrostichoides,Herb,n/a,,"N11,M11",9/17/2010,
+160,4,aralia racemosa,Herb,n/a,,"M10,M11",10/7/2010,
+161,13,dennstaedtia punctiloba,Herb,n/a,,"M10,M11",10/7/2010,
+162,80,polystichum acrostichoides,Herb,n/a,,"M10,M11",10/7/2010,
+163,1,aralia racemosa,Herb,n/a,,"M10,M11",10/8/2010,
+164,3,polystichum acrostichoides,Herb,n/a,,"M10,M11",10/8/2010,
+165,8,aralia racemosa,Herb,n/a,,"M10,M11",10/12/2010,
+166,8,dennstaedtia punctiloba,Herb,n/a,,"M10,M11",10/12/2010,
+167,70,polystichum acrostichoides,Herb,n/a,,"M10,M11",10/12/2010,
+168,29,rudbeckia laciniata,Herb,n/a,,"M10,M11",10/12/2010,
+169,98,rudbeckia laciniata,Herb,n/a,,"M10,M11",10/13/2010,
+170,10,cornus florida,Tree,>=24,,"M10,M11",10/13/2010,
+171,20,liquidambar styraciflua,Tree,>=24,,"M10,M11",10/13/2010,
+172,20,quercus rubra,Tree,>=24,,"M10,M11",10/13/2010,
+173,32,aralia racemosa,Herb,n/a,,"J10,J11,K10,K11",10/22/2010,
+174,23,verbesina alternifolia,Herb,n/a,,"J10,J11,K10,K11",10/22/2010,
+175,12,clethra alnifolia,Shrub,>=24,,K9,10/22/2010,
+176,20,viburnum dentatum,Shrub,>=24,,"J10,J11,K10,K11",10/22/2010,
+177,68,cornus florida,Tree,>=24,,"J10,J11,K10,K11",10/22/2010,
+178,54,quercus alba,Tree,>=24,,"J10,J11,K10,K11",10/22/2010,
+179,21,quercus bicolor,Tree,>=24,,"J10,J11,K10,K11",10/22/2010,
+180,50,liquidambar styraciflua,Tree,>=24,,"J10,J11,K10,K11",10/22/2010,
+181,33,cornus florida,Tree,>=24,,K7,10/26/2010,
+182,33,quercus rubra,Tree,>=24,,K7,10/26/2010,
+183,8,viburnum acerifolium,Shrub,<24,,K9,10/28/2010,
+184,60,viburnum prunifolium ,Shrub,<24,,K9,10/28/2010,
+185,29,betula lenta,Tree,>=24,,K9,10/28/2010,
+186,13,acer rubrum,Tree,>=24,,K9,10/28/2010,
+187,13,cornus florida,Tree,>=24,,K9,10/28/2010,
+188,9,liquidambar styraciflua,Tree,>=24,,K9,10/28/2010,
+189,2,nyssa sylvatica,Tree,>=24,,K9,10/28/2010,
+190,14,sassafras albidum,Tree,>=24,,K9,10/28/2010,
+191,10,hamamelis virginiana,Shrub,<24,,K9,10/30/2010,30
+192,15,viburnum acerifolium,Shrub,<24,,K9,10/30/2010,30
+193,110,viburnum prunifolium,Shrub,<24,,K9,10/30/2010,30
+194,4,quercus palustris,Tree,<24,,K9,10/30/2010,30
+195,1,acer rubrum,Tree,>=24,,K9,10/30/2010,30
+196,18,betula lenta,Tree,>=24,,K9,10/30/2010,30
+197,43,liriodendron tulipifera,Tree,>=24,,K9,10/30/2010,30
+198,7,cornus florida,Tree,>=24,,K9,10/30/2010,30
+199,16,liquidambar styraciflua,Tree,>=24,,K9,10/30/2010,30
+200,65,quercus rubra,Tree,>=24,,K9,10/30/2010,30
+201,12,sassafras albidum ,Tree,>=24,,K9,10/30/2010,30
+202,24,viburnum prunifolium,Shrub,<24,,"L7,L8,K8,K9",11/3/2010,1
+203,4,acer rubrum ,Tree,<24,,"L7,L8,K8,K9",11/3/2010,1
+204,1,betula lenta,Tree,<24,,"L7,L8,K8,K9",11/3/2010,1
+205,5,nyssa sylvatica,Tree,<24,,"L7,L8,K8,K9",11/3/2010,1
+206,11,quercus palustris,Tree,<24,,"L7,L8,K8,K9",11/3/2010,1
+207,9,cornus florida,Tree,>=24,,"L7,L8,K8,K9",11/3/2010,1
+208,6,quercus alba,Tree,>=24,,"L7,L8,K8,K9",11/3/2010,1
+209,12,sassafras albidum,Tree,>=24,,"L7,L8,K8,K9",11/3/2010,1
+210,6,betula lenta,Tree,<24,,L9,11/5/2010,1
+211,6,cornus florida,Tree,>=24,,L9,11/5/2010,1
+212,7,liquidambar styraciflua,Tree,>=24,,L9,11/5/2010,1
+213,7,sassafras albidum,Tree,>=24,,L9,11/5/2010,1
+214,64,aralia racemosa,Herb,n/a,,"P18,P10",11/6/2010,40
+215,7,polygonum virginianum,Herb,n/a,,"P18,P10",11/6/2010,40
+216,26,verbesina alternifolia,Herb,n/a,,"P18,P10",11/6/2010,40
+217,73,quercus alba,Tree,<24,,"P18,P10",11/6/2010,40
+218,121,quercus bicolor,Tree,<24,,"P18,P10",11/6/2010,40
+219,50,cornus florida,Tree,>=24,,"P18,P10",11/6/2010,40
+220,4,aralia racemosa,Herb,n/a,,"N19,P19",11/8/2010,1
+221,10,quercus bicolor,Tree,<24,,"N19,P19",11/8/2010,1
+222,20,cornus florida,Tree,>=24,,"N19,P19",11/8/2010,1
+223,14,aralia racemosa,Herb,n/a,,M9,11/9/2010,
+224,7,betula lenta,Tree,<24,,M9,11/9/2010,
+225,5,cornus florida,Tree,>=24,,M9,11/9/2010,
+226,5,liquidambar styraciflua,Tree,>=24,,M9,11/9/2010,
+227,2,sassafras albidum,Tree,>=24,,M9,11/9/2010,
+228,12,aralia racemosa,Herb,n/a,,"M9,L8,L9",11/10/2010,2
+229,58,dennstaedtia punctiloba,Herb,n/a,,L9,11/10/2010,1
+230,12,betula lenta,Tree,<24,,"L8,L9",11/10/2010,2
+231,1,acer rubrum,Tree,>=24,,"M9,L8,L9",11/10/2010,2
+232,15,cornus florida,Tree,>=24,,"M9,L8,L9",11/10/2010,2
+233,15,liquidambar styraciflua,Tree,>=24,,"M9,L8,L9",11/10/2010,2
+234,5,salix nigra,Tree,>=24,,"M9,L8,L9",11/10/2010,2
+235,3,sassafras albidum,Tree,>=24,,"M9,L8,L9",11/10/2010,2
+236,19,dennstaedtia punctiloba,Herb,n/a,,L9,11/11/2010,
+237,24,acer rubrum,Tree,>=24,Twin Lakes,,4/30/2011,20
+238,20,salix nigra,Tree,>=24,Twin Lakes,,4/30/2011,20
+239,160,aralia racemosa,Herb,n/a,North of Stone Mill Terrace,,5/4/2011,4
+240,114,asclepias incarnata,Herb,n/a,North of Stone Mill Terrace,,5/4/2011,4
+241,190,carex grayii,Herb,n/a,North of Stone Mill Terrace,,5/4/2011,4
+242,160,carex pennsylvanica,Herb,n/a,North of Stone Mill Terrace,,5/4/2011,4
+243,96,polystichum acrostichoides,Herb,n/a,North of Stone Mill Terrace,,5/4/2011,4
+244,48,verbesina alternifolia,Herb,n/a,North of Stone Mill Terrace,,5/4/2011,4
+245,10,cephalanthus occidentalis,Shrub,<24,North of Stone Mill Terrace,,5/4/2011,4
+246,7,clethra alnifolia,Shrub,<24,North of Stone Mill Terrace,,5/4/2011,4
+247,43,vaccinium angustifolium,Shrub,<24,North of Stone Mill Terrace,,5/4/2011,4
+248,1,cornus sericea,Shrub,>=24,North of Stone Mill Terrace,,5/4/2011,4
+249,4,hamemelis virginiana (1 'champlin's red'),Shrub,>=24,North of Stone Mill Terrace,,5/4/2011,4
+250,2,cornus florida,Tree,>=24,North of Stone Mill Terrace,,5/4/2011,4
+251,5,cornus florida,Tree,>=24,North of Stone Mill Terrace,,5/4/2011,4
+252,13,aralia racemosa,Herb,n/a,,L13,5/27/2011,
+253,24,parthenocissus quinquefolia,Herb,n/a,,L13,5/27/2011,
+254,40,geum canadense,Herb,n/a,,L13,5/27/2011,
+255,32,polygonum virginianum,Herb,n/a,,L13,5/27/2011,
+256,32,aster cordifolius,Herb,n/a,,L13,5/27/2011,
+257,40,eurybia divaricata,Herb,n/a,,L13,5/27/2011,
+258,7,liquidambar styraciflua,Tree,>=24,,L13,5/27/2011,
+259,2,quercus bicolor,Tree,>=24,,L13,5/27/2011,
+260,7,cornus florida,Tree,>=24,,L13,5/27/2011,
+261,24,aralia racemosa,Herb,n/a,,L13,5/31/2011,
+262,41,parthenocissus quinquefolia,Herb,n/a,,L13,5/31/2011,
+263,24,geum canadense,Herb,n/a,,L13,5/31/2011,
+264,30,polygonum virginianum,Herb,n/a,,L13,5/31/2011,
+265,32,aster cordifolius,Herb,n/a,,L13,5/31/2011,
+266,24,eurybia divaricata,Herb,n/a,,L13,5/31/2011,
+267,20,aralia racemosa,Herb,n/a,,L13,6/1/2011,
+268,23,geum canadense,Herb,n/a,,L13,6/1/2011,
+269,28,polygonum virginianum,Herb,n/a,,L13,6/1/2011,
+270,32,eurybia divaricata,Herb,n/a,,L13,6/1/2011,
+271,12,aralia racemosa,Herb,n/a,,"L14,L15,M15,M16",6/2/2011,
+272,32,parthenocissus quinquefolia,Herb,n/a,,"L14,L15,M15,M16",6/2/2011,
+273,24,geum canadense,Herb,n/a,,"L14,L15,M15,M16",6/2/2011,
+274,50,polygonum virginianum,Herb,n/a,,"L14,L15,M15,M16",6/2/2011,
+275,20,aster cordfolius,Herb,n/a,,"L14,L15,M15,M16",6/2/2011,
+276,32,eurybia divaricata,Herb,n/a,,"L14,L15,M15,M16",6/2/2011,
+277,5,aralia racemosa,Herb,n/a,,"M16,N17,N18",6/3/2011,
+278,10,parthenocissus quinquefolia,Herb,n/a,,"M16,N17,N18",6/3/2011,
+279,10,geum canadense,Herb,n/a,,"J13,M16,N17,N18",6/3/2011,
+280,20,polygonum virginianum,Herb,n/a,,"M16,N17,N18",6/3/2011,
+281,15,aster cordfolius,Herb,n/a,,"J13,M16,N17,N18",6/3/2011,
+282,32,eurybia divaricata,Herb,n/a,,M9,6/7/2011,
+283,32,geum canadense,Herb,n/a,,M9,6/7/2011,
+284,32,parthenocissus quinquefolia,Herb,n/a,,M9,6/7/2011,
+285,32,polygonum virginianum,Herb,n/a,,M9,6/7/2011,
+286,13,aralia racemosa,Herb,n/a,,M9,6/8/2011,
+287,62,aster cordifolius,Herb,n/a,,M9,6/8/2011,
+288,32,eurybia divaricata,Herb,n/a,,M9,6/8/2011,
+289,62,geum canadense,Herb,n/a,,M9,6/8/2011,
+290,22,parthenocissus quinquefolia,Herb,n/a,,M9,6/8/2011,
+291,32,polygonum virginianum,Herb,n/a,,M9,6/8/2011,
+292,8,aralia racemosa,Herb,n/a,,M10,6/9/2011,
+293,25,aster cordifolius,Herb,n/a,,M10,6/9/2011,
+294,37,eurybia divaricata,Herb,n/a,,M10,6/9/2011,
+295,10,geum canadense,Herb,n/a,,M10,6/9/2011,
+296,32,polygonum virginianum,Herb,n/a,,M10,6/9/2011,
+297,14,aralia racemosa,Herb,n/a,,N11,6/10/2011,
+298,17,aster cordifolius,Herb,n/a,,N11,6/10/2011,
+299,34,eurybia divaricata,Herb,n/a,,N11,6/10/2011,
+300,32,geum canadense,Herb,n/a,,N11,6/10/2011,
+301,24,parthenocissus quinquefolia,Herb,n/a,,N11,6/10/2011,
+302,8,aralia racemosa,Herb,n/a,,N11,6/11/2011,
+303,12,aster cordifolius,Herb,n/a,,N11,6/11/2011,
+304,8,eurybia divaricata,Herb,n/a,,N11,6/11/2011,
+305,10,geum canadense,Herb,n/a,,N11,6/11/2011,
+306,15,parthenocissus quinquefolia,Herb,n/a,,N11,6/11/2011,
+307,8,polygonum virginianum,Herb,n/a,,N11,6/11/2011,
+308,9,aralia racemosa,Herb,n/a,,K7,6/13/2011,
+309,44,aster cordifolius,Herb,n/a,,K7,6/13/2011,
+310,24,eurybia divaricata,Herb,n/a,,K7,6/13/2011,
+311,22,geum canadense,Herb,n/a,,K7,6/13/2011,
+312,61,parthenocissus quinquefolia,Herb,n/a,,K7,6/13/2011,
+313,24,polygonum virginianum,Herb,n/a,,K7,6/13/2011,
+314,65,elymus hystrix,Herb,n/a,,J18,6/14/2011,
+315,3,cornus florida,Tree,>=24,,J18,6/14/2011,
+316,3,liquidambar styraciflua,Tree,>=24,,J18,6/14/2011,
+317,6,liquidambar styraciflua,Tree,>=24,,L7,10/6/2011,
+318,4,quercus velutina,Tree,>=24,,L7,10/6/2011,
+319,8,cornus florida,Tree,>=24,,L7,10/6/2011,
+320,4,liquidambar styraciflua,Tree,>=24,,L7,10/7/2011,
+321,5,quercus velutina,Tree,>=24,,L7,10/7/2011,
+322,1,cornus florida,Tree,>=24,,L7,10/7/2011,
+323,15,liquidambar styraciflua,Tree,>=24,,L8,10/11/2011,
+324,4,quercus velutina,Tree,>=24,,L8,10/11/2011,
+325,16,cornus florida,Tree,>=24,,L8,10/11/2011,
+326,38,solidago caesia,Herb,,,L8,10/12/2011,
+327,38,aster cordifolius,Herb,,,L8,10/12/2011,
+328,38,aster divaricatus,Herb,,,L8,10/12/2011,
+329,38,aster novi-beligii,Herb,,,L8,10/12/2011,
+330,32,geranium maculatum,Herb,,,L8,10/12/2011,
+331,32,solidago canadensis,Herb,,,L8,10/12/2011,
+332,32,solidago odora,Herb,,,L8,10/12/2011,
+333,32,solidago rugosa,Herb,,,L8,10/12/2011,
+334,32,dennstaedtia punctiloba,Herb,,,L8,10/12/2011,
+335,38,andropogon virginicus,Herb,,,L8,10/12/2011,
+336,18,liriodendron tulipifera,Tree,?24,,L8,10/12/2011,
+337,24,carya tomentosa,Tree,?24,,L8,10/12/2011,
+338,12,carex swannii,Herb,,,"L7,L8",10/13/2011,
+339,10,aralia racemosa,Herb,,,"L7,L8",10/13/2011,
+340,8,solidago rugosa,Herb,,,"L7,L8",10/13/2011,
+341,11,solidago odora,Herb,,,"L7,L8",10/13/2011,
+342,6,solidago canadensis,Herb,,,"L7,L8",10/13/2011,
+343,6,dennstaedtia punctiloba,Herb,,,"L7,L8",10/13/2011,
+344,11,aster cordifolius,Herb,,,"L7,L8",10/13/2011,
+345,5,aster novi-beligii,Herb,,,"L7,L8",10/13/2011,
+346,8,aster divaricatus,Herb,,,"L7,L8",10/13/2011,
+347,16,carex lurida,Herb,,,"L7,L8",10/14/2011,
+348,22,carex swannii,Herb,,,"L7,L8",10/14/2011,
+349,20,aster cordifolius,Herb,,,,10/14/2011,
+350,18,aster divaricatus,Herb,,,,10/14/2011,
+351,17,aster novi-beligii,Herb,,,,10/14/2011,
+352,22,monarda fistulosa,Herb,,,,10/14/2011,
+353,23,dennstaedtia punctiloba,Herb,,,,10/14/2011,
+354,18,solidago rugosa,Herb,,,,10/14/2011,
+355,21,solidago odora,Herb,,,,10/14/2011,
+356,12,solidago canadensis,Herb,,,,10/14/2011,
+357,10,aesclepias syriaca,Herb,,,,10/14/2011,
+358,20,andropogon virginicus,Herb,,,,10/14/2011,
+359,24,geranium maculatum,Herb,,,,10/14/2011,
+360,20,aralia racemosa,Herb,,,,10/14/2011,
+361,8,carya tomentosa,Tree,?24,,"L7,L8",10/14/2011,
+362,9,liriodendron tulipifera,Tree,?24,,"L7,L8",10/14/2011,
+363,7,osmunda cinnamomea,Herb,,,,10/17/2011,
+364,5,polystichum acrostichoides,Herb,,,,10/17/2011,
+365,2,dryopteris marginalis,Herb,,,,10/17/2011,
+366,5,thelpteris palustris,Herb,,,,10/17/2011,
+367,5,aralia nudicaulis,Herb,,,,10/17/2011,
+368,7,athryium filix-fenima,Herb,,,,10/17/2011,
+369,8,castanea dentata,Tree,?24,,,10/17/2011,
+370,8,quercus velutina,Tree,?24,,,10/17/2011,
+371,3,liquidambar styraciflua,Tree,?24,,,10/17/2011,
+372,3,cornus florida,Tree,?24,,,10/17/2011,
+373,340,rudbeckia laciniata,Herb,,,,10/24/2011,
+374,45,staphylea trifolia,Shrub,,,,10/24/2011,
+375,18,aralia racemosa,Herb,,,,10/25/2011,
+376,40,,Herb,,,,10/25/2011,
+377,7,,Herb,,,,10/25/2011,
+378,25,,Herb,,,,10/25/2011,
+379,18,,Herb,,,,10/25/2011,
+380,54,,Herb,,,,10/25/2011,
+381,43,,Herb,,,,10/25/2011,
+382,12,,Herb,,,,10/25/2011,
+383,10,,Herb,,,,10/25/2011,
+384,24,,Herb,,,,10/25/2011,
+385,19,,Herb,,,,10/25/2011,
+386,32,,Herb,,,,10/25/2011,
+387,36,lindera benzoin,Shrub,?24,,,10/25/2011,
+388,15,corylus americana,Shrub,?24,,,10/25/2011,
+389,2,hamamelis virginiana,Shrub,?24,,,10/25/2011,
+390,8,liriodendron tulipifera,Tree,?24,,,10/25/2011,
+391,8,cornus florida,Tree,?24,,,10/25/2011,
+392,8,liquidambar styraciflua,Tree,?24,,,10/25/2011,
+393,46,aralia racemosa,Herb,?24,,,10/26/2011,
+394,56,,Herb,,,,10/26/2011,
+395,25,,Herb,,,,10/26/2011,
+396,32,,Herb,,,,10/26/2011,
+397,78,,Herb,,,,10/26/2011,
+398,40,,Herb,,,,10/26/2011,
+399,78,,Herb,,,,10/26/2011,
+400,52,,Herb,,,,10/26/2011,
+401,10,,Herb,,,,10/26/2011,
+402,30,,Herb,,,,10/26/2011,
+403,29,,Herb,,,,10/26/2011,
+404,36,,Herb,,,,10/26/2011,
+405,32,,Herb,,,,10/26/2011,
+406,44,,Herb,,,,10/26/2011,
+407,36,lindera benzoin,Shrub,?24,,,10/26/2011,
+408,15,corylus americana,Shrub,?24,,,10/26/2011,
+409,34,hamamelis virginiana,Shrub,?24,,,10/26/2011,
+410,28,liriodendron tulipifera,Tree,?24,,,10/26/2011,
+411,6,cornus florida,Tree,?24,,,10/26/2011,
+412,12,liquidambar styraciflua,Tree,?24,,,10/26/2011,
+413,10,lindera benzoin,Shrub,?24,,,10/28/2011,
+414,15,staphylea trifolia,Shrub,?24,,,10/28/2011,
+415,10,liriodendron tulipifera,Tree,?24,,,10/28/2011,
+416,10,hamamelis virginiana,Shrub,?24,,,10/28/2011,
+417,39,quercus bicolor,Tree,?24,,M20,10/28/2011,
+418,18,carex crinita,Herb,,,"L8,L9",5/17/2012,
+419,8,monarda fistulosa,Herb,,,"L8,L9",5/17/2012,
+420,8,geranium maculatum,Herb,,,"L8,L9",5/17/2012,
+421,4,solidago rugosa,Herb,,,"L8,L9",5/17/2012,
+422,4,solidago odora,Herb,,,"L8,L9",5/17/2012,
+423,6,aster novi-beligii,Herb,,,"L8,L9",5/17/2012,
+424,11,aesclepias syriaca,Herb,,,"L8,L9",5/17/2012,
+425,6,aster cordifolius,Herb,,,"L8,L9",5/17/2012,
+426,180,rudbeckia laciniata,Herb,,,N20,5/15/2012,
+427,180,rudbeckia laciniata,Herb,,,N20,5/16/2012,
+428,4,corylus americana,Shrub,,,K9,9/13/2012,0
+429,4,quercus velutina,Tree,?24,,K9,9/13/2012,0
+430,8,staphylea trifolia,Shrub,,,K9,9/13/2012,
+431,13,lindera benzoin,Shrub,,,K9,9/14/2012,
+432,3,liquidambar styraciflua,Tree,?24,,K9,9/14/2012,
+433,2,cornus florida,Tree,?24,,K9,9/14/2012,
+434,4,staphylea trifolia,Shrub,,,K9,9/14/2012,
+435,72,saururus cernuus,Herb,,,L9,9/21/2012,1
+436,14,aesclepias syriaca,Herb,,,L9,9/21/2012,1
+437,25,rudbeckia laciniata,Herb,,,L9,9/21/2012,1
+438,17,saururus cernuus,Herb,,,K9,9/28/2012,1
+439,10,carex amphibola,Herb,,,K9,9/28/2012,1
+440,20,juncus effusus,Herb,,,K9,9/28/2012,1
+441,3,asplenium platyneron,Herb,,,K9,9/28/2012,1
+442,19,carex lurida,Herb,,,K9,9/28/2012,1
+443,17,caltha palustris,Herb,,,K9,9/28/2012,1
+444,3,osmunda regalis,Herb,,,K9,9/28/2012,1
+445,32,onoclea sensibilis,Herb,,,K9,9/28/2012,1
+446,22,carex amphibola,Herb,,,K9,10/1/2012,1
+447,33,juncus effusus,Herb,,,K9,10/1/2012,1
+448,3,asplenium platyneron,Herb,,,K9,10/1/2012,1
+449,23,carex lurida,Herb,,,K9,10/1/2012,1
+450,27,caltha palustris,Herb,,,K9,10/1/2012,1
+451,9,osmunda regalis,Herb,,,K9,10/1/2012,1
+452,11,iris versicolor,Herb,,,K9,10/1/2012,1
+453,5,carex amphibola,Herb,,,K9,10/2/2012,1
+454,6,asplenium platyneron,Herb,,,K9,10/2/2012,1
+455,12,carex lurida,Herb,,,K9,10/2/2012,1
+456,27,carex amphibola,Herb,,,K9,10/3/2012,0
+457,40,juncus effusus,Herb,,,K9,10/3/2012,0
+458,18,carex lurida,Herb,,,K9,10/3/2012,0
+459,43,caltha palustris,Herb,,,K9,10/3/2012,0
+460,2,osmunda regalis,Herb,,,K9,10/3/2012,0
+461,32,onoclea sensibilis,Herb,,,K9,10/3/2012,0
+462,87,lobelia siphilitica,Herb,,,K10,10/9/2012,1
+463,23,osmunda regalis,Herb,,,"K9,K10",10/9/2012,1
+464,2,asplenium platyneron,Herb,,,K9,10/9/2012,1
+465,72,carex amphibola,Herb,,,"K9,K10",10/9/2012,1
+466,44,carex lurida,Herb,,,"K9,K10",10/9/2012,1
+467,123,juncus effusus,Herb,,,"K9,K10",10/9/2012,1
+468,63,onoclea sensibilis,Herb,,,"K9,K10",10/9/2012,1
+469,13,aster divaricatus,Herb,,,"K9,K10",10/9/2012,1
+470,8,solidago caesia,Herb,,,"K9,K10",10/9/2012,1
+471,25,iris versicolor,Herb,,,"K9,K10",10/9/2012,1
+472,4,polystichum acrostichoides,Herb,,,"K9,K10",10/9/2012,1
+473,5,viburnum prunifolium,Shrub,,,"K9,K10",10/9/2012,1
+474,17,staphylea trifolia,Shrub,,,"K9,K10",10/9/2012,1
+475,4,lindera benzoin,Shrub,,,"K9,K10",10/9/2012,1
+476,4,ostrya virginiana,Tree,?24,,"K9,K10",10/9/2012,1
+477,50,caltha palustris,Herb,,,"K9,K10",10/9/2012,1
+478,13,osmunda regalis,Herb,,,"K9,K10",10/16/2012,1
+479,19,sambucus canadensis,Shrub,,,"K9,K10",10/16/2012,1
+480,9,onoclea sensibilis,Herb,,,"K9,K10",10/16/2012,1
+481,34,juncus effusus,Herb,,,"K9,K10",10/16/2012,1
+482,62,carex grayii,Herb,,,"K9,K10",10/16/2012,1
+483,136,carex amphibola,Herb,,,"K9,K10",10/16/2012,1
+484,1,viburnum dentatum,Shrub,,,"K9,K10",10/16/2012,1
+485,13,aster divaricatus,Herb,,,"K9,K10",10/16/2012,1
+486,22,solidago caesia,Herb,,,"K9,K10",10/16/2012,1
+487,15,aster cordifolius,Herb,,,"K9,K10",10/16/2012,1
+488,28,carex lurida,Herb,,,"K9,K10",10/16/2012,1
+489,6,viburnum prunifolium,Shrub,,,"K9,K10",10/16/2012,1
+490,5,nyssa sylvatica,Tree,?24,,"K9,K10",10/16/2012,1
+491,2,liriodendron tulipifera,Tree,<24,,"K9,K10",10/16/2012,1
+492,8,athryium filix-fenima,Herb,,,"K9,K10",10/16/2012,1
+493,8,caltha palustris,Herb,,,"K9,K10",10/16/2012,1
+494,1,cornus florida,Tree,<24,,"K9,K10",10/16/2012,1
+495,12,geranium maculatum,Herb,,,"K9,K10",10/16/2012,1
+496,13,onoclea sensibilis,Herb,,,K9,10/17/2012,0
+497,29,juncus effusus,Herb,,,K9,10/17/2012,0
+498,66,carex grayii,Herb,,,K9,10/17/2012,0
+499,49,carex amphibola,Herb,,,K9,10/17/2012,0
+500,2,aster divaricatus,Herb,,,K9,10/17/2012,0
+501,16,solidago caesia,Herb,,,K9,10/17/2012,0
+502,2,viburnum prunifolium,Shrub,,,K9,10/17/2012,0
+503,1,nyssa sylvatica,Tree,?24,,K9,10/17/2012,0
+504,1,cornus florida,Tree,<24,,K9,10/17/2012,0
+505,4,geranium maculatum,Herb,,,K9,10/17/2012,0
+506,8,aster novi-beligii,Herb,,,K9,10/17/2012,0
+507,3,clethra alnifolia,Shrub,,,K9,10/17/2012,0
+508,23,vernonia noveboracensis,Herb,,,K9,10/17/2012,0
+509,14,carex vulpinoidea,Herb,,,K9,10/17/2012,0
+510,15,liquidambar styraciflua,Tree,?24,,"K8,K9",10/18/2012,20
+511,3,cornus florida,Tree,<24,,"K8,K9",10/22/2012,0
+512,3,cornus alternifolia,Tree,?24,,"K8,K9",10/22/2012,0
+513,3,cornus amomum,Shrub,?24,,"K8,K9",10/22/2012,0
+514,1,viburnum dentatum,Shrub,?24,,"K8,K9",10/22/2012,0
+515,1,solidago caesia ,Herb,,,"K8,K9",10/22/2012,0
+516,31,carex amphibola,Herb,,,"K8,K9",10/22/2012,0
+517,1,liquidambar styraciflua,Tree,?24,,"K8,K9",10/22/2012,0
+518,2,aster novi-beligii,Herb,,,"K8,K9",10/22/2012,0
+519,62,saururus cernuus,Herb,,,"K8,K9",10/22/2012,0
+520,30,carex vulpinoidea,Herb,,,"K8,K9",10/22/2012,0
+521,2,carpinus caroliniana,Tree,?24,,"K8,K9",10/22/2012,0
+522,5,clethra alnifolia,Shrub,?24,,"K8,K9",10/22/2012,0
+523,5,sambucus canadensis,Shrub,?24,,"K8,K9",10/22/2012,0
+524,35,vernonia noveboracensis,Herb,,,"K8,K9",10/22/2012,0
+525,1,cornus alternifolia,Tree,?24,,K9,10/23/2012,1
+526,3,cornus amomum,Shrub,?24,,K9,10/23/2012,1
+527,16,carex amphibola,Herb,,,K9,10/23/2012,1
+528,30,carex vulpinoidea,Herb,,,K9,10/23/2012,1
+529,1,clethra alnifolia,Shrub,?24,,K9,10/23/2012,1
+530,2,sambucus canadensis,Shrub,?24,,K9,10/23/2012,1
+531,22,vernonia noveboracensis,Herb,,,K9,10/23/2012,1
+532,31,carex grayii,Herb,,,K9,10/23/2012,1
+533,5,cornus florida,Tree,<24,,K9,10/24/2012,1
+534,5,cornus alternifolia,Tree,?24,,K9,10/24/2012,1
+535,10,cornus amomum,Shrub,?24,,K9,10/24/2012,1
+536,16,carex amphibola,Herb,,,K9,10/24/2012,1
+537,3,liquidambar styraciflua,Tree,?24,,K9,10/24/2012,1
+538,6,carex vulpinoidea,Herb,,,K9,10/24/2012,1
+539,1,carpinus caroliniana,Tree,?24,,K9,10/24/2012,1
+540,3,clethra alnifolia,Shrub,?24,,K9,10/24/2012,1
+541,10,sambucus canadensis,Shrub,?24,,K9,10/24/2012,1
+542,55,vernonia noveboracensis,Herb,,,K9,10/24/2012,1
+543,31,carex grayii,Herb,,,K9,10/24/2012,1
+544,27,solidago caesia,Herb,,,"K8,K9",10/25/2012,1
+545,3,carex amphibola,Herb,,,"K8,K9",10/25/2012,1
+546,10,aster novi-beligii,Herb,,,"K8,K9",10/25/2012,1
+547,22,saururus cernuus,Herb,,,"K8,K9",10/25/2012,1
+548,53,carex vulpinoidea,Herb,,,"K8,K9",10/25/2012,1
+549,9,vernonia noveboracensis,Herb,,,"K8,K9",10/25/2012,1
+550,35,carex grayii,Herb,,,"K8,K9",10/25/2012,1
+551,3,cornus amomum,Shrub,?24,,"K8,K9",10/26/2012,1
+552,3,solidago caesia,Herb,,,"K8,K9",10/26/2012,1
+553,13,carex amphibola,Herb,,,"K8,K9",10/26/2012,1
+554,5,aster novi-beligii,Herb,,,"K8,K9",10/26/2012,1
+555,153,saururus cernuus,Herb,,,"K8,K9",10/26/2012,1
+556,1,carpinus caroliniana,Tree,?24,,"K8,K9",10/26/2012,1
+557,4,clethra alnifolia,Shrub,?24,,"K8,K9",10/26/2012,1
+558,9,carex grayii,Herb,,,"K8,K9",10/26/2012,1
+559,23,aster divaricatus,Herb,,,K9,10/23/2012,1
+560,19,onoclea sensibilis,Herb,,,K9,10/23/2012,1
+561,32,iris versicolor,Herb,,,K9,10/23/2012,1
+562,20,juncus effusus,Herb,,,K9,10/23/2012,1
+563,10,solidago odora,Herb,,,K9,10/23/2012,1
+564,34,carex crinita,Herb,,,K9,10/23/2012,1
+565,26,athryium filix-fenima,Herb,,,K9,10/23/2012,1
+566,6,aster divaricatus,Herb,,,K9,10/24/2012,1
+567,10,iris versicolor,Herb,,,K9,10/24/2012,1
+568,16,carex crinita,Herb,,,K9,10/24/2012,1
+569,16,athryium filix-fenima,Herb,,,K9,10/24/2012,1
+570,16,asplenium platyneron,Herb,,,K9,10/24/2012,1
+571,5,viburnum prunifolium,Shrub,?24,,K9,10/24/2012,1
+572,30,aster divaricatus,Herb,,,"K8,K9",10/25/2012,1
+573,12,iris versicolor,Herb,,,"K8,K9",10/25/2012,1
+574,13,solidago caesia,Herb,,,"K8,K9",10/25/2012,1
+575,100,carex crinita,Herb,,,"K8,K9",10/25/2012,1
+576,27,athryium filix-fenima,Herb,,,"K8,K9",10/25/2012,1
+577,14,asplenium platyneron,Herb,,,"K8,K9",10/25/2012,1
+578,10,polystichum acrostichoides,Herb,,,"K8,K9",10/25/2012,1
+579,12,carex aggregata,Herb,,,"K8,K9",10/25/2012,1
+580,2,dennstaedtia punctiloba,Herb,,,"K8,K9",10/25/2012,1
+581,11,solidago odora,Herb,,,"K8,K9",10/26/2012,1
+582,30,athryium filix-fenima,Herb,,,"K8,K9",10/26/2012,1
+583,1,viburnum prunifolium,Shrub,?24,,"K8,K9",10/26/2012,1
+584,7,aster cordifolius,Herb,,,"K8,K9",10/26/2012,1
+585,19,aralia racemosa,Herb,,,"K8,K9",10/26/2012,1
+586,6,aralia racemosa,Herb,,,"K8,K9",10/26/2012,1
+587,15,carex cephalaphora,Herb,,,"K8,K9",10/26/2012,1
+588,64,dryopteris marginalis,Herb,,,L9,11/4/2012,
+589,32,athryium filix-fenima,Herb,,,L9,11/4/2012,
+590,129,thelpteris palustris,Herb,,,L9,11/4/2012,
+591,89,schizachryium scoparium,Herb,,,L9,11/4/2012,
+592,38,aster cordifolius,Herb,,,L9,11/4/2012,
+593,57,aster divaricatus,Herb,,,L9,11/4/2012,
+594,30,carex vulpinoidea,Herb,,,L9,11/4/2012,
+595,32,polystichum acrostichoides,Herb,,,L9,11/4/2012,
+596,36,carex lurida,Herb,,,L9,11/4/2012,
+597,20,solidago canadensis,Herb,,,L9,11/4/2012,
+598,38,andropogon virginicus,Herb,,,L9,11/4/2012,
+599,36,carex crinita,Herb,,,L9,11/4/2012,
+600,6,liquidambar styraciflua,Tree,,,M9,5/2/2013,
+601,7,cornus florida,Tree,,,M9,5/2/2013,
+602,4,asplenium platyneron,Herb,,,L9,5/2/2013,
+603,40,iris versicolor,Herb,,,L9,5/2/2013,
+604,17,carex plantaginea,Herb,,,L9,5/2/2013,
+605,3,carex debilis,Herb,,,L9,5/2/2013,
+606,10,carex vulpinoidea,Herb,,,L9,5/2/2013,
+607,23,liquidambar styraciflua,Tree,,,M9,5/3/2013,
+608,2,liquidambar styraciflua,Tree,,,L9,5/7/2013,
+609,3,cornus florida,Tree,,,L9,5/7/2013,
+610,13,asplenium platyneron,Herb,,,K9,5/7/2013,
+611,92,iris versicolor,Herb,,,K9,5/7/2013,
+612,54,carex plantaginea,Herb,,,"K9,L9",5/7/2013,
+613,5,solidago odora,Herb,,,K9,5/7/2013,
+614,23,aster divaricatus,Herb,,,"K9,L9",5/7/2013,
+615,172,carex platyphylla,Herb,,,"K9,L9",5/7/2013,
+616,3,thelpteris palustris,Herb,,,K9,5/7/2013,
+617,6,dennstaedtia punctiloba,Herb,,,K9,5/7/2013,
+618,14,carex grayii,Herb,,,K9,5/7/2013,
+619,8,carex vulpinoidea,Herb,,,K9,5/7/2013,
+620,10,viburnum acerifolium,Shrub,,,K9,5/7/2013,
+621,11,liquidambar styraciflua,Tree,,,M9,5/10/2013,
+622,3,liquidambar styraciflua,Tree,,,"K9,L9",5/13/2013,
+623,129,carex plataginea,Herb,,,"K9,L9",5/13/2013,
+624,10,solidago odora,Herb,,,"K9,L9",5/13/2013,
+625,80,carex platyphylla,Herb,,,"K9,L9",5/13/2013,
+626,10,thelpteris palustris,Herb,,,"K9,L9",5/13/2013,
+627,14,viburnum acerifolium,Shrub,,,"K9,L9",5/13/2013,
+628,45,aster novi-beligii,Herb,,,"K9,L9",5/15/2013,
+629,15,solidago caesia,Herb,,,"K9,L9",5/15/2013,
+630,15,aralia racemosa,Herb,,,K9,5/15/2013,
+631,2,betula lenta,Tree,,,K9,5/15/2013,
+632,25,solidago rugosa,Herb,,,"K9,L9",5/15/2013,
+633,13,solidago canadensis,Herb,,,"K9,L9",5/15/2013,
+634,2,liquidambar styraciflua,Tree,,,M9,5/15/2013,
+635,1,cornus florida,Tree,,,M9,5/15/2013,
+636,1,carpinus caroliniana,Tree,,,M9,5/15/2013,
+637,2,quercus alba,Tree,,,M9,5/15/2013,
+638,7,quercus rubra,Tree,,,M9,5/15/2013,
+639,4,aesculus parviflora,Shrub,,,M9,5/15/2013,
+640,15,acer saccharinum,Tree,<24,,N20,5/28/2013,
+641,2,sambucus canadensis,Shrub,?24,,N20,5/28/2013,
+642,25,acer saccharinum,Tree,<24,,N20,5/29/2013,
+643,4,sambucus canadensis,Shrub,<24,,N20,5/29/2013,
+644,13,staphylea trifolia,Shrub,<24,,N20,5/29/2013,
+645,30,rudbeckia laciniata,Herb,<24,,N20,5/29/2013,
+646,8,acer saccharinum,Tree,<24,,"K9,K10",6/4/2013,
+647,4,sambucus canadensis,Shrub,,,"K9,K10",6/4/2013,
+648,56,staphylea trifolia,Shrub,<24,,"K9,K10",6/4/2013,
+649,19,solidago odora,Herb,,,"K9,K10",6/4/2013,
+650,66,carex platyphylla,Herb,,,"K9,K10",6/4/2013,
+651,126,carex plataginea,Herb,,,"K9,K10",6/4/2013,
+652,52,solidago canadensis,Herb,,,"K9,K10",6/4/2013,
+653,2,lobelia siphilitica,Herb,,,"K9,K10",6/4/2013,
+654,2,cornus florida,Tree,?24,,"K9,K10",6/4/2013,
+655,1,viburnum acerifolium,Shrub,?24,,"K9,K10",6/4/2013,
+656,6,viburnum prunifolim,Shrub,?24,,"K9,K10",6/4/2013,
+657,1,cornus alternifolia,Tree,?24,,"K9,K10",6/4/2013,
+658,1,betula lenta,Tree,<24,,"K9,K10",6/4/2013,
+659,11,quercus rubra,Tree,<24,,"K9,K10",6/4/2013,
+660,23,acer saccharinum,Tree,<24,,N20,6/5/2013,
+661,41,staphylea trifolia,Shrub,<24,,N20,6/5/2013,
+662,11,rudbeckia laciniata,Herb,,,N20,6/5/2013,
+663,2,quercus alba,Tree,<24,,"K9,K10",6/4/2013,
+664,2,monarda fistulosa,Herb,,,"K9,K10",6/4/2013,
+665,6,aralia racemosa,Herb,,,"K9,K10",6/4/2013,
+666,4,aralia nudicaulis,Herb,,,"K9,K10",6/4/2013,
+667,30,eupatorium perfoliatum,Herb,,,"K9,K10",6/4/2013,
+668,24,dennstaedtia punctiloba,Herb,,,"K9,K10",6/4/2013,
+669,4,carya tomentosa,Tree,<24,,"K9,K10",6/4/2013,
+670,4,carya cordiformis,Tree,<24,,N20,6/5/2013,
+671,2,liriodendron tulipifera,Tree,<24,,N20,6/5/2013,
+672,19,lindera benzoin,Shrub,<24,,N20,8/7/2013,
+673,21,lindera benzoin,Shrub,<24,,N20,9/26/2013,
+674,30,verbesina alternifolia,Herb,,,N20,8/7/2013,
+675,172,verbesina alternifolia,Herb,,,N20,9/26/2013,
+676,7,quercus bicolor,Tree,<24,,N20,8/7/2013,
+677,13,quercus bicolor,Tree,<24,,N20,9/26/2013,
+678,43,rudbeckia laciniata,Herb,,,N20,9/26/2013,
+679,20,hibiscus moschuetos,Herb,,,M20,10/31/2013,
+680,25,hibiscus moschuetos,Herb,,,O16,10/31/2013,
+681,35,verbesina alternifolia,Herb,,,M20,10/31/2013,
+682,68,verbesina alternifolia,Herb,,,"M19,N19",10/31/2013,
+683,13,verbesina alternifolia,Herb,,,M15,11/1/2013,
+684,7,verbesina alternifolia,Herb,,,K10,11/2/2013,
+685,12,quercus alba,Tree,<24,,M20,10/31/2013,
+686,11,quercus alba,Tree,<24,,"M19,N19",10/31/2013,
+687,8,quercus alba,Tree,<24,,M15,11/1/2013,
+688,10,carex plantaginea,Herb,,,M20,10/31/2013,
+689,25,carex plantaginea,Herb,,,O16,10/31/2013,
+690,12,carex plantaginea,Herb,,,K10,11/2/2013,
+691,16,lindera benzoin,Shrub,<24,,"M19,N19",10/31/2013,
+692,9,lindera benzoin,Shrub,<24,,M15,11/1/2013,
+693,14,lindera benzoin,Shrub,<24,,K10,11/2/2013,
+694,1,quercus palustris,Tree,<24,,"M19,N19",10/31/2013,
+695,2,aesculus parviflora,Shrub,<24,,K10,11/2/2013,
+696,1,quercus palustris,Tree,<24,,O16,10/31/2013,
+697,34,asplenium platyneron,Herb,,,"M9,M10",11/4/2013,
+698,8,carex plantaginea,Herb,,,"M9,M10",11/4/2013,
+699,1,vaccinium angustifolium,Shrub,<24,,M11,11/4/2013,
+700,96,carex pensylvanica,Herb,,,M10,7/15/2014,4
+701,150,carex vulpinoidea,Herb,,,M10,7/15/2014,4
+702,48,geranium maculatum,Herb,,,M10,7/15/2014,4
+703,50,monarda fistulosa,Herb,,,M10,7/15/2014,4
+704,100,solidago odora,Herb,,,M10,7/15/2014,4
+705,10,carex pensylvanica,Herb,,,L13,10/14/2014,
+706,2,aralia racemosa,Herb,,,L13,10/14/2014,
+707,35,carex pensylvanica,Herb,,,"L13,M12",10/16/2014,
+708,29,aralia racemosa,Herb,,,"L13,M12",10/16/2014,
+709,50,solidago odora,Herb,,,"L13,M12",10/16/2014,
+710,72,acer saccharinum,Tree,<24,,"M20,N20",10/15/2014,
+711,30,rudbeckia laciniata,Herb,,,"M20,N20",10/15/2014,
+712,25,hibiscus moschuetos,Herb,,,"M20,N20",10/15/2014,
+713,107,acer saccharinum,Tree,<24,,"M20,N20,N19",10/17/2014,
+714,40,rudbeckia laciniata,Herb,,,"M20,N20,N19",10/17/2014,
+715,11,hibiscus moschuetos,Herb,,,"M20,N20,N19",10/17/2014,
+716,62,carex pensylvanica,Herb,,,"L13,M12",10/21/2014,
+717,30,aralia racemosa,Herb,,,"L13,M12",10/21/2014,
+718,47,solidago odora,Herb,,,"L13,M12",10/21/2014,
+719,16,aralia racemosa,Herb,,,"L17,18",10/22/2014,
+720,24,verbesina alternifolia,Herb,,,"L17,18",10/22/2014,
+721,81,quercus rubra,Tree,<24,,"L17,18",10/22/2014,
+722,87,acer rubrum,Tree,<24,,"L17,18",10/22/2014,
+723,16,aralia racemosa,Herb,,,"L17,18",10/28/2014,
+724,45,quercus rubra,Tree,<24,,"L17,18",10/28/2014,
+725,121,acer rubrum,Tree,<24,,"L17,18",10/28/2014,
+726,11,quercus alba,Tree,<24,,"L17,18",10/28/2014,
+727,2,verbesina alternifolia,Herb,,,"L17,18",10/29/2014,
+728,51,quercus rubra,Tree,<24,,"L17,18",10/29/2014,
+729,213,acer rubrum,Tree,<24,,"L17,18",10/29/2014,
+730,16,aralia racemosa,Herb,,,"L17,18",10/30/2014,
+731,24,verbesina alternifolia,Herb,,,"L17,18",10/30/2014,
+732,72,quercus rubra,Tree,<24,,"L17,18",10/30/2014,
+733,253,acer rubrum,Tree,<24,,"L17,18",10/30/2014,
+734,158,acer saccharinum,Tree,<24,,"M,N20",11/12/2014,1
+735,241,acer saccharinum,Tree,<24,,"N20,21",11/13/2014,6
+736,216,acer rubrum,Tree,<24,,"N20,21",11/13/2014,6
+737,30,hibiscus moschuetos,Herb,,,"M,N20",11/11/2014,2
+738,16,rudbeckia laciniata,Herb,,,"M,N20",11/11/2014,2
+739,130,quercus rubra,Tree,,,L20,3/31/2015,
+740,35,acer rubrum,Tree,,,L20,3/31/2015,
+741,170,quercus rubra,Tree,,,L20,4/1/2015,
+742,55,acer rubrum,Tree,,,L20,4/1/2015,
+743,120,quercus rubra,Tree,,,L20,4/2/2015,
+744,100,quercus rubra,Tree,,,L20,4/3/2015,
+745,40,quercus rubra,Tree,,,L20,4/6/2015,
+746,105,quercus rubra,Tree,,,L20,4/10/2015,
+747,20,quercus rubra,Tree,,,L21,4/14/2015,
+748,45,quercus rubra,Tree,,,L20,4/20/2015,
+749,218,quercus rubra,Tree,,,L20,4/21/2015,
+750,140,quercus rubra,Tree,,,L20,3/30/2015,
+751,60,acer rubrum,Tree,,,L20,3/30/2015,
+752,130,quercus rubra,Tree,,,L20,3/31/2015,
+753,35,acer rubrum,Tree,,,L20,3/31/2015,
+754,170,quercus rubra,Tree,,,L20,4/1/2015,
+755,55,acer rubrum,Tree,,,L20,4/1/2015,
+756,120,quercus rubra,Tree,,,L20,4/2/2015,
+757,100,quercus rubra,Tree,,,L20,4/3/2015,
+758,40,quercus rubra,Tree,,,L20 ,4/6/2015,
+759,105,quercus rubra,Tree,,,L20 ,4/10/2015,
+760,20,quercus rubra,Tree,,,L21,4/14/2015,
+761,45,quercus rubra,Tree,,,L20,4/20/2015,
+762,218,quercus rubra,Tree,,,L20,4/21/2015,
+763,36,aralia racemosa,Herb,,,K9,9/11/2015,
+764,6,geranium maculatum,Herb,,,K9,9/11/2015,
+765,16,eutrochium maculatum,Herb,,,K9,9/11/2015,
+766,15,rudbeckia laciniata,Herb,,,L13,11/2/2015,
+767,35,liriodendron tulipifera,Tree,,,L13,11/2/2015,
+768,72,liquidambar styraciflua,Tree,,,L13,11/2/2015,
+769,34,quercus alba,Tree,,,"L13,L12",11/4/2015,
+770,11,rudbeckia laciniata,Herb,,,"L13,L12",11/4/2015,
+771,181,liquidambar styraciflua,Tree,,,"L13,L12",11/4/2015,
+772,4,verbesina alternifolia,Herb,,,"L13,L12",11/4/2015,
+773,30,maianthemum racemosum,Herb,,,"L13,L12",11/4/2015,
+774,35,liriodendron tulipifera,Tree,,,"L13,L12",11/4/2015,
+775,2,quercus alba,Tree,,,L13,11/9/2015,
+776,41,liriodendron tulipifera,Tree,,,L13,11/9/2015,
+777,123,liquidambar styraciflua,Tree,,,L13,11/9/2015,
+778,3,nyssa sylvatica,Tree,,,L13,11/10/2015,
+779,11,staphylea trifolia,Shrub,,,L13,11/10/2015,
+780,11,liriodendron tulipifera,Tree,,,L13,11/10/2015,
+781,231,liquidambar styraciflua,Tree,,,L13,11/10/2015,
+782,20,quercus rubra,Tree,,,L13,11/11/2015,
+783,18,liriodendron tulipifera,Tree,,,L13,11/11/2015,
+784,10,nyssa sylvatica,Tree,,,L13,11/11/2015,
+785,30,maianthemum racemosum,Herb,,,L13,11/11/2015,
+786,89,liquidambar styraciflua,Tree,,,L13,11/11/2015,
+787,60,liquidambar styraciflua,Tree,,,"L13,M13",11/12/2015,
+788,10,quercus rubra,Tree,,,"L13,M13",11/12/2015,
+789,50,quercus rubra,Tree,,,"L13,M13",11/13/2015,
+790,120,liquidambar styraciflua,Tree,,,"L13,M13",11/13/2015,
+791,40,polygonatum pubescens or biflorum,Herb,,,"L13,M13",11/13/2015,
+792,41,quercus rubra,Tree,,,K10,11/16/2015,
+793,136,liquidambar styraciflua,Tree,,,K10,11/16/2015,
+794,153,liquidambar styraciflua,Tree,,,"K10,K9",11/17/2015,
+795,18,staphylea trifolia,Shrub,,,"K10,K9",11/17/2015,
+796,31,quercus rubra,Tree,,,"K10,K9",11/17/2015,
+797,12,quercus alba,Tree,,,"K10,K9",11/17/2015,
+798,1,carya cordiformis,Tree,,,"K10,K9",11/17/2015,
+799,1,liriodendron tulipifera,Tree,,,"K10,K9",11/17/2015,
+800,68,liquidambar styraciflua,Tree,,,"K10,J10,L10",11/18/2015,
+801,203,staphylea trifolia,Shrub,,,"K10,J10,L10",11/18/2015,
+802,15,liriodendron tulipifera,Tree,,,"K10,J10,L10",11/18/2015,
+803,158,acer saccharinum,Tree,,,"M20,M19",11/20/2015,
+804,29,tsuga canadensis,Tree,,,"N16,N15",11/19/2015,
+805,176,acer saccharinum,Tree,,,"M20,M19",11/23/2015,
+806,116,acer saccharinum,Tree,,,"M20,M19",11/24/2015,
+807,9,celtis occidentalis,Tree,,,"P11,P12",6/7/2016,
+808,8,betula populifolia,Tree,,,"P11,P12",6/7/2016,
+809,1,celtis occidentalis,Tree,,,"P11,P12",6/8/2016,
+810,7,betula populifolia,Tree,,,"P11,P12",6/8/2016,
+811,15,sassafras albidum,Tree,,,"P11,P12",6/8/2016,
+812,7,cornus amomum,Shrub,,,"P11,P12",6/8/2016,
+813,3,clethra alnifolia,Shrub,,,"P11,P12",6/8/2016,
+814,11,clethra alnifolia,Shrub,,,"P11,P12",6/9/2016,
+815,12,cornus amomum,Shrub,,,"P11,P12",6/9/2016,
+816,16,vaccinium corymbosum,Shrub,,,"P11,P12",6/9/2016,
+817,69,andropogon virginicus,Herb,,,"P11,P12",6/9/2016,
+818,35,carex vulpinoidea,Herb,,,"P11,P12",6/9/2016,
+819,28,solidage juncea,Herb,,,"P11,P12",6/9/2016,
+820,20,heliopsis helianthoides,Herb,,,"P11,P12",6/9/2016,
+821,39,euthamia graminifolia,Herb,,,"P11,P12",6/9/2016,
+822,45,elymus canadensis,Herb,,,"P11,P12",6/9/2016,
+823,67,monarda fistulosa,Herb,,,"P11,P12",6/9/2016,
+824,14,elymus canadensis,Herb,,,"P11,P12 ",6/10/2016,
+825,7,solidage juncea,Herb,,,"P11,P12 ",6/10/2016,
+826,11,andropogon virginicus,Herb,,,"P11,P12 ",6/10/2016,
+827,10,heliopsis helianthoides,Herb,,,"P11,P12 ",6/10/2016,
+828,4,euthamia graminifolia,Herb,,,"P11,P12 ",6/10/2016,
+829,62,heliopsis helianthoides,Herb,,,"P11,P12",6/14/2016,
+830,24,monarda fistulosa,Herb,,,"P11,P12",6/14/2016,
+831,63,andropogon virginicus,Herb,,,"P11,P12",6/14/2016,
+832,48,euthamia graminifolia,Herb,,,"P11,P12",6/14/2016,
+833,14,carex vulpinoidea,Herb,,,"P11,P12",6/14/2016,
+834,3,carex stricta,Herb,,,"P11,P12",6/14/2016,
+835,20,vernonia noveboracensis,Herb,,,"P11,P12",6/14/2016,
+836,46,solidago juncea,Herb,,,"P11,P12",6/14/2016,
+837,39,juncus effusus,Herb,,,"P11,P12",6/14/2016,
+838,11,lobelia siphilitica,Herb,,,"P11,P12",6/14/2016,
+839,16,heliopsis helianthoides,Herb,,,"P11,P12",6/15/2016,
+840,5,monarda fistulosa,Herb,,,"P11,P12",6/15/2016,
+841,6,andropogon virginicus,Herb,,,"P11,P12",6/15/2016,
+842,44,euthamia graminifolia,Herb,,,"P11,P12",6/15/2016,
+843,27,carex stricta,Herb,,,"P11,P12",6/15/2016,
+844,5,vernonia noveboracensis,Herb,,,"P11,P12",6/15/2016,
+845,14,juncus effusus,Herb,,,"P11,P12",6/15/2016,
+846,22,lobelia siphilitica,Herb,,,"P11,P12",6/15/2016,
+847,6,onoclea sensibilis,Herb,,,"P11,P12",6/15/2016,
+848,29,elymus canadensis,Herb,,,"P11,P12",6/15/2016,
+849,24,eleocharis obtusa,Herb,,,"P11,P12",6/15/2016,
+850,1,osmunda regalis,Herb,,,"P11,P12",6/15/2016,
+851,53,heliopsis helianthoides,Herb,,,"P11,P12",6/16/2016,
+852,4,monarda fistulosa,Herb,,,"P11,P12",6/16/2016,
+853,16,euthamia graminifolia,Herb,,,"P11,P12",6/16/2016,
+854,7,carex stricta,Herb,,,"P11,P12",6/16/2016,
+855,37,juncus effusus,Herb,,,"P11,P12",6/16/2016,
+856,17,lobelia siphilitica,Herb,,,"P11,P12",6/16/2016,
+857,16,onoclea sensibilis,Herb,,,"P11,P12",6/16/2016,
+858,32,elymus canadensis,Herb,,,"P11,P12",6/16/2016,
+859,76,eleocharis obtusa,Herb,,,"P11,P12",6/16/2016,
+860,20,osmunda regalis,Herb,,,"P11,P12",6/16/2016,
+861,37,saururus cernuus,Herb,,,"P11,P12",6/16/2016,
+862,15,hibiscus moschuetos,Herb,,,"P11,P12",6/16/2016,
+863,6,clethra alnifolia,Shrub,,,"P11,P12",6/16/2016,
+864,3,vaccinium corymbosum,Herb,,,"P11,P12",6/16/2016,
+865,40,leersia virginica,Herb,,,"P11,P12",6/16/2016,
+866,40,heliopsis helianthoides,Herb,,,"P11,P12",6/17/2016,
+867,62,carex stricta,Herb,,,"P11,P12",6/17/2016,
+868,39,elymus canadensis,Herb,,,"P11,P12",6/17/2016,
+869,10,osmunda regalis,Herb,,,"P11,P12",6/17/2016,
+870,18,hibiscus moschuetos,Herb,,,"P11,P12",6/17/2016,
+871,10,leersia virginica,Herb,,,"P11,P12",6/17/2016,
+872,2,clethra alnifolia,Shrub,,,"P11,P12",6/17/2016,
+873,1,vaccinium corymbosum,Shrub,,,"P11,P12",6/17/2016,
+874,77,liquidambar styraciflua,Tree,,,Q14,10/26/2016,
+875,20,staphylea trifolia,Shrub,,,Q14,10/26/2016,
+876,13,quercus rubra,Tree,,,Q14,10/26/2016,
+877,35,liquidambar styraciflua,Tree,,,Q14,10/28/2016,
+878,38,staphylea trifolia,Shrub,,,Q14,10/28/2016,
+879,15,quercus rubra,Tree,,,Q14,10/28/2016,
+880,45,sambucus canadensis,Shrub,,,"L20,K20",11/5/2016,
+881,51,liquidambar styraciflua,Tree,,,"L20,K20",11/5/2016,
+882,32,quercus rubra,Tree,,,"L20,K20",11/5/2016,
+883,61,staphylea trifolia,Shrub,,,"L20,K20",11/5/2016,
+884,14,rudbeckia laciniata,Herb,,,"L20,K20",11/5/2016,
+885,15,sambucus canadensis,Shrub,,,Q14,11/7/2016,
+886,50,liquidambar styraciflua,Tree,,,Q14,11/7/2016,
+887,25,quercus rubra,Tree,,,Q14,11/7/2016,
+888,68,staphylea trifolia,Shrub,,,Q14,11/7/2016,
+889,17,monarda fistulosa,Herb,,,"M8,L8",6/2/2017,
+890,50,lobelia siphilitica,Herb,,,"M8,L8",6/2/2017,
+891,15,deschampsia flexuosa,Herb,,,"M8,L8",6/2/2017,
+892,139,danthonia spicata,Herb,,,"M8,L8",6/2/2017,
+893,12,symphytotrichum oblongifolium,Herb,,,"M8,L8",6/2/2017,
+894,4,symphytotrichum oblongifolium,Herb,,,"M8,L8",6/5/2017,
+895,7,monarda fistulosa,Herb,,,"M8,L8",6/5/2017,
+896,14,deschampsia flexuosa,Herb,,,"M8,L8",6/5/2017,
+897,36,danthonia spicata,Herb,,,"M8,L8",6/5/2017,
+898,13,lobelia siphilitica,Herb,,,"M8,L8",6/5/2017,
+899,9,monarda fistulosa,Herb,,,"L8,L7",6/7/2017,
+900,1,symphytotrichum oblongifolium,Herb,,,"L8,L7",6/7/2017,
+901,12,deschampsia flexuosa,Herb,,,"L8,L7",6/7/2017,
+902,7,lobelia siphilitica,Herb,,,"L8,L7",6/7/2017,
+903,35,danthonia spicata,Herb,,,"L8,L7",6/7/2017,
+904,10,monarda fistulosa,Herb,,,L8,6/8/2017,
+905,5,symphytotrichum oblongifolium,Herb,,,L8,6/8/2017,
+906,19,deschampsia flexuosa,Herb,,,L8,6/8/2017,
+907,39,danthonia spicata,Herb,,,L8,6/8/2017,
+908,15,monarda fistulosa,Herb,,,L8,6/9/2017,
+909,3,symphytotrichum oblongifolium,Herb,,,L8,6/9/2017,
+910,8,dennstaedtia punctiloba,Herb,,,"L8,L7",6/28/2017,
+911,11,dennstaedtia punctiloba,Herb,,,"M7,L7,M8",6/30/2017,
+912,25,dennstaedtia punctiloba,Herb,,,"L7,L8,M8",7/5/2017,
+913,27,dennstaedtia punctiloba,Herb,,,"L7,L8,M8",7/6/2017,
+914,27,dennstaedtia punctiloba,Herb,,,"L7,L8,M8",7/7/2017,
+915,20,dennstaedtia punctiloba,Herb,,,"L7,L8,",7/28/2017,
+916,85,staphylea trifolia,Shrub,,,N4,11/4/2017,
+917,30,liriodendron tulipifera,Tree,,,N4,11/4/2017,
+918,68,liquidambar styraciflua,Tree,,,N4,11/4/2017,
+919,88,staphylea trifolia,Shrub,,,"N20,N21",11/6/2017,
+920,8,sambucus canadensis,Shrub,,,"N20,N21",11/6/2017,
+921,31,liquidambar styraciflua,Tree,,,"N20,N21",11/6/2017,
+922,44,quercus alba,Tree,,,"L12,K12",11/8/2017,
+923,88,liquidambar styraciflua,Tree,,,"L12,K12",11/8/2017,
+924,20,quercus alba,Tree,,,"L12,K12",11/9/2017,
+925,25,liquidambar styraciflua,Tree,,,"L12,K12",11/9/2017,
+926,5,liriodendron tulipifera,Tree,,,"L12,K12",11/9/2017,
+927,25,quercus alba,Tree,,,"K12,L12",11/10/2017,
+928,23,liquidambar styraciflua,Tree,,,"K12,L12",11/10/2017,
+929,9,liriodendron tulipifera,Tree,,,"K12,L12",11/10/2017,
+930,2,carya cordiformis,Tree,,,K14,11/11/2017,
+931,15,quercus alba,Tree,,,K14,11/11/2017,
+932,15,quercus rubra,Tree,,,K14,11/11/2017,
+933,7,carya cordiformis,Tree,,,K14,11/13/2017,
+934,45,quercus alba,Tree,,,K14,11/13/2017,
+935,25,quercus rubra,Tree,,,K14,11/13/2017,
+936,12,carya cordiformis,Tree,,,"J18,K18",11/14/2017,
+937,68,staphylea trifolia,Shrub,,,"J18,K18",11/14/2017,
+938,8,quercus rubra,Tree,,,"J18,K18",11/14/2017,
+939,20,quercus alba,Tree,,,"J18,K18",11/14/2017,
+940,29,quercus alba,Tree,,,"J18,K18",11/15/2017,
+941,28,staphylea trifolia,Shrub,,,"J18,J19",11/16/2017,
+942,19,staphylea trifolia,Shrub,,,"J18,J19",11/16/2017,
+943,25,quercus rubra,Tree,,,"J18,J19",11/16/2017,
+944,5,liriodendron tulipifera,Tree,,,"J18,J19",11/16/2017,
+945,18,carya cordiformis,Tree,,,"J18,K18",11/17/2017,
+946,8,liriodendron tulipifera,Tree,,,"J18,K18",11/17/2017,
+947,32,quercus alba,Tree,,,"J18,K18",11/17/2017,
+948,17,quercus rubra,Tree,,,"J18,K18",11/20/2017,
+949,14,liriodendron tulipifera,Tree,,,"J18,K18",11/20/2017,
+950,15,staphylea trifolia,Shrub,,,"J18,K18",11/20/2017,
+951,5,liriodendron tulipifera,Tree,,,J18,11/21/2017,
+952,10,staphylea trifolia,Shrub,,,J18,11/21/2017,
+953,8,quercus rubra,Tree,,,J18,11/21/2017,
+954,10,quercus rubra,Tree,,,"K14,J14",11/22/2017,
+955,6,quercus alba,Tree,,,"K14,J14",11/22/2017,
+956,1,quercus velutina,Tree,,,"K14,J14",11/22/2017,
+957,1,liriodendron tulipifera,Tree,,,"K14,J14",11/22/2017,
+958,23,carya cordiformis,Tree,,,"K14,J14",11/27/2017,
+959,13,quercus alba,Tree,,,"K14,J14",11/27/2017,
+960,17,quercus alba,Tree,,,L12,11/27/2017,
+961,18,liquidambar styraciflua,Tree,,,L12,11/27/2017,
+962,1,liriodendron tulipifera,Tree,,,L12,11/27/2017,
+963,49,liquidambar styraciflua,Tree,,,L12,11/28/2017,
+964,20,staphylea trifolia,Shrub,,,L12,11/28/2017,
+965,25,quercus alba,Tree,,,L12,11/28/2017,
+966,15,sambucus canadensis,Shrub,,,L12,11/28/2017,
+967,15,quercus alba,Tree,,,L12,11/29/2017,
+968,51,liquidambar styraciflua,Tree,,,L12,11/29/2017,
+969,16,staphylea trifolia,Shrub,,,L12,11/29/2017,
+970,119,liquidambar styraciflua,Tree,,,L12,11/30/2017,
+971,15,quercus alba,Tree,,,L12,11/30/2017,
+972,3,staphylea trifolia,Shrub,,,L12,11/30/2017,
+973,14,quercus alba,Tree,,,L12,12/1/2017,
+974,36,liquidambar styraciflua,Tree,,,L12,12/1/2017,
+975,7,quercus alba,Tree,,,"L12,L13",12/4/2017,
+976,36,liquidambar styraciflua,Tree,,,"L12,L13",12/4/2017,
+977,35,liquidambar styraciflua,Tree,,,"L12,L13",12/5/2017,
+978,5,quercus alba,Tree,,,"L12,L13",12/5/2017,
+979,106,liquidambar styraciflua,Tree,,,"L12,L13",12/7/2017,
+980,20,liquidambar styraciflua,Tree,,,"L12,L13",12/8/2017,
+981,11,corylus americana,Shrub,,,P12,4/11/2018,
+982,26,viburnum acerifolium,Shrub,,,P12,4/11/2018,
+983,21,lindera benzoin,Shrub,,,P12,4/11/2018,
+984,135,geranium maculatum,Herb,,,P12,4/12/2018,
+985,70,theylpteris palustris,Herb,,,P12,4/12/2018,
+986,160,carex amphibola,Herb,,,P12,4/12/2018,
+987,90,tridens flavus,Herb,,,P12,4/12/2018,
+988,41,eurybia divaricata,Herb,,,"P13,P12",5/11/2018,
+989,44,elymus hystrix,Herb,,,"P13,P12",5/11/2018,
+990,47,carex pensylvanica,Herb,,,"P13,P12",5/11/2018,
+991,5,rhus glabra,Tree,,,"P13,P12",5/11/2018,
+992,3,hamamelis virginiana,Shrub,,,"P13,P12",5/11/2018,
+993,19,dicanthelium clandestinum,Herb,,,"P13,P12",5/11/2018,
+994,32,danthonia spicata,Herb,,,"P13,P12",5/11/2018,
+995,56,elymus hystrix,Herb,,,"P12,N12",5/15/2018,
+996,63,danthonia spicata,Herb,,,"P12,N12",5/15/2018,
+997,49,carex pensylvanica,Herb,,,"P12,N12",5/15/2018,
+998,6,rhus glabra,Tree,,,"P12,N12",5/15/2018,
+999,6,hamamelis virginiana,Shrub,,,"P12,N12",5/15/2018,
+1000,81,dicanthelium clandestinum,Herb,,,"P12,N12",5/15/2018,
+1001,59,eurybia divaricata,Herb,,,"P12,N12",5/15/2018,
+1002,50,elymus hystrix,Herb,,,"P12,N12",5/16/2018,
+1003,50,danthonia spicata,Herb,,,"P12,N12",5/16/2018,
+1004,32,carex pensylvanica,Herb,,,"P12,N12",5/16/2018,
+1005,6,rhus glabra,Tree,,,"P12,N12",5/16/2018,
+1006,6,hamamelis virginiana,Shrub,,,"P12,N12",5/16/2018,
+1007,4,rhus glabra,Tree,,,"P12,N12",5/18/2018,
+1008,2,hamamelis virginiana,Shrub,,,"P12,N12",5/18/2018,
+1009,4,rubus alleghaniensis,Shrub,,,"P12,N12",5/18/2018,
+1010,50,carex swanii,Herb,,,"P12,N12",5/18/2018,
+1011,2,morella pensylvanica,Shrub,,,"P12,N12",5/18/2018,
+1012,3,rhus glabra,Tree,,,P12,5/23/2018,
+1013,3,hamamelis virginiana,Shrub,,,P12,5/23/2018,
+1014,50,dicanthelium clandestinum,Herb,,,P12,5/23/2018,
+1015,50,eurybia divaricata,Herb,,,P12,5/23/2018,
+1016,5,rubus alleghaniensis,Shrub,,,P12,5/23/2018,
+1017,3,morella pensylvanica,Shrub,,,P12,5/23/2018,
+1018,50,carex swanii,Herb,,,P12,5/24/2018,
+1019,2,rhus glabra,Tree,,,P12,5/24/2018,
+1020,2,hamamelis virginiana,Shrub,,,P12,5/24/2018,
+1021,50,dichanthelium clandestinum,Herb,,,P12,5/24/2018,
+1022,2,morella pensylvanica,Shrub,,,P12,5/24/2018,
+1023,3,rubus alleghaniensis,Shrub,,,P12,5/24/2018,
+1024,50,carex swanii,Herb,,,P12,5/25/2018,
+1025,3,rhus glabra,Tree,,,P12,5/25/2018,
+1026,4,hamamelis virginiana,Shrub,,,P12,5/25/2018,
+1027,4,morella pensylvanica,Shrub,,,P12,5/25/2018,
+1028,4,rubus alleghaniensis,Shrub,,,P12,5/25/2018,
+1029,100,danthonia spicata,Herb,,,P12,5/25/2018,
+1030,50,eurybia divaricata,Herb,,,P12,5/25/2018,
+1031,32,carex pensylvanica,Herb,,,P12,5/25/2018,
+1032,2,rhus glabra,Tree,,,P12,5/29/2018,
+1033,2,morella pensylvanica,Shrub,,,P12,5/29/2018,
+1034,3,rubus alleghaniensis,Shrub,,,P12,5/29/2018,
+1035,4,hamamelis virginiana,Shrub,,,P12,5/30/2018,
+1036,5,morella pensylvanica,Shrub,,,P12,5/30/2018,
+1037,4,rubus alleghaniensis,Shrub,,,P12,5/30/2018,
+1038,50,danthonia spicata,Herb,,,P12,5/30/2018,
+1039,100,eurybia divaricata,Herb,,,P12,5/30/2018,
+1040,54,carex pensylvanica,Herb,,,P12,5/30/2018,
+1041,4,rhus glabra,Tree,,,P12,5/30/2018,
+1042,50,dicanthelium clandestinum,Herb,,,P12,5/30/2018,
+1043,2,hamamelis virginiana,Shrub,,,P12,5/31/2018,
+1044,2,morella pensylvanica,Shrub,,,P12,5/31/2018,
+1045,4,rubus alleghaniensis,Shrub,,,P12,5/31/2018,
+1046,50,danthonia spicata,Herb,,,P12,5/31/2018,
+1047,32,carex pensylvanica,Herb,,,P12,5/31/2018,
+1048,3,rhus glabra,Tree,,,P12,5/31/2018,
+1049,100,monarda fistulosa,Herb,,,P12,5/31/2018,
+1050,2,hamamelis virginiana,Shrub,,,P12,6/1/2018,
+1051,2,morella pensylvanica,Shrub,,,P12,6/1/2018,
+1052,32,carex pensylvanica,Herb,,,P12,6/1/2018,
+1053,2,rhus glabra,Tree,,,P12,6/1/2018,
+1054,50,carex swanii,Herb,,,P12,6/1/2018,
+1055,50,monarda fistulosa,Herb,,,P12,6/1/2018,
+1056,4,hamamelis virginiana,Shrub,,,P12,6/4/2018,
+1057,4,morella pensylvanica,Shrub,,,P12,6/4/2018,
+1058,3,rubus alleghaniensis,Shrub,,,P12,6/4/2018,
+1059,50,danthonia spicata,Herb,,,P12,6/4/2018,
+1060,50,eurybia divaricata,Herb,,,P12,6/4/2018,
+1061,32,carex pensylvanica,Herb,,,P12,6/4/2018,
+1062,4,rhus glabra,Tree,,,P12,6/4/2018,
+1063,1,quercus montana,Tree,,,P12,6/4/2018,
+1064,1,carya cordiformis,Tree,,,P12,6/4/2018,
+1065,2,hamamelis virginiana,Shrub,,,P12,6/5/2018,
+1066,50,danthonia spicata,Herb,,,P12,6/5/2018,
+1067,32,carex pensylvanica,Herb,,,P12,6/5/2018,
+1068,2,rhus glabra,Tree,,,P12,6/5/2018,
+1069,50,dicanthelium clandestinum,Herb,,,P12,6/5/2018,
+1070,50,monarda fistulosa,Herb,,,P12,6/5/2018,
+1071,2,hamamelis virginiana,Shrub,,,P12,6/7/2018,
+1072,2,morella pensylvanica,Shrub,,,P12,6/7/2018,
+1073,4,rubus alleghaniensis,Shrub,,,P12,6/7/2018,
+1074,50,danthonia spicata,Herb,,,P12,6/7/2018,
+1075,50,eurybia divaricata,Herb,,,P12,6/7/2018,
+1076,6,rhus glabra,Tree,,,P12,6/7/2018,
+1077,50,dicanthelium clandestinum,Herb,,,P12,6/7/2018,
+1078,9,lindera benzoin,Shrub,,,P12,6/7/2018,
+1079,2,quercus alba,Tree,,,P12,6/7/2018,
+1080,30,theylpteris palustris,Herb,,,P12,6/7/2018,
+1081,32,carex amphibola,Herb,,,P12,6/7/2018,
+1082,50,monarda fistulosa,Herb,,,P12,6/7/2018,
+1083,52,geranium maculatum,Herb,,,P12,6/7/2018,
+1084,10,tridens flavus,Herb,,,P12,6/7/2018,
+1085,4,viburnum acerifolium,Shrub,,,P12,6/7/2018,
+1086,4,hamamelis virginiana,Shrub,,,P12,6/8/2018,
+1087,2,morella pensylvanica,Shrub,,,P12,6/8/2018,
+1088,25,danthonia spicata,Herb,,,P12,6/8/2018,
+1089,64,carex pensylvanica,Herb,,,P12,6/8/2018,
+1090,6,rhus glabra,Tree,,,P12,6/8/2018,
+1091,2,celtis occidentalis,Tree,,,P12,6/8/2018,
+1092,2,quercus montana,Tree,,,P12,6/8/2018,
+1093,1,carya cordiformis,Tree,,,P12,6/8/2018,
+1094,50,eragrostis spectabilis,Herb,,,P12,6/8/2018,
+1095,50,monarda fistulosa,Herb,,,P12,6/8/2018,
+1096,2,morella pensylvanica,Shrub,,,P12,6/12/2018,
+1097,32,carex pensylvanica,Herb,,,P12,6/12/2018,
+1098,10,rhus glabra,Tree,,,P12,6/12/2018,
+1099,100,eragrostis spectabilis,Herb,,,P12,6/12/2018,
+1100,2,quercus alba,Tree,,,P12,6/12/2018,
+1101,5,morella pensylvanica,Shrub,,,P12,6/13/2018,
+1102,32,carex pensylvanica,Herb,,,P12,6/13/2018,
+1103,6,rhus glabra,Tree,,,P12,6/13/2018,
+1104,50,eragrostis spectabilis,Herb,,,P12,6/13/2018,
+1105,1,quercus alba,Tree,,,P12,6/13/2018,
+1106,50,eurybia divaricata,Herb,,,P12,6/13/2018,
+1107,50,monarda fistulosa,Herb,,,P12,6/13/2018,
+1108,1,hamamelis virginiana,Shrub,,,P12,6/13/2018,
+1109,1,quercus montana,Tree,,,P12,6/13/2018,
+1110,100,danthonia spicata,Herb,,,P12,6/13/2018,
+1111,50,dicanthelium clandestinum,Herb,,,P12,6/13/2018,
+1112,2,morella pensylvanica,Shrub,,,P12,6/14/2018,
+1113,32,carex pensylvanica,Herb,,,P12,6/14/2018,
+1114,2,rhus glabra,Tree,,,P12,6/14/2018,
+1115,50,carex swanii,Herb,,,P12,6/14/2018,
+1116,2,morella pensylvanica,Shrub,,,"P11,P12",6/21/2018,
+1117,32,carex pensylvanica,Herb,,,"P11,P12",6/21/2018,
+1118,2,rhus glabra,Tree,,,"P11,P12",6/21/2018,
+1119,50,eragrostis spectabilis,Herb,,,"P11,P12",6/21/2018,
+1120,1,quercus alba,Tree,,,"P11,P12",6/21/2018,
+1121,50,monarda fistulosa,Herb,,,"P11,P12",6/21/2018,
+1122,50,danthonia spicata,Herb,,,"P11,P12",6/21/2018,
+1123,3,celtis occidentalis,Tree,,,"P11,P12",6/21/2018,
+1124,1,morella pensylvanica,Shrub,,,"P11,P12",6/22/2018,
+1125,64,carex pensylvanica,Herb,,,"P11,P12",6/22/2018,
+1126,2,rhus glabra,Tree,,,"P11,P12",6/22/2018,
+1127,100,monarda fistulosa,Herb,,,"P11,P12",6/22/2018,
+1128,50,danthonia spicata,Herb,,,"P11,P12",6/22/2018,
+1129,2,rubus alleghaniensis,Shrub,,,"P11,P12",6/22/2018,
+1130,50,dicanthelium clandestinum,Herb,,,"P11,P12",6/22/2018,
+1131,1,ostrya,Tree,,,"P11,P12",6/22/2018,
+1132,2,corylus americana,Shrub,,,"P11,P12",6/22/2018,
+1133,150,asclepias tuberosa,Herb,,,"P12,P13",6/20/2018,
+1134,100,panicum virgatum,Herb,,,"P12,P13",6/20/2018,
+1135,15,rhus glabra,Tree,,,"P12,P13",6/20/2018,
+1136,5,morella pensylvanica,Shrub,,,"P12,P13",6/20/2018,
+1137,5,hamamelis virginiana,Shrub,,,"P12,P13",6/20/2018,
+1138,5,ostrya,Tree,,,"P12,P13",6/20/2018,
+1139,5,carya cordiformis,Tree,,,"P12,P13",6/20/2018,
+1140,500,solidago nemoralis,Herb,,,"L24,L23,M23",6/22/2018,
+1141,1000,panicum virgatum,Herb,,,"L24,L23,M23",6/22/2018,
+1142,500,monarda fistulosa,Herb,,,"L24,L23,M23",6/22/2018,
+1143,10,amelanchier canadensis,Tree,,,"L24,L23,M23",6/22/2018,
+1144,20,hamamelis virginiana,Shrub,,,"L24,L23,M23",6/22/2018,
+1145,20,lindera benzoin,Shrub,,,"L24,L23,M23",6/22/2018,
+1146,20,morella pensylvanica,Shrub,,,"L24,L23,M23",6/22/2018,
+1147,20,rosa carolina,Shrub,,,"L24,L23,M23",6/22/2018,
+1148,10,sambucus canadensis,Shrub,,,"L24,L23,M23",6/22/2018,
+1149,50,parthenocissus quinquefolia,Herb,,,"L24,L23,M23",6/22/2018,
+1150,500,solidago speciosa,Herb,,,"L24,L23,M23",6/22/2018,
+1151,500,elymus hystrix,Herb,,,"L24,L23,M23",6/22/2018,
+1152,500,asclepias tuberosa,Herb,,,"L24,L23,M23",6/22/2018,
+1153,500,eragrostis spectabilis,Herb,,,"L24,L23,M23",6/22/2018,
