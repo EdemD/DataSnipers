@@ -16,8 +16,9 @@
 5. [Background Research Report](Deliverables//2%20Background%20Research%20Report)
 6. [Audience Profile](Deliverables//3%20Audience%20Profile/Audience%20Profile.md)
 7. [Data Cleaning Documentation](Deliverables/4%20Data%20Cleaning/Data%20Cleaning.md)
-8. [R-Scripts (WIP)](Deliverables/5%20RScript)
+8. [R-Scripts](Deliverables/5%20RScript)
 9. [R-Plots](Deliverables/5%20RScript/Analysis_and_plots.md)
+10. Summary, Presentation and Contributorship
 
 ### PROOFREAD STATEMENT
 
