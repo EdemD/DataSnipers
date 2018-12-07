@@ -5,8 +5,6 @@
 2. Harwinder Kaur
 3. Edem Dosseh
 
-### Data
-
 ### List of Files
 
 1. [License](/LICENSE)
@@ -18,8 +16,8 @@
 7. [Data Cleaning Documentation](Deliverables/4%20Data%20Cleaning/Data%20Cleaning.md)
 8. [R-Scripts](Deliverables/5%20RScript)
 9. [R-Plots](Deliverables/5%20RScript/Analysis_and_plots.md)
-10. Summary, Presentation and Contributorship
+10. [Summary, Presentation and Contributorship](Deliverables/6%20Final%20Deliverables)
 
 ### PROOFREAD STATEMENT
 
-1. This document has been proofread by Edem Dosseh on December 3, 2018 08:58 PM.
+This document has been proofread by Edem Dosseh on December 3, 2018 08:58 PM.
