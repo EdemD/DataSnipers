@@ -1,16 +1,15 @@
 # Summary
 
-`Word Count - 2084`
-
-Contents of the document**
+**Contents of the document**
 
 * [Audience](#audience)
   * [Decisions that our analysis target](#decisions-that-our-analysis-target)
-* Source Data and Processing
+* [Source Data and Processing](#source-data-and-processing)
 * [Research Questions and their answers](#research-questions-and-their-answers)
   * [Species Composition(1937-2016)](#species-composition-(1937-2016))
-  * 
-* [References](#references)
+  * [Management Efforts](#management-efforts)
+  * [Impact of Restoration Activities](#impact-of-restoration-activities)
+* [References and Word Count](#references)
 
 ## Audience
 
@@ -40,7 +39,29 @@ Between 2008 and 2015, the director of NYBG developed an ambitious program of ec
 
 ## Source Data and Processing
 
-<to be filled>
+The source files we received covered the below breadth - 
+
+* GIS Data (not used)
+* Inventory Data
+* Restoration Data
+
+### Inventory Data
+
+Inventory Data provided inventory information like -
+
+* Comprehensive Species Tally (All the species seen with their classification into Native, Non-native and Invasive) (1937, 2002, 2006, 2011, 2016)
+* Woody Plant Data (1937, 2002, 2006, 2011, 2016) - Survey of all woody plants in NYBG
+* Groundcover Data (2011, 2016) - Survey of the groundcover in (cm) in NYBG
+* Additional Species Data (2011, 2016) - Survey of additional species in NYBG
+
+The detailed cleaning report can be found [here](Deliverables/4%20Data%20Cleaning/Data%20Cleaning.md)
+
+### Restoration Data
+
+Restoration Data contains the data around management efforts. These include -
+
+* NYBG Forest Management Data - outlining hours spent by Staffs and Volunteers around variety of tasks.
+* NYBG Forest Restoration Planting - with information about the plantings that have been done with other information like - quantity, timestamp, taxon, etc.
 
 ## Research Questions and their answers
 
@@ -175,3 +196,7 @@ Schuler, J.A. and Forrest, T. A.  2016. Thain Family Forest Program 2008-2025. T
 Rudnicky, J.L. and M.J. McDonnell. 1989. Forty-Eight Years of Canopy Change in a Hardwood Hemlock Forest in New York City. Torreya 116(1):52-64.
 
 NYBG/25. Thain Family Forest Inventory. June 2016.
+
+
+
+`Word Count - 2272`
