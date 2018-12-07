@@ -197,6 +197,8 @@ Rudnicky, J.L. and M.J. McDonnell. 1989. Forty-Eight Years of Canopy Change in a
 
 NYBG/25. Thain Family Forest Inventory. June 2016.
 
+### Proofread Statement
 
+This document has been proofread by Harwinder Kaur on December 12th, 2018 at 3:09 p.m. 
 
 `Word Count - 2272`
