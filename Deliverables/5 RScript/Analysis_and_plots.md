@@ -597,7 +597,7 @@ res_by_species <- restoration %>%
 ```
 
     ## Joining, by = "Taxon"
-
+    
     ## Warning: Column `Taxon` joining character vector and factor, coercing into
     ## character vector
 
@@ -875,11 +875,11 @@ Contributorship
 Kumar Vikash
 
 -   Native, non-native and invasive species in NYBG
--   Diversity of the forest
--   Composition of the forest
+    -   Diversity of the forest
+    -   Composition of the forest
 -   Management Efforts over the years
--   Invasive Species Control Efforts
--   Restoration Efforts
+    -   Invasive Species Control Efforts
+    -   Restoration Efforts
 
 Edem Dosseh
 
