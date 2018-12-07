@@ -1,11 +1,15 @@
 # Summary
 
-**Contents of the document**
+`Word Count - 2084`
+
+Contents of the document**
 
 * [Audience](#audience)
   * [Decisions that our analysis target](#decisions-that-our-analysis-target)
 * Source Data and Processing
-* Answers to the Research Questions
+* [Research Questions and their answers](#research-questions-and-their-answers)
+  * [Species Composition(1937-2016)](#species-composition-(1937-2016))
+  * 
 * [References](#references)
 
 ## Audience
@@ -33,6 +37,120 @@ Between 2008 and 2015, the director of NYBG developed an ambitious program of ec
 > We want to analyze the staff hours distribution during this period, and the impact it had towards the area of - restoration planting, invasive plant management and trail maintenance.
 
 
+
+## Source Data and Processing
+
+<to be filled>
+
+## Research Questions and their answers
+
+We had selected three questions that we planned to answer with our analysis. These were -
+
+1. How has the species composition changed over the years (Native, Non-native, Invasive)?
+
+2. How has the management efforts changed over the years?
+
+3. How has the restoration programs impacted with the help of volunteers and staff?
+
+
+
+### Species Composition (1937-2016)
+
+**How has the species composition changed over the years (Native, Non-native, Invasive)?**
+
+To make this more meaningful, we have divided the analysis into two phases -
+
+* Number of native, non-native and invasive species found and its variation
+* Total count of the native, non-native and invasive species and its variation
+
+
+
+#### Number of Species (Diversity of the forest)
+
+There is a wide variety of species that can be found in NYBG. The number of different species that can be found had been increasing for all the three species types (native, non-native and invasive). From the data, the trend we found is given below.
+
+
+
+![](res/cst_trend.png)
+
+
+
+From the period 2002 to 2016, there is a tremendous growth in the total number of species in all the three types - native, non-native and invasive. The rate growth in the number of native species is more prominent, which is evident from the plot, where the slope of the line kept increasing every year. The rate of growth in the number of non-native species increased till 2011, from where it decreased (as the slope of the line graph seems to have decreased slightly). The most **prominent rate of decrease can be found in Invasive species after 2011**. We would be interested in knowing if there are some external factors that might have contributed to this behavior.
+
+
+
+#### Total Count of Species (Forest Composition)
+
+Till now, we have discussed about the diversity of the forest, emphasizing on the count of species and its trends over the years. NYBG also has an inventory of all the plants and its coverage. These are based on survey done over the past years and are recorded with timestamp.
+
+The types of plants that we will be analyzing in the further sections are -
+
+- Woody Plants (1937, 2002, 2006, 2011, 2016)
+- Ground Cover (2011, 2016)
+- Additional Species (2011, 2016)
+
+
+
+![](res/composition.png)
+
+
+
+For **Woody Plants**, native species have seen tremendous growth over the last decade. The growth rate is fairly consistent and healthy for the New York Botanical Gardens. This can be as a result of the restoration planting efforts from the management, which we would look into in the later sections. Even though, there is an increase in the non-native species as well, the rate is much lower than the native species. Invasive species have almost similar growth rates as non-native.
+
+From the **Ground Cover** data, it is obvious that more emphasis is given in the controlling of non-native and invasive species, which have decreased a lot in the last few years. There is a noticeable increase in the native species as well.
+
+The **Additional Species** data seems to not favor either of the three species types. All the three, have witnessed a good increase over the last five years (2011-2016).
+
+
+
+### Management Efforts
+
+#### Invasive Species Control Efforts
+
+NYBG undertakes several initiatives to manage the forest. One of them is Invasive Species Control, which can directly impact the growth trends of Invasive Species over the years.
+
+![](res/Staff_Volunteer Hours-1.png)
+
+The plot shows us that the hours spent over the years does not have a trend. There has been significant work hours put during the years 2009, 2010 and again in 2014. The range of the time period over which the data was collected is pretty low (2008-2014). Hence we cannot make a correlation with the species count for these years. In future, as this data matures, we would be in a better place to draw correlation between the two.
+
+
+
+#### Restoration Efforts
+
+Towards the management goals, there are active restoration projects that have been going on since 2007.
+
+
+
+![](res/restoration.png)
+
+
+
+The restoration efforts seem to be very un-even. The years that recorded best efforts are 2011, 2012, 2015 and 2018. For the remaining years, it has been fairly consistent. The highest number of plantings can be seen in June of 2018. All the restorations that have been recorded are either identified as native species or not-identified. For the period till 2016, below is the restoration activities for native species. 
+
+
+
+![](res/restoration_native-1.png)
+
+
+
+Please note that the actual native species plantings may be much higher than this. The classification of species into native, non-native and invasive has been done on the basis of the most recent Comprehensive Species Tally (2016). Even this record is outdated when compared to the restoration plantings.
+
+
+
+### Impact of Restoration Activities
+
+There has been significant improvement in the hours spent by the management of NYBG for restoration of the forest. 
+
+![](res/correlation.png)
+
+
+
+From the above plots we can see -
+
+- Improved diversity of the forest
+- Better controlling of invasive species
+- Significant improvement in the woody plants count
+- Decrease in invasive ground cover
 
 
 

@@ -1,6 +1,5 @@
 ## NYBG Research Questions
 
-1. What type of changes have we observed. Are the changes direct result if the management efforts?
-2. Are there other areas of opportunity for the analysis?
-3. What is the growth patterns of the trees (native, non-native or invasive) in the New York Botanical Garden
-
+1. How has the species composition changed over the years (Native, Non-native, Invasive)?
+2. How has the management efforts changed over the years?
+3. How has the restoration programs impacted with the help of volunteers and staff?
